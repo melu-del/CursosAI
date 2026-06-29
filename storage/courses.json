@@ -1,0 +1,174 @@
+{
+  "course_demo": {
+    "id": "course_demo",
+    "title": "¿Qué es la Inteligencia Artificial?",
+    "description": "Una introducción clara a la IA: qué es, cómo funciona y por qué importa.",
+    "status": "content_ready",
+    "source": "demo",
+    "createdAt": "2026-06-26T10:00:00.000Z",
+    "scenes": [
+      {
+        "id": 1,
+        "type": "title",
+        "title": "¿Qué es la Inteligencia Artificial?",
+        "subtitle": "Una introducción para todos",
+        "narration": "Hoy vamos a explorar qué es la inteligencia artificial, cómo funciona y por qué está cambiando el mundo.",
+        "bullets": [],
+        "duration": 150,
+        "audioUrl": null,
+        "topic": "Inteligencia Artificial"
+      },
+      {
+        "id": 2,
+        "type": "problem",
+        "title": "El problema que resuelve",
+        "subtitle": "Las máquinas antes eran ciegas",
+        "narration": "Antes, las computadoras solo hacían lo que les programabas. No podían aprender ni adaptarse. Si los datos cambiaban, el programa fallaba.",
+        "bullets": [
+          "Las computadoras seguían reglas fijas",
+          "No podían reconocer imágenes ni hablar",
+          "Necesitaban instrucciones para cada caso",
+          "Eran frágiles ante datos nuevos"
+        ],
+        "duration": 240,
+        "audioUrl": null,
+        "topic": "Inteligencia Artificial"
+      },
+      {
+        "id": 3,
+        "type": "solution",
+        "title": "La solución: aprender de datos",
+        "subtitle": "Mostrarle ejemplos, no reglas",
+        "narration": "La IA aprende a partir de ejemplos. En vez de programar reglas, le mostramos miles de casos y ella encuentra los patrones por sí sola.",
+        "bullets": [
+          "Aprende de millones de ejemplos",
+          "Encuentra patrones automáticamente",
+          "Mejora con más datos",
+          "Se adapta a situaciones nuevas"
+        ],
+        "duration": 240,
+        "audioUrl": null,
+        "topic": "Inteligencia Artificial"
+      },
+      {
+        "id": 4,
+        "type": "example",
+        "title": "Ejemplos en tu vida cotidiana",
+        "subtitle": "Ya la usás todos los días",
+        "narration": "La IA está en todas partes: cuando Netflix te recomienda una serie, cuando tu teléfono reconoce tu cara, o cuando escribís en Google.",
+        "bullets": [
+          "Recomendaciones de Netflix",
+          "Face ID en el celular",
+          "Traducción automática",
+          "Filtro de spam en el email"
+        ],
+        "duration": 240,
+        "audioUrl": null,
+        "topic": "Inteligencia Artificial"
+      },
+      {
+        "id": 5,
+        "type": "closing",
+        "title": "Lo que aprendiste hoy",
+        "subtitle": "¡Ya entendés la IA!",
+        "narration": "La IA aprende de datos, reconoce patrones y toma decisiones. Ya forma parte de tu vida y seguirá creciendo. ¡Ahora lo sabés!",
+        "bullets": [
+          "La IA aprende de ejemplos, no de reglas",
+          "Está en tu vida cotidiana",
+          "Mejora con más datos y práctica"
+        ],
+        "duration": 180,
+        "audioUrl": null,
+        "topic": "Inteligencia Artificial"
+      }
+    ]
+  },
+  "course_1782762584443": {
+    "id": "course_1782762584443",
+    "title": "Hubble Contact Lenses: Marketing Directo al Consumidor (DTC)",
+    "description": "¿Qué es Hubble Lentes de Contacto? · El Problema de las Lentes Tradicionales · La Solución de Hubble: DTC y Suscripción · Un Éxito Impulsado por Datos · ¿Qué Aprendimos de Hubble?",
+    "status": "ready",
+    "source": "file",
+    "scenes": [
+      {
+        "id": 1,
+        "type": "title",
+        "title": "¿Qué es Hubble Lentes de Contacto?",
+        "subtitle": "Cómo una startup revolucionó el mercado de las lentillas",
+        "narration": "¿Te imaginás revolucionar una industria que nadie se atrevería a tocar? Eso es lo que hizo Hubble con las lentes de contacto. Esta startup irrumpió en el mercado con un modelo directo al consumidor, cambiando las reglas del juego para siempre. Vamos a ver cómo lo lograron.",
+        "bullets": [
+          "Disrupción en el mercado",
+          "Modelo Directo al Consumidor (DTC)",
+          "Lentes de contacto por suscripción"
+        ],
+        "duration": 547,
+        "audioUrl": "/storage/course_1782762584443/audio/scene_1.wav",
+        "topic": "Hubble Contact Lenses: Marketing Directo al Consumidor (DTC)"
+      },
+      {
+        "id": 2,
+        "type": "problem",
+        "title": "El Problema de las Lentes Tradicionales",
+        "subtitle": "Altos costos y poca accesibilidad en un mercado obsoleto",
+        "narration": "Antes de Hubble, el mercado de lentes de contacto era un dolor de cabeza. Precios desorbitados por intermediarios y distribuidores, que dejaban a los consumidores pagando fortunas. Muchos incluso sacrificaban su salud ocular para estirar el uso de sus lentes. ¡Una locura!",
+        "bullets": [
+          "Márgenes de intermediarios",
+          "Precios excesivos",
+          "Riesgo para la salud ocular"
+        ],
+        "duration": 554,
+        "audioUrl": "/storage/course_1782762584443/audio/scene_2.wav",
+        "topic": "Hubble Contact Lenses: Marketing Directo al Consumidor (DTC)"
+      },
+      {
+        "id": 3,
+        "type": "solution",
+        "title": "La Solución de Hubble: DTC y Suscripción",
+        "subtitle": "Un modelo directo al consumidor, simple, accesible y conveniente",
+        "narration": "Jesse Horwitz y Ben Cogan vieron la oportunidad. ¿Por qué no vender lentes de contacto de forma directa, por suscripción y a un precio justo? Así nació Hubble. Lentes diarias desechables, a solo un dólar por día, entregadas cómodamente en tu casa. Un modelo simple y genial.",
+        "bullets": [
+          "Venta directa al consumidor (DTC)",
+          "Modelo de suscripción",
+          "Lentes diarias a $1/día",
+          "Envío a domicilio"
+        ],
+        "duration": 644,
+        "audioUrl": "/storage/course_1782762584443/audio/scene_3.wav",
+        "topic": "Hubble Contact Lenses: Marketing Directo al Consumidor (DTC)"
+      },
+      {
+        "id": 4,
+        "type": "example",
+        "title": "Un Éxito Impulsado por Datos",
+        "subtitle": "Crecimiento explosivo gracias al marketing digital agresivo",
+        "narration": "Con una estrategia de marketing digital súper agresiva, principalmente en Facebook, Hubble explotó. En solo 18 meses, lograron más de 30 millones de dólares en financiación y 20 millones en ventas anuales. Su valoración superó los 200 millones. ¡Un crecimiento impresionante!",
+        "bullets": [
+          "Marketing digital (Facebook Ads)",
+          "Captación de clientes",
+          "Crecimiento rápido: $20M en ventas",
+          "Valoración de $200M+"
+        ],
+        "duration": 639,
+        "audioUrl": "/storage/course_1782762584443/audio/scene_4.wav",
+        "topic": "Hubble Contact Lenses: Marketing Directo al Consumidor (DTC)"
+      },
+      {
+        "id": 5,
+        "type": "closing",
+        "title": "¿Qué Aprendimos de Hubble?",
+        "subtitle": "Disrupción, marketing y los desafíos del escalado rentable",
+        "narration": "La historia de Hubble nos enseña el poder de la disrupción y el marketing basado en datos. Pero el desafío no termina ahí: escalar de forma rentable y expandir los canales es clave para el éxito a largo plazo. ¿Qué otras industrias crees que necesitan una disrupción así?",
+        "bullets": [
+          "Poder del modelo DTC",
+          "Marketing digital clave",
+          "Desafío: escalar de forma rentable",
+          "Diversificar canales de marketing"
+        ],
+        "duration": 525,
+        "audioUrl": "/storage/course_1782762584443/audio/scene_5.wav",
+        "topic": "Hubble Contact Lenses: Marketing Directo al Consumidor (DTC)"
+      }
+    ],
+    "createdAt": "2026-06-29T19:49:44.443Z"
+  }
+}
