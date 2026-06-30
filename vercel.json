@@ -1,0 +1,6 @@
+{
+  "installCommand": "echo '//npm.pkg.github.com/:_authToken='$GITHUB_TOKEN >> .npmrc && npm install --legacy-peer-deps",
+  "rewrites": [
+    { "source": "/((?!api/).*)", "destination": "/index.html" }
+  ]
+}
