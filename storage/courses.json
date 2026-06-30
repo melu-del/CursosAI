@@ -83,92 +83,3771 @@
       }
     ]
   },
-  "course_1782762584443": {
-    "id": "course_1782762584443",
-    "title": "Hubble Contact Lenses: Marketing Directo al Consumidor (DTC)",
-    "description": "¿Qué es Hubble Lentes de Contacto? · El Problema de las Lentes Tradicionales · La Solución de Hubble: DTC y Suscripción · Un Éxito Impulsado por Datos · ¿Qué Aprendimos de Hubble?",
+  "course_1782780237934_0": {
+    "id": "course_1782780237934_0",
+    "title": "V&Co: Estrategias de Distribución Digital",
+    "description": "V&Co: Redefiniendo la Distribución · Canales Tradicionales y Nuevos Retos · Tres Rutas Digitales para V&Co · Riesgos y Oportunidades · ¿Qué camino tomar?",
     "status": "ready",
     "source": "file",
     "scenes": [
       {
         "id": 1,
         "type": "title",
-        "title": "¿Qué es Hubble Lentes de Contacto?",
-        "subtitle": "Cómo una startup revolucionó el mercado de las lentillas",
-        "narration": "¿Te imaginás revolucionar una industria que nadie se atrevería a tocar? Eso es lo que hizo Hubble con las lentes de contacto. Esta startup irrumpió en el mercado con un modelo directo al consumidor, cambiando las reglas del juego para siempre. Vamos a ver cómo lo lograron.",
+        "title": "V&Co: Redefiniendo la Distribución",
+        "subtitle": "Descubrí cómo V&Co enfrenta los desafíos del mercado digital.",
+        "narration": "¡Hola! Hoy vamos a sumergirnos en el mundo de V&Co, una empresa líder en tecnología residencial de alta gama. Imaginate productos súper confiables y duraderos, ideales para proyectos exclusivos. V&Co se posiciona como el estándar de máxima calidad en su sector, lo que les permite mantener un precio premium en un mercado maduro. ¿Listos para ver cómo lo hacen?",
         "bullets": [
-          "Disrupción en el mercado",
-          "Modelo Directo al Consumidor (DTC)",
-          "Lentes de contacto por suscripción"
+          "Tecnología residencial premium",
+          "Líder en calidad y fiabilidad",
+          "Posicionamiento de precio superior",
+          "30% de cuota en un mercado maduro"
         ],
-        "duration": 547,
-        "audioUrl": "/storage/course_1782762584443/audio/scene_1.wav",
-        "topic": "Hubble Contact Lenses: Marketing Directo al Consumidor (DTC)"
+        "quiz": [
+          {
+            "type": "single",
+            "question": "¿Cuál es el principal atributo de los productos de V&Co?",
+            "options": [
+              "Bajo costo",
+              "Alta durabilidad y fiabilidad",
+              "Diseño minimalista",
+              "Amplia variedad de colores"
+            ],
+            "correctAnswer": 1,
+            "explanation": "La narración menciona específicamente 'durabilidad y alta fiabilidad operativa' como clave para arquitectos y desarrolladores."
+          },
+          {
+            "type": "single",
+            "question": "¿Cómo se posiciona V&Co en el mercado?",
+            "options": [
+              "Como opción económica",
+              "Como el estándar de máxima calidad",
+              "Como un competidor de rango medio",
+              "Como un proveedor de nicho sin gran cuota"
+            ],
+            "correctAnswer": 1,
+            "explanation": "V&Co ostenta un 'claro posicionamiento premium, consolidándose como el estándar de máxima calidad del sector'."
+          }
+        ],
+        "drawing": [
+          {
+            "type": "rect",
+            "x": 100,
+            "y": 100,
+            "w": 4,
+            "h": 200,
+            "color": "accent",
+            "fill": false
+          },
+          {
+            "type": "line",
+            "x1": 100,
+            "y1": 150,
+            "x2": 300,
+            "y2": 150,
+            "color": "accent",
+            "w": 2
+          },
+          {
+            "type": "line",
+            "x1": 100,
+            "y1": 200,
+            "x2": 300,
+            "y2": 200,
+            "color": "accent",
+            "w": 2
+          },
+          {
+            "type": "line",
+            "x1": 100,
+            "y1": 250,
+            "x2": 300,
+            "y2": 250,
+            "color": "accent",
+            "w": 2
+          },
+          {
+            "type": "text",
+            "x": 200,
+            "y": 125,
+            "text": "V&Co",
+            "color": "ink",
+            "size": 36,
+            "bold": true
+          },
+          {
+            "type": "text",
+            "x": 200,
+            "y": 175,
+            "text": "🏡 Tech Premium",
+            "color": "ink",
+            "size": 20
+          },
+          {
+            "type": "text",
+            "x": 200,
+            "y": 225,
+            "text": "💎 Calidad TOP",
+            "color": "ink",
+            "size": 20
+          },
+          {
+            "type": "text",
+            "x": 200,
+            "y": 275,
+            "text": "📈 Mercado",
+            "color": "ink",
+            "size": 20
+          },
+          {
+            "type": "arrow",
+            "x1": 200,
+            "y1": 310,
+            "x2": 200,
+            "y2": 360,
+            "color": "green",
+            "w": 4
+          }
+        ],
+        "duration": 765,
+        "audioUrl": "/storage/course_1782780237934_0/audio/scene_1.wav",
+        "topic": "V&Co: Estrategias de Distribución Digital"
       },
       {
         "id": 2,
         "type": "problem",
-        "title": "El Problema de las Lentes Tradicionales",
-        "subtitle": "Altos costos y poca accesibilidad en un mercado obsoleto",
-        "narration": "Antes de Hubble, el mercado de lentes de contacto era un dolor de cabeza. Precios desorbitados por intermediarios y distribuidores, que dejaban a los consumidores pagando fortunas. Muchos incluso sacrificaban su salud ocular para estirar el uso de sus lentes. ¡Una locura!",
+        "title": "Canales Tradicionales y Nuevos Retos",
+        "subtitle": "La distribución física choca con la realidad del mundo digital.",
+        "narration": "V&Co siempre operó con tres canales tradicionales: Grandes Retailers, Grandes Obras y Distribuidores. Cada uno con sus descuentos y bonificaciones. Pero en 2025, ¡sorpresa! Clientes empezaron a ver ofertas de V&Co en marketplaces online a precios que perforaban el sugerido. ¿El culpable? Un distribuidor del Norte operando con seudónimo. Esto empezó a diluir la marca y a generar un conflicto importante.",
         "bullets": [
-          "Márgenes de intermediarios",
-          "Precios excesivos",
-          "Riesgo para la salud ocular"
+          "3 Canales tradicionales",
+          "Descuentos y bonificaciones específicas",
+          "Quiebre de precios en marketplaces",
+          "Dilución de marca y conflicto de canal"
         ],
-        "duration": 554,
-        "audioUrl": "/storage/course_1782762584443/audio/scene_2.wav",
-        "topic": "Hubble Contact Lenses: Marketing Directo al Consumidor (DTC)"
+        "quiz": [
+          {
+            "type": "single",
+            "question": "¿Cuál de los siguientes NO es un canal de distribución tradicional de V&Co?",
+            "options": [
+              "Grandes Retailers",
+              "Grandes Obras",
+              "Marketplace online",
+              "Distribuidores"
+            ],
+            "correctAnswer": 2,
+            "explanation": "Los canales tradicionales son Grandes Retailers, Grandes Obras y Distribuidores. El marketplace online fue el origen del conflicto."
+          },
+          {
+            "type": "single",
+            "question": "¿Qué problema clave surgió en 2025 para V&Co?",
+            "options": [
+              "Aumento de la demanda de productos",
+              "Reclamos por publicaciones en marketplace con precios bajos",
+              "Desacuerdos con los Grandes Retailers",
+              "Falta de stock en los distribuidores"
+            ],
+            "correctAnswer": 1,
+            "explanation": "El texto indica que 'el equipo comercial de Grandes Retailers registró reclamos de clientes respecto a publicaciones en el marketplace líder del país. Dichas ofertas perforaban el precio de venta sugerido'."
+          }
+        ],
+        "drawing": [
+          {
+            "type": "rect",
+            "x": 50,
+            "y": 250,
+            "w": 80,
+            "h": 80,
+            "color": "accent",
+            "fill": true
+          },
+          {
+            "type": "text",
+            "x": 90,
+            "y": 290,
+            "text": "Retail",
+            "color": "white",
+            "size": 18
+          },
+          {
+            "type": "rect",
+            "x": 160,
+            "y": 250,
+            "w": 80,
+            "h": 80,
+            "color": "accent",
+            "fill": true
+          },
+          {
+            "type": "text",
+            "x": 200,
+            "y": 290,
+            "text": "Obras",
+            "color": "white",
+            "size": 18
+          },
+          {
+            "type": "rect",
+            "x": 270,
+            "y": 250,
+            "w": 80,
+            "h": 80,
+            "color": "accent",
+            "fill": true
+          },
+          {
+            "type": "text",
+            "x": 310,
+            "y": 290,
+            "text": "Dist.",
+            "color": "white",
+            "size": 18
+          },
+          {
+            "type": "arrow",
+            "x1": 90,
+            "y1": 240,
+            "x2": 90,
+            "y2": 150,
+            "color": "ink",
+            "w": 3
+          },
+          {
+            "type": "arrow",
+            "x1": 200,
+            "y1": 240,
+            "x2": 200,
+            "y2": 150,
+            "color": "ink",
+            "w": 3
+          },
+          {
+            "type": "arrow",
+            "x1": 310,
+            "y1": 240,
+            "x2": 310,
+            "y2": 150,
+            "color": "ink",
+            "w": 3
+          },
+          {
+            "type": "rect",
+            "x": 150,
+            "y": 60,
+            "w": 3,
+            "h": 50,
+            "color": "red",
+            "fill": false
+          },
+          {
+            "type": "text",
+            "x": 200,
+            "y": 85,
+            "text": "$$$",
+            "color": "red",
+            "size": 30,
+            "bold": true
+          },
+          {
+            "type": "line",
+            "x1": 160,
+            "y1": 70,
+            "x2": 240,
+            "y2": 100,
+            "color": "red",
+            "w": 3
+          },
+          {
+            "type": "line",
+            "x1": 160,
+            "y1": 100,
+            "x2": 240,
+            "y2": 70,
+            "color": "red",
+            "w": 3
+          }
+        ],
+        "duration": 883,
+        "audioUrl": "/storage/course_1782780237934_0/audio/scene_2.wav",
+        "topic": "V&Co: Estrategias de Distribución Digital"
       },
       {
         "id": 3,
         "type": "solution",
-        "title": "La Solución de Hubble: DTC y Suscripción",
-        "subtitle": "Un modelo directo al consumidor, simple, accesible y conveniente",
-        "narration": "Jesse Horwitz y Ben Cogan vieron la oportunidad. ¿Por qué no vender lentes de contacto de forma directa, por suscripción y a un precio justo? Así nació Hubble. Lentes diarias desechables, a solo un dólar por día, entregadas cómodamente en tu casa. Un modelo simple y genial.",
+        "title": "Tres Rutas Digitales para V&Co",
+        "subtitle": "Explorando estrategias para capitalizar el entorno online.",
+        "narration": "Ante este escenario, V&Co tiene que pensar en el futuro digital. Se plantean tres estrategias principales: abrir una tienda oficial en el marketplace líder, desarrollar un E-commerce propio directo al consumidor (DTC), o sustituir un distribuidor por una plataforma B2B. Cada una busca capitalizar las oportunidades digitales, pero con enfoques muy distintos.",
         "bullets": [
-          "Venta directa al consumidor (DTC)",
-          "Modelo de suscripción",
-          "Lentes diarias a $1/día",
-          "Envío a domicilio"
+          "Tienda oficial en Marketplace",
+          "E-commerce propio (DTC)",
+          "Plataforma B2B para distribuidores"
         ],
-        "duration": 644,
-        "audioUrl": "/storage/course_1782762584443/audio/scene_3.wav",
-        "topic": "Hubble Contact Lenses: Marketing Directo al Consumidor (DTC)"
+        "quiz": [
+          {
+            "type": "single",
+            "question": "¿Cuál de las siguientes NO es una estrategia digital propuesta para V&Co?",
+            "options": [
+              "Abrir una tienda física en cada ciudad",
+              "Desarrollar un E-commerce propio (DTC)",
+              "Abrir una tienda oficial en el marketplace líder",
+              "Sustituir un distribuidor por una plataforma B2B"
+            ],
+            "correctAnswer": 0,
+            "explanation": "Las opciones planteadas son Marketplace, E-commerce (DTC) y Plataforma B2B, no abrir más tiendas físicas."
+          },
+          {
+            "type": "single",
+            "question": "¿Qué significa la sigla DTC en el contexto de un E-commerce?",
+            "options": [
+              "Directo al Cliente",
+              "Distribución Totalizada y Centralizada",
+              "Desarrollo Tecnológico Continuo",
+              "Datos para el Consumidor"
+            ],
+            "correctAnswer": 0,
+            "explanation": "DTC significa 'Direct-to-Consumer' o 'Directo al Consumidor', lo que implica venta directa sin intermediarios."
+          }
+        ],
+        "drawing": [
+          {
+            "type": "circle",
+            "cx": 200,
+            "cy": 300,
+            "r": 50,
+            "color": "ink",
+            "fill": false,
+            "w": 4
+          },
+          {
+            "type": "text",
+            "x": 200,
+            "y": 305,
+            "text": "V&Co",
+            "color": "ink",
+            "size": 22,
+            "bold": true
+          },
+          {
+            "type": "arrow",
+            "x1": 200,
+            "y1": 240,
+            "x2": 100,
+            "y2": 150,
+            "color": "accent",
+            "w": 3
+          },
+          {
+            "type": "arrow",
+            "x1": 200,
+            "y1": 240,
+            "x2": 200,
+            "y2": 150,
+            "color": "accent",
+            "w": 3
+          },
+          {
+            "type": "arrow",
+            "x1": 200,
+            "y1": 240,
+            "x2": 300,
+            "y2": 150,
+            "color": "accent",
+            "w": 3
+          },
+          {
+            "type": "rect",
+            "x": 60,
+            "y": 80,
+            "w": 80,
+            "h": 50,
+            "color": "green",
+            "fill": true
+          },
+          {
+            "type": "text",
+            "x": 100,
+            "y": 105,
+            "text": "🛒 MP",
+            "color": "white",
+            "size": 20
+          },
+          {
+            "type": "rect",
+            "x": 160,
+            "y": 80,
+            "w": 80,
+            "h": 50,
+            "color": "green",
+            "fill": true
+          },
+          {
+            "type": "text",
+            "x": 200,
+            "y": 105,
+            "text": "💻 DTC",
+            "color": "white",
+            "size": 20
+          },
+          {
+            "type": "rect",
+            "x": 260,
+            "y": 80,
+            "w": 80,
+            "h": 50,
+            "color": "green",
+            "fill": true
+          },
+          {
+            "type": "text",
+            "x": 300,
+            "y": 105,
+            "text": "⚙️ B2B",
+            "color": "white",
+            "size": 20
+          }
+        ],
+        "duration": 740,
+        "audioUrl": "/storage/course_1782780237934_0/audio/scene_3.wav",
+        "topic": "V&Co: Estrategias de Distribución Digital"
       },
       {
         "id": 4,
-        "type": "example",
-        "title": "Un Éxito Impulsado por Datos",
-        "subtitle": "Crecimiento explosivo gracias al marketing digital agresivo",
-        "narration": "Con una estrategia de marketing digital súper agresiva, principalmente en Facebook, Hubble explotó. En solo 18 meses, lograron más de 30 millones de dólares en financiación y 20 millones en ventas anuales. Su valoración superó los 200 millones. ¡Un crecimiento impresionante!",
+        "type": "solution",
+        "title": "Riesgos y Oportunidades",
+        "subtitle": "Cada estrategia digital tiene su lado bueno y su lado complejo.",
+        "narration": "Implementar una estrategia digital no es solo sumar ventas. Hay que evaluar qué tan compatible es con tu red actual, los posibles conflictos de canal, la inversión necesaria y si la empresa tiene las capacidades para operarla. Por ejemplo, el E-commerce propio puede canibalizar a los retailers, mientras que el B2B puede generar migraciones de volumen. ¡Es un rompecabezas estratégico!",
         "bullets": [
-          "Marketing digital (Facebook Ads)",
-          "Captación de clientes",
-          "Crecimiento rápido: $20M en ventas",
-          "Valoración de $200M+"
+          "Crecimiento vs. Canibalización",
+          "Impacto en la red de distribución actual",
+          "Capacidades operativas internas",
+          "Rentabilidad a largo plazo"
         ],
-        "duration": 639,
-        "audioUrl": "/storage/course_1782762584443/audio/scene_4.wav",
-        "topic": "Hubble Contact Lenses: Marketing Directo al Consumidor (DTC)"
+        "quiz": [
+          {
+            "type": "single",
+            "question": "¿Qué riesgo principal implica el desarrollo de un E-commerce propio (DTC) para V&Co?",
+            "options": [
+              "Aumento de la rentabilidad sin riesgos",
+              "Alto riesgo de conflicto de canal y canibalización",
+              "Mejora automática de la propuesta de valor",
+              "Facilidad de operación sin nuevas capacidades"
+            ],
+            "correctAnswer": 1,
+            "explanation": "El texto menciona que el E-commerce propio 'supone un alto riesgo de conflicto de canal, ya que implicaría competir frontalmente contra las plataformas digitales de los grandes retailers y canibalizar el incipiente ecosistema online de los distribuidores minoristas'."
+          },
+          {
+            "type": "single",
+            "question": "¿Qué se proyecta para la estrategia B2B en cuanto a las unidades vendidas en la región norte?",
+            "options": [
+              "Una disminución del 10%",
+              "Un incremento del 20%",
+              "Sin cambios significativos",
+              "Una migración del 5% del volumen"
+            ],
+            "correctAnswer": 1,
+            "explanation": "La estrategia B2B 'proyecta un incremento del 20% en las unidades vendidas de dicha zona'."
+          }
+        ],
+        "drawing": [
+          {
+            "type": "line",
+            "x1": 200,
+            "y1": 50,
+            "x2": 200,
+            "y2": 350,
+            "color": "ink",
+            "w": 3
+          },
+          {
+            "type": "line",
+            "x1": 50,
+            "y1": 200,
+            "x2": 350,
+            "y2": 200,
+            "color": "ink",
+            "w": 3
+          },
+          {
+            "type": "text",
+            "x": 200,
+            "y": 30,
+            "text": "Oportunidades",
+            "color": "green",
+            "size": 20,
+            "bold": true
+          },
+          {
+            "type": "text",
+            "x": 200,
+            "y": 370,
+            "text": "Riesgos",
+            "color": "red",
+            "size": 20,
+            "bold": true
+          },
+          {
+            "type": "text",
+            "x": 370,
+            "y": 200,
+            "text": "Crecimiento",
+            "color": "green",
+            "size": 20,
+            "bold": true
+          },
+          {
+            "type": "text",
+            "x": 30,
+            "y": 200,
+            "text": "Conflicto",
+            "color": "red",
+            "size": 20,
+            "bold": true
+          },
+          {
+            "type": "dot",
+            "cx": 100,
+            "cy": 100,
+            "r": 15,
+            "color": "red"
+          },
+          {
+            "type": "text",
+            "x": 100,
+            "y": 100,
+            "text": "MP",
+            "color": "white",
+            "size": 14
+          },
+          {
+            "type": "dot",
+            "cx": 300,
+            "cy": 150,
+            "r": 15,
+            "color": "green"
+          },
+          {
+            "type": "text",
+            "x": 300,
+            "y": 150,
+            "text": "DTC",
+            "color": "white",
+            "size": 14
+          },
+          {
+            "type": "dot",
+            "cx": 250,
+            "cy": 250,
+            "r": 15,
+            "color": "orange"
+          },
+          {
+            "type": "text",
+            "x": 250,
+            "y": 250,
+            "text": "B2B",
+            "color": "white",
+            "size": 14
+          }
+        ],
+        "duration": 742,
+        "audioUrl": "/storage/course_1782780237934_0/audio/scene_4.wav",
+        "topic": "V&Co: Estrategias de Distribución Digital"
       },
       {
         "id": 5,
         "type": "closing",
-        "title": "¿Qué Aprendimos de Hubble?",
-        "subtitle": "Disrupción, marketing y los desafíos del escalado rentable",
-        "narration": "La historia de Hubble nos enseña el poder de la disrupción y el marketing basado en datos. Pero el desafío no termina ahí: escalar de forma rentable y expandir los canales es clave para el éxito a largo plazo. ¿Qué otras industrias crees que necesitan una disrupción así?",
+        "title": "¿Qué camino tomar?",
+        "subtitle": "Decidiendo el futuro digital de V&Co para mantener su liderazgo.",
+        "narration": "Entonces, ¿cómo avanza V&Co? No es solo cuestión de ventas, sino de si la propuesta de valor digital es realmente superior, si la rentabilidad justifica los riesgos, si la empresa tiene las capacidades necesarias y qué otros factores externos pueden influir. La decisión final debe ser estratégica, buscando capitalizar las oportunidades digitales sin sacrificar el posicionamiento premium de la marca ni la relación con su red actual. ¡Un gran desafío!",
         "bullets": [
-          "Poder del modelo DTC",
-          "Marketing digital clave",
-          "Desafío: escalar de forma rentable",
-          "Diversificar canales de marketing"
+          "Evaluar propuesta de valor digital",
+          "Analizar rentabilidad vs. riesgos",
+          "Verificar capacidades operativas",
+          "Proteger posicionamiento premium y red"
         ],
-        "duration": 525,
-        "audioUrl": "/storage/course_1782762584443/audio/scene_5.wav",
-        "topic": "Hubble Contact Lenses: Marketing Directo al Consumidor (DTC)"
+        "quiz": [
+          {
+            "type": "single",
+            "question": "¿Qué pregunta clave debería hacerse V&Co al evaluar una alternativa digital?",
+            "options": [
+              "¿Solo importan las ventas, sin considerar la rentabilidad?",
+              "¿La propuesta de valor es superior a la tradicional?",
+              "¿La empresa ya tiene todas las capacidades operativas?",
+              "¿Qué tan rápido podemos implementarla sin planificar?"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Una de las preguntas clave para el debate es '¿Qué V&Co aumente sus ventas en unidades luego de implementar una alternativa digital, implica que la propuesta de valor es superior a la tradicional?'"
+          },
+          {
+            "type": "single",
+            "question": "¿Una rentabilidad positiva siempre valida la implementación de un canal?",
+            "options": [
+              "Sí, siempre",
+              "No, hay otros factores a considerar",
+              "Solo si las ventas son muy altas",
+              "Solo si no hay conflicto de canal"
+            ],
+            "correctAnswer": 1,
+            "explanation": "La pregunta de debate es '¿Una rentabilidad positiva siempre valida la implementación de un canal?', sugiriendo que la respuesta es no, y que se deben considerar otros factores."
+          }
+        ],
+        "drawing": [
+          {
+            "type": "path",
+            "d": "M 200 370 Q 100 300 100 200 Q 100 100 200 30 Q 300 100 300 200 Q 300 300 200 370",
+            "color": "accent",
+            "fill": false,
+            "w": 4
+          },
+          {
+            "type": "text",
+            "x": 200,
+            "y": 200,
+            "text": "¿DECISIÓN?",
+            "color": "ink",
+            "size": 30,
+            "bold": true
+          },
+          {
+            "type": "arrow",
+            "x1": 200,
+            "y1": 170,
+            "x2": 150,
+            "y2": 100,
+            "color": "green",
+            "w": 3
+          },
+          {
+            "type": "arrow",
+            "x1": 200,
+            "y1": 170,
+            "x2": 250,
+            "y2": 100,
+            "color": "red",
+            "w": 3
+          },
+          {
+            "type": "text",
+            "x": 150,
+            "y": 80,
+            "text": "ÉXITO",
+            "color": "green",
+            "size": 18
+          },
+          {
+            "type": "text",
+            "x": 250,
+            "y": 80,
+            "text": "RIESGO",
+            "color": "red",
+            "size": 18
+          },
+          {
+            "type": "line",
+            "x1": 100,
+            "y1": 200,
+            "x2": 300,
+            "y2": 200,
+            "color": "ink",
+            "w": 2
+          },
+          {
+            "type": "text",
+            "x": 100,
+            "y": 220,
+            "text": "Pro. Valor",
+            "color": "ink",
+            "size": 16
+          },
+          {
+            "type": "text",
+            "x": 300,
+            "y": 220,
+            "text": "Capacidades",
+            "color": "ink",
+            "size": 16
+          },
+          {
+            "type": "dot",
+            "cx": 200,
+            "cy": 270,
+            "r": 8,
+            "color": "ink"
+          },
+          {
+            "type": "text",
+            "x": 200,
+            "y": 290,
+            "text": "Rentabilidad",
+            "color": "ink",
+            "size": 16
+          }
+        ],
+        "duration": 915,
+        "audioUrl": "/storage/course_1782780237934_0/audio/scene_5.wav",
+        "topic": "V&Co: Estrategias de Distribución Digital"
       }
     ],
-    "createdAt": "2026-06-29T19:49:44.443Z"
+    "createdAt": "2026-06-30T00:43:57.934Z"
+  },
+  "course_1782825433537_0": {
+    "id": "course_1782825433537_0",
+    "title": "V&Co: Redefiniendo la distribución digital",
+    "description": "V&Co: Distribución Digital · El Problema: Conflicto de Canal · ¿Cómo Adaptarse al Digital? · Opciones Digitales para V&Co · Conclusiones y Próximos Pasos",
+    "status": "ready",
+    "source": "file",
+    "scenes": [
+      {
+        "id": 1,
+        "type": "title",
+        "title": "V&Co: Distribución Digital",
+        "subtitle": "Redefiniendo el futuro en un mercado maduro",
+        "narration": "¡Hola! Hoy vamos a analizar el caso de V&Co, una empresa líder en tecnología residencial de alta gama. Imaginate productos súper exclusivos, elegidos por arquitectos para proyectos top. V&Co se posiciona como el estándar de calidad, lo que les permite tener precios premium en un mercado que mueve medio millón de unidades al año, capturando un 30% del mismo.",
+        "bullets": [
+          "Tecnología residencial de alta gama",
+          "Posicionamiento premium consolidado",
+          "Mercado maduro (30% cuota)"
+        ],
+        "quiz": [
+          {
+            "type": "single",
+            "question": "¿Cuál es el principal tipo de producto de V&Co?",
+            "options": [
+              "Tecnología residencial de alta gama",
+              "Electrodomésticos de línea blanca",
+              "Muebles de diseño exclusivos",
+              "Software empresarial"
+            ],
+            "correctAnswer": 0,
+            "explanation": "V&Co se especializa en tecnología residencial de alta gama para proyectos exclusivos."
+          },
+          {
+            "type": "single",
+            "question": "¿Cómo se describe el posicionamiento de V&Co en el mercado?",
+            "options": [
+              "Económico y accesible",
+              "Competitivo en precios",
+              "Premium y de máxima calidad",
+              "Innovador pero poco conocido"
+            ],
+            "correctAnswer": 2,
+            "explanation": "La compañía ostenta un claro posicionamiento premium, consolidándose como el estándar de máxima calidad del sector."
+          }
+        ],
+        "drawing": [
+          {
+            "type": "rect",
+            "x": 100,
+            "y": 200,
+            "w": 3,
+            "h": 150,
+            "color": "ink",
+            "fill": false
+          },
+          {
+            "type": "poly",
+            "points": [
+              [
+                100,
+                200
+              ],
+              [
+                200,
+                100
+              ],
+              [
+                300,
+                200
+              ]
+            ],
+            "color": "ink",
+            "fill": false,
+            "w": 3
+          },
+          {
+            "type": "text",
+            "x": 200,
+            "y": 280,
+            "text": "V&Co",
+            "color": "accent",
+            "size": 40,
+            "bold": true
+          },
+          {
+            "type": "path",
+            "d": "M 150 140 Q 200 120 250 140 Q 250 160 200 180 Q 150 160 150 140 Z",
+            "color": "yellow",
+            "fill": true
+          },
+          {
+            "type": "text",
+            "x": 200,
+            "y": 155,
+            "text": "PREMIUM",
+            "color": "ink",
+            "size": 18,
+            "bold": true
+          },
+          {
+            "type": "circle",
+            "cx": 60,
+            "cy": 340,
+            "r": 25,
+            "color": "green",
+            "fill": false,
+            "w": 3
+          },
+          {
+            "type": "text",
+            "x": 60,
+            "y": 345,
+            "text": "30%",
+            "color": "green",
+            "size": 24,
+            "bold": true
+          },
+          {
+            "type": "text",
+            "x": 140,
+            "y": 345,
+            "text": "Market Share",
+            "color": "ink",
+            "size": 20
+          }
+        ],
+        "duration": 750,
+        "audioUrl": "/storage/course_1782825433537_0/audio/scene_1.wav",
+        "topic": "V&Co: Redefiniendo la distribución digital"
+      },
+      {
+        "id": 2,
+        "type": "problem",
+        "title": "El Problema: Conflicto de Canal",
+        "subtitle": "Precios perforados, reputación diluida y reclamos de clientes",
+        "narration": "Pero no todo es color de rosa. V&Co distribuye sus productos por canales tradicionales: grandes retailers, grandes obras y distribuidores. El problema surge cuando un distribuidor del Norte empieza a vender en marketplaces online, ¡perforando el precio sugerido! Esto diluye la marca, la equipara con productos de menor calidad y genera reclamos.",
+        "bullets": [
+          "Distribución tradicional",
+          "Distribuidor Norte vende online bajo precio",
+          "Dilución de marca y reclamos",
+          "Competencia avanza en digital"
+        ],
+        "quiz": [
+          {
+            "type": "single",
+            "question": "¿Cuál de los siguientes canales no es tradicional para V&Co?",
+            "options": [
+              "Grandes Retailers",
+              "Grandes Obras",
+              "Distribuidores",
+              "Marketplaces online"
+            ],
+            "correctAnswer": 3,
+            "explanation": "Marketplaces online es el canal donde se detectó la venta irregular, no un canal tradicional para V&Co."
+          },
+          {
+            "type": "single",
+            "question": "¿Qué consecuencia tuvo la venta por debajo del precio sugerido?",
+            "options": [
+              "Aumento de la rentabilidad",
+              "Fortalecimiento del posicionamiento premium",
+              "Dilución de la marca y reclamos de clientes",
+              "Expansión a nuevos mercados"
+            ],
+            "correctAnswer": 2,
+            "explanation": "La perforación de precios diluyó el posicionamiento de la marca y generó reclamos."
+          }
+        ],
+        "drawing": [
+          {
+            "type": "rect",
+            "x": 100,
+            "y": 150,
+            "w": 3,
+            "h": 100,
+            "color": "ink",
+            "fill": false
+          },
+          {
+            "type": "text",
+            "x": 200,
+            "y": 195,
+            "text": "Precio Sugerido",
+            "color": "ink",
+            "size": 22,
+            "bold": true
+          },
+          {
+            "type": "line",
+            "x1": 100,
+            "y1": 250,
+            "x2": 300,
+            "y2": 250,
+            "color": "ink",
+            "w": 2
+          },
+          {
+            "type": "line",
+            "x1": 150,
+            "y1": 200,
+            "x2": 250,
+            "y2": 200,
+            "color": "ink",
+            "w": 2
+          },
+          {
+            "type": "arrow",
+            "x1": 200,
+            "y1": 280,
+            "x2": 200,
+            "y2": 350,
+            "color": "red",
+            "w": 5
+          },
+          {
+            "type": "path",
+            "d": "M 150 320 Q 170 300 200 320 Q 230 300 250 320",
+            "color": "red",
+            "w": 4
+          },
+          {
+            "type": "text",
+            "x": 200,
+            "y": 380,
+            "text": "PRECIO BAJO",
+            "color": "red",
+            "size": 28,
+            "bold": true
+          },
+          {
+            "type": "line",
+            "x1": 100,
+            "y1": 300,
+            "x2": 300,
+            "y2": 100,
+            "color": "red",
+            "w": 5
+          },
+          {
+            "type": "line",
+            "x1": 100,
+            "y1": 100,
+            "x2": 300,
+            "y2": 300,
+            "color": "red",
+            "w": 5
+          },
+          {
+            "type": "rect",
+            "x": 50,
+            "y": 50,
+            "w": 2,
+            "h": 50,
+            "color": "ink",
+            "fill": false
+          },
+          {
+            "type": "text",
+            "x": 90,
+            "y": 75,
+            "text": "WEB",
+            "color": "accent",
+            "size": 20
+          }
+        ],
+        "duration": 741,
+        "audioUrl": "/storage/course_1782825433537_0/audio/scene_2.wav",
+        "topic": "V&Co: Redefiniendo la distribución digital"
+      },
+      {
+        "id": 3,
+        "type": "solution",
+        "title": "¿Cómo Adaptarse al Digital?",
+        "subtitle": "Estrategias para capitalizar nuevas oportunidades",
+        "narration": "Este conflicto digital es un llamado de atención. V&Co no puede seguir ignorando el entorno online. Necesita una estrategia que no solo capitalice las oportunidades digitales, sino que también aporte valor a su red de distribución actual. La clave es encontrar el equilibrio y la forma correcta de entrar al juego digital, sin generar nuevos conflictos.",
+        "bullets": [
+          "No ignorar el entorno digital",
+          "Capitalizar oportunidades online",
+          "Aportar valor a la red actual",
+          "Minimizar conflictos de canal"
+        ],
+        "quiz": [
+          {
+            "type": "single",
+            "question": "¿Cuál es la principal razón por la que V&Co debe adoptar una estrategia digital?",
+            "options": [
+              "Para reducir sus costos operativos generales",
+              "Para ignorar a la competencia online",
+              "Para capitalizar oportunidades y resolver conflictos de canal",
+              "Para enfocarse exclusivamente en la venta directa"
+            ],
+            "correctAnswer": 2,
+            "explanation": "La estrategia digital busca capitalizar oportunidades y aportar valor a la red actual, minimizando los conflictos."
+          },
+          {
+            "type": "single",
+            "question": "¿Qué debe buscar la estrategia digital de V&Co en relación con su red de distribución actual?",
+            "options": [
+              "Reemplazarla completamente",
+              "Ignorarla y crear una nueva",
+              "Aportar valor y minimizar conflictos",
+              "Competir directamente con ella"
+            ],
+            "correctAnswer": 2,
+            "explanation": "La estrategia debe aportar valor a la red actual y buscar el equilibrio para evitar conflictos."
+          }
+        ],
+        "drawing": [
+          {
+            "type": "rect",
+            "x": 50,
+            "y": 200,
+            "w": 3,
+            "h": 100,
+            "color": "ink",
+            "fill": false
+          },
+          {
+            "type": "text",
+            "x": 100,
+            "y": 250,
+            "text": "TRADICIONAL",
+            "color": "ink",
+            "size": 18,
+            "bold": true
+          },
+          {
+            "type": "circle",
+            "cx": 300,
+            "cy": 250,
+            "r": 60,
+            "color": "accent",
+            "fill": false,
+            "w": 3
+          },
+          {
+            "type": "path",
+            "d": "M 270 230 L 280 240 L 270 250 L 280 260 L 270 270",
+            "color": "accent",
+            "w": 2
+          },
+          {
+            "type": "path",
+            "d": "M 330 230 L 320 240 L 330 250 L 320 260 L 330 270",
+            "color": "accent",
+            "w": 2
+          },
+          {
+            "type": "path",
+            "d": "M 280 220 L 290 210 L 300 220 L 310 210 L 320 220",
+            "color": "accent",
+            "w": 2
+          },
+          {
+            "type": "text",
+            "x": 300,
+            "y": 250,
+            "text": "DIGITAL",
+            "color": "accent",
+            "size": 20,
+            "bold": true
+          },
+          {
+            "type": "arrow",
+            "x1": 150,
+            "y1": 250,
+            "x2": 240,
+            "y2": 250,
+            "color": "green",
+            "w": 5
+          },
+          {
+            "type": "text",
+            "x": 200,
+            "y": 100,
+            "text": "¿CÓMO?",
+            "color": "ink",
+            "size": 36,
+            "bold": true
+          }
+        ],
+        "duration": 708,
+        "audioUrl": "/storage/course_1782825433537_0/audio/scene_3.wav",
+        "topic": "V&Co: Redefiniendo la distribución digital"
+      },
+      {
+        "id": 4,
+        "type": "example",
+        "title": "Opciones Digitales para V&Co",
+        "subtitle": "Analizando Marketplace, E-commerce (DTC) y Plataforma B2B",
+        "narration": "V&Co está evaluando varias alternativas digitales. Una es abrir una tienda oficial en un Marketplace, compitiendo con pequeños retailers. Otra es desarrollar su propio E-commerce (DTC), lo que implicaría competir directamente con grandes retailers. Y la tercera, una plataforma B2B para reemplazar al distribuidor del Norte, cada una con sus propios riesgos de canibalización y oportunidades de crecimiento.",
+        "bullets": [
+          "Marketplace (tienda oficial)",
+          "E-commerce (DTC propio)",
+          "Plataforma B2B (reemplazo distribuidor)",
+          "Riesgos: canibalización, conflictos"
+        ],
+        "quiz": [
+          {
+            "type": "single",
+            "question": "¿Qué riesgo principal comparten las opciones de Marketplace y E-commerce (DTC)?",
+            "options": [
+              "Alto costo de desarrollo",
+              "Competencia directa con sus propios canales o socios",
+              "Falta de demanda de productos",
+              "Dificultad para la entrega física"
+            ],
+            "correctAnswer": 1,
+            "explanation": "Ambas opciones implican competir con pequeños retailers o con las plataformas digitales de los grandes retailers."
+          },
+          {
+            "type": "single",
+            "question": "¿Cuál de las siguientes opciones implica reemplazar un distribuidor existente?",
+            "options": [
+              "Tienda oficial en Marketplace",
+              "Desarrollo de E-commerce (DTC)",
+              "Plataforma B2B para la región Norte",
+              "Expansión a nuevos grandes retailers"
+            ],
+            "correctAnswer": 2,
+            "explanation": "La plataforma B2B se propone para sustituir la distribución de la región Norte."
+          }
+        ],
+        "drawing": [
+          {
+            "type": "circle",
+            "cx": 100,
+            "cy": 120,
+            "r": 50,
+            "color": "accent",
+            "fill": false,
+            "w": 3
+          },
+          {
+            "type": "path",
+            "d": "M 80 120 L 120 120 M 100 100 L 100 140 M 90 130 L 110 130",
+            "color": "accent",
+            "w": 2
+          },
+          {
+            "type": "text",
+            "x": 100,
+            "y": 180,
+            "text": "Marketplace",
+            "color": "ink",
+            "size": 18
+          },
+          {
+            "type": "rect",
+            "x": 200,
+            "y": 80,
+            "w": 3,
+            "h": 80,
+            "color": "green",
+            "fill": false
+          },
+          {
+            "type": "path",
+            "d": "M 210 90 L 290 90 M 210 100 L 290 100 M 210 110 L 290 110",
+            "color": "green",
+            "w": 2
+          },
+          {
+            "type": "text",
+            "x": 250,
+            "y": 180,
+            "text": "E-commerce (DTC)",
+            "color": "ink",
+            "size": 18
+          },
+          {
+            "type": "circle",
+            "cx": 200,
+            "cy": 300,
+            "r": 50,
+            "color": "purple",
+            "fill": false,
+            "w": 3
+          },
+          {
+            "type": "line",
+            "x1": 170,
+            "y1": 300,
+            "x2": 230,
+            "y2": 300,
+            "color": "purple",
+            "w": 2
+          },
+          {
+            "type": "line",
+            "x1": 200,
+            "y1": 270,
+            "x2": 200,
+            "y2": 330,
+            "color": "purple",
+            "w": 2
+          },
+          {
+            "type": "text",
+            "x": 200,
+            "y": 360,
+            "text": "Plataforma B2B",
+            "color": "ink",
+            "size": 18
+          },
+          {
+            "type": "arrow",
+            "x1": 100,
+            "y1": 220,
+            "x2": 100,
+            "y2": 270,
+            "color": "red",
+            "w": 3
+          },
+          {
+            "type": "arrow",
+            "x1": 250,
+            "y1": 220,
+            "x2": 250,
+            "y2": 270,
+            "color": "red",
+            "w": 3
+          },
+          {
+            "type": "text",
+            "x": 175,
+            "y": 245,
+            "text": "vs.",
+            "color": "red",
+            "size": 24
+          }
+        ],
+        "duration": 879,
+        "audioUrl": "/storage/course_1782825433537_0/audio/scene_4.wav",
+        "topic": "V&Co: Redefiniendo la distribución digital"
+      },
+      {
+        "id": 5,
+        "type": "closing",
+        "title": "Conclusiones y Próximos Pasos",
+        "subtitle": "Más allá de las ventas: valor, capacidades y riesgos",
+        "narration": "Implementar un canal digital no es solo cuestión de aumentar ventas o rentabilidad. Hay que evaluar si la propuesta de valor es superior, si V&Co tiene las capacidades operativas para gestionarlo y qué otros factores externos pueden influir. Es una decisión estratégica compleja que redefine el futuro de la distribución y el posicionamiento de la marca.",
+        "bullets": [
+          "No solo ventas, sino valor estratégico",
+          "Evaluar capacidades operativas",
+          "Considerar factores externos",
+          "Decisión estratégica clave"
+        ],
+        "quiz": [
+          {
+            "type": "single",
+            "question": "¿Una rentabilidad positiva siempre valida la implementación de un canal digital?",
+            "options": [
+              "Sí, es el único factor relevante",
+              "No, también hay que considerar la propuesta de valor y las capacidades",
+              "Solo si el volumen de ventas es muy alto",
+              "Depende del tipo de producto"
+            ],
+            "correctAnswer": 1,
+            "explanation": "No, una rentabilidad positiva no siempre es suficiente; se deben evaluar otros factores como la propuesta de valor, las capacidades operativas y los riesgos."
+          },
+          {
+            "type": "single",
+            "question": "¿Qué otro factor crucial debe considerar V&Co antes de implementar una estrategia digital?",
+            "options": [
+              "El color del nuevo logo",
+              "La opinión de la competencia directa",
+              "Las capacidades operativas internas para gestionar el canal",
+              "El precio de las acciones en bolsa de los retailers"
+            ],
+            "correctAnswer": 2,
+            "explanation": "Es fundamental evaluar si V&Co ya cuenta con las capacidades necesarias para operar la estrategia digital."
+          }
+        ],
+        "drawing": [
+          {
+            "type": "circle",
+            "cx": 200,
+            "cy": 150,
+            "r": 60,
+            "color": "accent",
+            "fill": false,
+            "w": 3
+          },
+          {
+            "type": "path",
+            "d": "M 180 130 Q 200 110 220 130 Q 220 170 200 190 Q 180 170 180 130",
+            "color": "yellow",
+            "fill": true
+          },
+          {
+            "type": "text",
+            "x": 200,
+            "y": 150,
+            "text": "💡",
+            "color": "ink",
+            "size": 40
+          },
+          {
+            "type": "rect",
+            "x": 80,
+            "y": 250,
+            "w": 3,
+            "h": 80,
+            "color": "ink",
+            "fill": false
+          },
+          {
+            "type": "line",
+            "x1": 80,
+            "y1": 290,
+            "x2": 320,
+            "y2": 290,
+            "color": "ink",
+            "w": 2
+          },
+          {
+            "type": "text",
+            "x": 200,
+            "y": 270,
+            "text": "EVALUAR",
+            "color": "green",
+            "size": 28,
+            "bold": true
+          },
+          {
+            "type": "text",
+            "x": 200,
+            "y": 310,
+            "text": "CAPACIDADES Y RIESGOS",
+            "color": "ink",
+            "size": 18
+          },
+          {
+            "type": "arrow",
+            "x1": 200,
+            "y1": 330,
+            "x2": 200,
+            "y2": 370,
+            "color": "purple",
+            "w": 4
+          },
+          {
+            "type": "text",
+            "x": 200,
+            "y": 385,
+            "text": "ACCIÓN",
+            "color": "purple",
+            "size": 24,
+            "bold": true
+          }
+        ],
+        "duration": 692,
+        "audioUrl": "/storage/course_1782825433537_0/audio/scene_5.wav",
+        "topic": "V&Co: Redefiniendo la distribución digital"
+      }
+    ],
+    "createdAt": "2026-06-30T13:17:13.537Z"
+  },
+  "course_1782826962096_0": {
+    "id": "course_1782826962096_0",
+    "title": "V&Co: Redefiniendo la Distribución Digital",
+    "description": "V&Co: El Desafío Digital · El Problema: Conflictos en el Canal · ¿Cómo Entrar al Mundo Digital? · Analizando las Opciones · Decisiones Estratégicas Clave",
+    "status": "ready",
+    "source": "file",
+    "scenes": [
+      {
+        "id": 1,
+        "type": "title",
+        "title": "V&Co: El Desafío Digital",
+        "subtitle": "Descubrí cómo una marca premium enfrenta la transformación de su distribución.",
+        "narration": "¡Hola a todos! Hoy vamos a explorar el caso de V&Co, una marca líder en tecnología residencial de alta gama que se destaca por su calidad premium. Pero incluso las mejores marcas enfrentan desafíos, especialmente en un mercado que está cambiando rápidamente con la irrupción digital. Acompañanos a ver cómo V&Co busca redefinir su estrategia de distribución.",
+        "bullets": [
+          "V&Co: Tecnología residencial premium",
+          "Líder en calidad y fiabilidad",
+          "Mercado maduro, 30% de cuota",
+          "Desafío digital en la distribución"
+        ],
+        "quiz": [],
+        "drawing": [
+          {
+            "type": "rect",
+            "x": 100,
+            "y": 100,
+            "w": 4,
+            "h": 100,
+            "color": "accent",
+            "fill": false
+          },
+          {
+            "type": "text",
+            "x": 200,
+            "y": 150,
+            "text": "V&Co",
+            "color": "accent",
+            "size": 40,
+            "bold": true
+          },
+          {
+            "type": "line",
+            "x1": 100,
+            "y1": 250,
+            "x2": 300,
+            "y2": 250,
+            "color": "ink",
+            "w": 3
+          },
+          {
+            "type": "circle",
+            "cx": 150,
+            "cy": 250,
+            "r": 15,
+            "color": "green",
+            "fill": true
+          },
+          {
+            "type": "circle",
+            "cx": 250,
+            "cy": 250,
+            "r": 15,
+            "color": "green",
+            "fill": true
+          },
+          {
+            "type": "arrow",
+            "x1": 150,
+            "y1": 270,
+            "x2": 150,
+            "y2": 320,
+            "color": "ink",
+            "w": 3
+          },
+          {
+            "type": "arrow",
+            "x1": 250,
+            "y1": 270,
+            "x2": 250,
+            "y2": 320,
+            "color": "ink",
+            "w": 3
+          },
+          {
+            "type": "text",
+            "x": 200,
+            "y": 350,
+            "text": "Distribución",
+            "color": "ink",
+            "size": 28
+          },
+          {
+            "type": "path",
+            "d": "M 100 370 Q 200 320 300 370",
+            "color": "accent",
+            "w": 4
+          },
+          {
+            "type": "text",
+            "x": 200,
+            "y": 300,
+            "text": "Digital?",
+            "color": "red",
+            "size": 28,
+            "bold": true
+          }
+        ],
+        "duration": 753,
+        "audioUrl": "/storage/course_1782826962096_0/audio/scene_1.wav",
+        "topic": "V&Co: Redefiniendo la Distribución Digital"
+      },
+      {
+        "id": 2,
+        "type": "problem",
+        "title": "El Problema: Conflictos en el Canal",
+        "subtitle": "Un distribuidor 'online' generó un quiebre en la política de precios de V&Co.",
+        "narration": "V&Co siempre manejó una red de distribución tradicional con grandes retailers y distribuidores. Pero algo pasó: se encontraron publicaciones online que vendían sus productos por debajo del precio sugerido. La investigación reveló que uno de sus propios distribuidores, el del Norte, estaba operando bajo un seudónimo en marketplaces, generando un conflicto de canal y diluyendo la imagen premium de la marca.",
+        "bullets": [
+          "Precios 'perforados' online",
+          "Distribuidor del Norte implicado",
+          "Conflicto de canal grave",
+          "Dilución del posicionamiento premium"
+        ],
+        "quiz": [],
+        "drawing": [
+          {
+            "type": "rect",
+            "x": 60,
+            "y": 100,
+            "w": 3,
+            "h": 50,
+            "color": "accent",
+            "fill": false
+          },
+          {
+            "type": "text",
+            "x": 120,
+            "y": 125,
+            "text": "V&Co",
+            "color": "accent",
+            "size": 24,
+            "bold": true
+          },
+          {
+            "type": "arrow",
+            "x1": 120,
+            "y1": 155,
+            "x2": 120,
+            "y2": 200,
+            "color": "ink",
+            "w": 3
+          },
+          {
+            "type": "rect",
+            "x": 30,
+            "y": 200,
+            "w": 3,
+            "h": 50,
+            "color": "green",
+            "fill": false
+          },
+          {
+            "type": "text",
+            "x": 90,
+            "y": 225,
+            "text": "Retailers",
+            "color": "green",
+            "size": 20
+          },
+          {
+            "type": "rect",
+            "x": 180,
+            "y": 200,
+            "w": 3,
+            "h": 50,
+            "color": "purple",
+            "fill": false
+          },
+          {
+            "type": "text",
+            "x": 240,
+            "y": 225,
+            "text": "Distribuidores",
+            "color": "purple",
+            "size": 20
+          },
+          {
+            "type": "line",
+            "x1": 200,
+            "y1": 255,
+            "x2": 200,
+            "y2": 300,
+            "color": "ink",
+            "w": 3
+          },
+          {
+            "type": "circle",
+            "cx": 200,
+            "cy": 320,
+            "r": 25,
+            "color": "red",
+            "fill": true
+          },
+          {
+            "type": "text",
+            "x": 200,
+            "y": 325,
+            "text": "$",
+            "color": "white",
+            "size": 30,
+            "bold": true
+          },
+          {
+            "type": "line",
+            "x1": 220,
+            "y1": 310,
+            "x2": 180,
+            "y2": 330,
+            "color": "white",
+            "w": 4
+          },
+          {
+            "type": "line",
+            "x1": 180,
+            "y1": 310,
+            "x2": 220,
+            "y2": 330,
+            "color": "white",
+            "w": 4
+          },
+          {
+            "type": "text",
+            "x": 200,
+            "y": 370,
+            "text": "¡Precio Bajo!",
+            "color": "red",
+            "size": 26,
+            "bold": true
+          },
+          {
+            "type": "arrow",
+            "x1": 250,
+            "y1": 270,
+            "x2": 280,
+            "y2": 320,
+            "color": "red",
+            "w": 3
+          }
+        ],
+        "duration": 835,
+        "audioUrl": "/storage/course_1782826962096_0/audio/scene_2.wav",
+        "topic": "V&Co: Redefiniendo la Distribución Digital"
+      },
+      {
+        "id": 3,
+        "type": "solution",
+        "title": "¿Cómo Entrar al Mundo Digital?",
+        "subtitle": "V&Co debe elegir entre varias estrategias para el canal digital.",
+        "narration": "Ante este escenario, V&Co ya no puede ignorar el entorno digital. La pregunta clave es cómo capitalizar estas oportunidades sin generar más conflictos. Se plantean tres caminos principales: abrir una tienda oficial en un marketplace, desarrollar un e-commerce propio, o implementar una plataforma B2B. Cada opción tiene sus pros y sus contras, y un impacto diferente en la red de distribución actual.",
+        "bullets": [
+          "No se puede ignorar lo digital",
+          "Estrategias para el nuevo canal",
+          "Marketplace, E-commerce o B2B",
+          "Impacto en la red actual"
+        ],
+        "quiz": [],
+        "drawing": [
+          {
+            "type": "circle",
+            "cx": 200,
+            "cy": 80,
+            "r": 35,
+            "color": "accent",
+            "fill": false,
+            "w": 4
+          },
+          {
+            "type": "text",
+            "x": 200,
+            "y": 85,
+            "text": "V&Co",
+            "color": "accent",
+            "size": 26,
+            "bold": true
+          },
+          {
+            "type": "line",
+            "x1": 200,
+            "y1": 120,
+            "x2": 200,
+            "y2": 160,
+            "color": "ink",
+            "w": 3
+          },
+          {
+            "type": "path",
+            "d": "M 200 160 L 100 220 L 300 220 Z",
+            "color": "ink",
+            "fill": false,
+            "w": 3
+          },
+          {
+            "type": "line",
+            "x1": 100,
+            "y1": 220,
+            "x2": 100,
+            "y2": 270,
+            "color": "ink",
+            "w": 3
+          },
+          {
+            "type": "line",
+            "x1": 200,
+            "y1": 220,
+            "x2": 200,
+            "y2": 270,
+            "color": "ink",
+            "w": 3
+          },
+          {
+            "type": "line",
+            "x1": 300,
+            "y1": 220,
+            "x2": 300,
+            "y2": 270,
+            "color": "ink",
+            "w": 3
+          },
+          {
+            "type": "rect",
+            "x": 50,
+            "y": 270,
+            "w": 3,
+            "h": 50,
+            "color": "green",
+            "fill": false
+          },
+          {
+            "type": "text",
+            "x": 100,
+            "y": 295,
+            "text": "Marketplace",
+            "color": "green",
+            "size": 18
+          },
+          {
+            "type": "rect",
+            "x": 150,
+            "y": 270,
+            "w": 3,
+            "h": 50,
+            "color": "purple",
+            "fill": false
+          },
+          {
+            "type": "text",
+            "x": 200,
+            "y": 295,
+            "text": "E-commerce",
+            "color": "purple",
+            "size": 18
+          },
+          {
+            "type": "rect",
+            "x": 250,
+            "y": 270,
+            "w": 3,
+            "h": 50,
+            "color": "orange",
+            "fill": false
+          },
+          {
+            "type": "text",
+            "x": 300,
+            "y": 295,
+            "text": "B2B",
+            "color": "orange",
+            "size": 18
+          },
+          {
+            "type": "text",
+            "x": 200,
+            "y": 350,
+            "text": "¿Qué camino tomar?",
+            "color": "ink",
+            "size": 28,
+            "bold": true
+          }
+        ],
+        "duration": 909,
+        "audioUrl": "/storage/course_1782826962096_0/audio/scene_3.wav",
+        "topic": "V&Co: Redefiniendo la Distribución Digital"
+      },
+      {
+        "id": 4,
+        "type": "example",
+        "title": "Analizando las Opciones",
+        "subtitle": "Cada estrategia digital tiene un impacto único en ventas, rentabilidad y conflictos.",
+        "narration": "Por ejemplo, un marketplace oficial promete crecer un 10%, pero compite con los pequeños retailers. Un e-commerce propio podría sumar un 5% de ventas, pero el riesgo de conflicto con grandes retailers es alto. Y una plataforma B2B para la región Norte podría incrementar un 20% en esa zona, pero canibalizaría parte de las ventas del distribuidor del Sur. Es clave evaluar cada detalle.",
+        "bullets": [
+          "Marketplace: +10% ventas, conflicto minorista",
+          "E-commerce: +5% ventas, alto riesgo de conflicto",
+          "B2B: +20% (Norte), -10% (Sur), canibalización",
+          "Evaluar impacto en rentabilidad y canal"
+        ],
+        "quiz": [],
+        "drawing": [
+          {
+            "type": "line",
+            "x1": 100,
+            "y1": 200,
+            "x2": 300,
+            "y2": 200,
+            "color": "ink",
+            "w": 4
+          },
+          {
+            "type": "poly",
+            "points": [
+              [
+                100,
+                180
+              ],
+              [
+                120,
+                160
+              ],
+              [
+                140,
+                180
+              ]
+            ],
+            "color": "green",
+            "fill": true
+          },
+          {
+            "type": "text",
+            "x": 120,
+            "y": 140,
+            "text": "+10%",
+            "color": "green",
+            "size": 20
+          },
+          {
+            "type": "poly",
+            "points": [
+              [
+                180,
+                180
+              ],
+              [
+                200,
+                160
+              ],
+              [
+                220,
+                180
+              ]
+            ],
+            "color": "green",
+            "fill": true
+          },
+          {
+            "type": "text",
+            "x": 200,
+            "y": 140,
+            "text": "+5%",
+            "color": "green",
+            "size": 20
+          },
+          {
+            "type": "poly",
+            "points": [
+              [
+                260,
+                180
+              ],
+              [
+                280,
+                160
+              ],
+              [
+                300,
+                180
+              ]
+            ],
+            "color": "green",
+            "fill": true
+          },
+          {
+            "type": "text",
+            "x": 280,
+            "y": 140,
+            "text": "+20%",
+            "color": "green",
+            "size": 20
+          },
+          {
+            "type": "poly",
+            "points": [
+              [
+                100,
+                220
+              ],
+              [
+                120,
+                240
+              ],
+              [
+                140,
+                220
+              ]
+            ],
+            "color": "red",
+            "fill": true
+          },
+          {
+            "type": "text",
+            "x": 120,
+            "y": 260,
+            "text": "Conflicto",
+            "color": "red",
+            "size": 18
+          },
+          {
+            "type": "poly",
+            "points": [
+              [
+                180,
+                220
+              ],
+              [
+                200,
+                240
+              ],
+              [
+                220,
+                220
+              ]
+            ],
+            "color": "red",
+            "fill": true
+          },
+          {
+            "type": "text",
+            "x": 200,
+            "y": 260,
+            "text": "Alto Riesgo",
+            "color": "red",
+            "size": 18
+          },
+          {
+            "type": "poly",
+            "points": [
+              [
+                260,
+                220
+              ],
+              [
+                280,
+                240
+              ],
+              [
+                300,
+                220
+              ]
+            ],
+            "color": "red",
+            "fill": true
+          },
+          {
+            "type": "text",
+            "x": 280,
+            "y": 260,
+            "text": "-10%",
+            "color": "red",
+            "size": 18
+          },
+          {
+            "type": "rect",
+            "x": 50,
+            "y": 300,
+            "w": 3,
+            "h": 50,
+            "color": "accent",
+            "fill": false
+          },
+          {
+            "type": "text",
+            "x": 100,
+            "y": 325,
+            "text": "Marketplace",
+            "color": "accent",
+            "size": 16
+          },
+          {
+            "type": "rect",
+            "x": 150,
+            "y": 300,
+            "w": 3,
+            "h": 50,
+            "color": "accent",
+            "fill": false
+          },
+          {
+            "type": "text",
+            "x": 200,
+            "y": 325,
+            "text": "E-commerce",
+            "color": "accent",
+            "size": 16
+          },
+          {
+            "type": "rect",
+            "x": 250,
+            "y": 300,
+            "w": 3,
+            "h": 50,
+            "color": "accent",
+            "fill": false
+          },
+          {
+            "type": "text",
+            "x": 300,
+            "y": 325,
+            "text": "B2B",
+            "color": "accent",
+            "size": 16
+          }
+        ],
+        "duration": 866,
+        "audioUrl": "/storage/course_1782826962096_0/audio/scene_4.wav",
+        "topic": "V&Co: Redefiniendo la Distribución Digital"
+      },
+      {
+        "id": 5,
+        "type": "closing",
+        "title": "Decisiones Estratégicas Clave",
+        "subtitle": "La implementación de canales digitales va más allá de las ventas.",
+        "narration": "La decisión de V&Co no es solo sobre aumentar las ventas, sino sobre mantener su propuesta de valor premium, asegurar la rentabilidad y evaluar si cuenta con las capacidades operativas para cada estrategia digital. Es un balance complejo entre crecimiento, riesgo de canibalización y el fortalecimiento de la red de distribución. ¿Cuál será la mejor jugada para V&Co?",
+        "bullets": [
+          "Más allá de las ventas: valor y rentabilidad",
+          "Capacidades operativas necesarias",
+          "Balance entre crecimiento y conflicto",
+          "¡Momento de una decisión estratégica!"
+        ],
+        "quiz": [],
+        "drawing": [
+          {
+            "type": "circle",
+            "cx": 200,
+            "cy": 120,
+            "r": 40,
+            "color": "accent",
+            "fill": false,
+            "w": 4
+          },
+          {
+            "type": "text",
+            "x": 200,
+            "y": 125,
+            "text": "V&Co",
+            "color": "accent",
+            "size": 30,
+            "bold": true
+          },
+          {
+            "type": "line",
+            "x1": 100,
+            "y1": 200,
+            "x2": 300,
+            "y2": 200,
+            "color": "ink",
+            "w": 3
+          },
+          {
+            "type": "line",
+            "x1": 200,
+            "y1": 150,
+            "x2": 200,
+            "y2": 250,
+            "color": "ink",
+            "w": 3
+          },
+          {
+            "type": "text",
+            "x": 150,
+            "y": 180,
+            "text": "Crecimiento",
+            "color": "green",
+            "size": 20
+          },
+          {
+            "type": "text",
+            "x": 250,
+            "y": 180,
+            "text": "Riesgo",
+            "color": "red",
+            "size": 20
+          },
+          {
+            "type": "text",
+            "x": 150,
+            "y": 220,
+            "text": "Rentabilidad",
+            "color": "purple",
+            "size": 20
+          },
+          {
+            "type": "text",
+            "x": 250,
+            "y": 220,
+            "text": "Capacidad",
+            "color": "orange",
+            "size": 20
+          },
+          {
+            "type": "path",
+            "d": "M 100 280 Q 200 320 300 280",
+            "color": "ink",
+            "w": 3
+          },
+          {
+            "type": "line",
+            "x1": 100,
+            "y1": 280,
+            "x2": 100,
+            "y2": 330,
+            "color": "ink",
+            "w": 3
+          },
+          {
+            "type": "line",
+            "x1": 300,
+            "y1": 280,
+            "x2": 300,
+            "y2": 330,
+            "color": "ink",
+            "w": 3
+          },
+          {
+            "type": "line",
+            "x1": 100,
+            "y1": 330,
+            "x2": 300,
+            "y2": 330,
+            "color": "ink",
+            "w": 3
+          },
+          {
+            "type": "text",
+            "x": 200,
+            "y": 305,
+            "text": "Estrategia Digital",
+            "color": "accent",
+            "size": 24,
+            "bold": true
+          }
+        ],
+        "duration": 793,
+        "audioUrl": "/storage/course_1782826962096_0/audio/scene_5.wav",
+        "topic": "V&Co: Redefiniendo la Distribución Digital"
+      }
+    ],
+    "createdAt": "2026-06-30T13:42:42.096Z"
+  },
+  "course_1782850925972_0": {
+    "id": "course_1782850925972_0",
+    "title": "V&Co: Estrategias Digitales para Redefinir la Distribución",
+    "description": "V&Co: Redefiniendo la Distribución · El Desafío Digital de V&Co · Estrategias Digitales para V&Co · Opción 1: Tienda Oficial en Marketplace · Opciones 2 y 3: E-Commerce y B2B · Claves para la Decisión Estratégica",
+    "status": "content_ready",
+    "source": "file",
+    "boardStyle": "classic",
+    "scorm": false,
+    "scenes": [
+      {
+        "id": 1,
+        "type": "title",
+        "title": "V&Co: Redefiniendo la Distribución",
+        "subtitle": "Navegando los desafíos de un mercado maduro",
+        "narration": "Hola a todos. Hoy vamos a explorar el caso de V&Co, una empresa líder en tecnología residencial de alta gama. V&Co se destaca por su calidad y fiabilidad, siendo la elección preferida en proyectos exclusivos. Sin embargo, incluso en un mercado maduro y con un posicionamiento premium, surgen nuevos desafíos. Acompáñennos a descubrir cómo V&Co puede redefinir su estrategia de distribución.",
+        "bullets": [
+          "V&Co: Tecnología residencial premium",
+          "Líder en calidad y fiabilidad",
+          "Desafíos en un mercado maduro",
+          "Necesidad de redefinir distribución"
+        ],
+        "quiz": [],
+        "drawing": [
+          {
+            "type": "text",
+            "x": 180,
+            "y": 100,
+            "text": "V&Co",
+            "color": "accent",
+            "size": 48,
+            "bold": true
+          },
+          {
+            "type": "path",
+            "d": "M 100 200 A 80 80 0 1 1 300 200 A 80 80 0 1 1 100 200",
+            "color": "ink",
+            "w": 3
+          },
+          {
+            "type": "circle",
+            "cx": 200,
+            "cy": 200,
+            "r": 20,
+            "color": "ink",
+            "fill": true
+          },
+          {
+            "type": "rect",
+            "x": 160,
+            "y": 190,
+            "w": 80,
+            "h": 20,
+            "color": "ink",
+            "fill": true
+          },
+          {
+            "type": "rect",
+            "x": 190,
+            "y": 160,
+            "w": 20,
+            "h": 80,
+            "color": "ink",
+            "fill": true
+          },
+          {
+            "type": "arrow",
+            "x1": 200,
+            "y1": 280,
+            "x2": 200,
+            "y2": 340,
+            "color": "green",
+            "w": 4
+          },
+          {
+            "type": "arrow",
+            "x1": 140,
+            "y1": 280,
+            "x2": 100,
+            "y2": 320,
+            "color": "green",
+            "w": 4
+          },
+          {
+            "type": "arrow",
+            "x1": 260,
+            "y1": 280,
+            "x2": 300,
+            "y2": 320,
+            "color": "green",
+            "w": 4
+          },
+          {
+            "type": "text",
+            "x": 200,
+            "y": 370,
+            "text": "ESTRATEGIA",
+            "color": "ink",
+            "size": 24,
+            "bold": true
+          }
+        ],
+        "duration": 540,
+        "audioUrl": null,
+        "topic": "V&Co: Estrategias Digitales para Redefinir la Distribución"
+      },
+      {
+        "id": 2,
+        "type": "problem",
+        "title": "El Desafío Digital de V&Co",
+        "subtitle": "Conflicto de canal y dilución de marca",
+        "narration": "V&Co opera en un mercado que moviliza 500.000 unidades anuales, manteniendo una cuota del 30% con precios superiores. Su distribución tradicional se basa en grandes retailers, obras y distribuidores. Sin embargo, reclamos por precios bajos en marketplaces revelaron que un distribuidor estaba socavando el posicionamiento premium de la marca. Esto puso en evidencia la urgencia de abordar el entorno digital desatendido.",
+        "bullets": [
+          "Mercado maduro, posicionamiento premium",
+          "Canales tradicionales: Retailers, Obras, Distribuidores",
+          "Reclamos por precios bajos en marketplaces",
+          "Distribuidor del Norte: Conflicto de canal"
+        ],
+        "quiz": [],
+        "drawing": [
+          {
+            "type": "line",
+            "x1": 50,
+            "y1": 350,
+            "x2": 350,
+            "y2": 350,
+            "color": "ink",
+            "w": 2
+          },
+          {
+            "type": "line",
+            "x1": 50,
+            "y1": 350,
+            "x2": 50,
+            "y2": 100,
+            "color": "ink",
+            "w": 2
+          },
+          {
+            "type": "rect",
+            "x": 70,
+            "y": 200,
+            "w": 50,
+            "h": 150,
+            "color": "accent",
+            "fill": true
+          },
+          {
+            "type": "rect",
+            "x": 130,
+            "y": 250,
+            "w": 50,
+            "h": 100,
+            "color": "ink",
+            "fill": true
+          },
+          {
+            "type": "rect",
+            "x": 190,
+            "y": 280,
+            "w": 50,
+            "h": 70,
+            "color": "ink",
+            "fill": true
+          },
+          {
+            "type": "text",
+            "x": 95,
+            "y": 180,
+            "text": "30%",
+            "color": "white",
+            "size": 20,
+            "bold": true
+          },
+          {
+            "type": "rect",
+            "x": 250,
+            "y": 150,
+            "w": 3,
+            "h": 150,
+            "color": "ink",
+            "fill": false
+          },
+          {
+            "type": "line",
+            "x1": 250,
+            "y1": 150,
+            "x2": 350,
+            "y2": 300,
+            "color": "red",
+            "w": 4
+          },
+          {
+            "type": "line",
+            "x1": 250,
+            "y1": 300,
+            "x2": 350,
+            "y2": 150,
+            "color": "red",
+            "w": 4
+          },
+          {
+            "type": "text",
+            "x": 300,
+            "y": 120,
+            "text": "$ PRECIO",
+            "color": "red",
+            "size": 20,
+            "bold": true
+          },
+          {
+            "type": "circle",
+            "cx": 270,
+            "cy": 100,
+            "r": 30,
+            "color": "ink",
+            "fill": false,
+            "w": 3
+          },
+          {
+            "type": "line",
+            "x1": 290,
+            "y1": 120,
+            "x2": 330,
+            "y2": 160,
+            "color": "ink",
+            "w": 3
+          }
+        ],
+        "duration": 540,
+        "audioUrl": null,
+        "topic": "V&Co: Estrategias Digitales para Redefinir la Distribución"
+      },
+      {
+        "id": 3,
+        "type": "solution",
+        "title": "Estrategias Digitales para V&Co",
+        "subtitle": "Oportunidades para agregar valor a la distribución actual",
+        "narration": "Ante este escenario, V&Co debe implementar una estrategia que capitalice las oportunidades del entorno digital, pero que también agregue valor a su red de distribución existente. No se trata solo de vender más, sino de hacerlo de forma sostenible, protegiendo su posicionamiento premium. Es fundamental evaluar cómo cada alternativa digital impacta la marca y los canales actuales.",
+        "bullets": [
+          "Capitalizar oportunidades digitales",
+          "Agregar valor a la red actual",
+          "Proteger el posicionamiento premium",
+          "Evaluar impacto en marca y canales"
+        ],
+        "quiz": [],
+        "drawing": [
+          {
+            "type": "path",
+            "d": "M 200 80 Q 230 50 260 80 Q 290 110 260 140 Q 230 170 230 190 L 230 220",
+            "color": "ink",
+            "w": 5
+          },
+          {
+            "type": "dot",
+            "cx": 230,
+            "cy": 250,
+            "r": 15,
+            "color": "ink"
+          },
+          {
+            "type": "circle",
+            "cx": 100,
+            "cy": 300,
+            "r": 30,
+            "color": "accent",
+            "fill": true
+          },
+          {
+            "type": "text",
+            "x": 100,
+            "y": 305,
+            "text": "🛒",
+            "color": "white",
+            "size": 28
+          },
+          {
+            "type": "circle",
+            "cx": 200,
+            "cy": 300,
+            "r": 30,
+            "color": "green",
+            "fill": true
+          },
+          {
+            "type": "text",
+            "x": 200,
+            "y": 305,
+            "text": "🌐",
+            "color": "white",
+            "size": 28
+          },
+          {
+            "type": "circle",
+            "cx": 300,
+            "cy": 300,
+            "r": 30,
+            "color": "purple",
+            "fill": true
+          },
+          {
+            "type": "text",
+            "x": 300,
+            "y": 305,
+            "text": "⚙️",
+            "color": "white",
+            "size": 28
+          },
+          {
+            "type": "arrow",
+            "x1": 230,
+            "y1": 260,
+            "x2": 100,
+            "y2": 270,
+            "color": "ink",
+            "w": 3
+          },
+          {
+            "type": "arrow",
+            "x1": 230,
+            "y1": 260,
+            "x2": 200,
+            "y2": 270,
+            "color": "ink",
+            "w": 3
+          },
+          {
+            "type": "arrow",
+            "x1": 230,
+            "y1": 260,
+            "x2": 300,
+            "y2": 270,
+            "color": "ink",
+            "w": 3
+          }
+        ],
+        "duration": 540,
+        "audioUrl": null,
+        "topic": "V&Co: Estrategias Digitales para Redefinir la Distribución"
+      },
+      {
+        "id": 4,
+        "type": "example",
+        "title": "Opción 1: Tienda Oficial en Marketplace",
+        "subtitle": "Un nuevo canal con potencial de crecimiento y competencia",
+        "narration": "Una de las alternativas es la apertura de una tienda oficial en el principal marketplace del país. Esta opción proyecta un crecimiento del 10% en el volumen total de V&Co. Sin embargo, es clave considerar que esta tienda competiría directamente con las ventas ya realizadas por los pequeños retailers en la misma plataforma, lo que podría generar nuevos conflictos.",
+        "bullets": [
+          "Tienda oficial en marketplace líder",
+          "Proyección: 10% de crecimiento en volumen",
+          "Competencia con pequeños retailers",
+          "Evaluar impacto en la red existente"
+        ],
+        "quiz": [],
+        "drawing": [
+          {
+            "type": "rect",
+            "x": 100,
+            "y": 100,
+            "w": 4,
+            "h": 200,
+            "color": "ink",
+            "fill": false
+          },
+          {
+            "type": "line",
+            "x1": 100,
+            "y1": 150,
+            "x2": 300,
+            "y2": 150,
+            "color": "ink",
+            "w": 2
+          },
+          {
+            "type": "line",
+            "x1": 100,
+            "y1": 200,
+            "x2": 300,
+            "y2": 200,
+            "color": "ink",
+            "w": 2
+          },
+          {
+            "type": "line",
+            "x1": 100,
+            "y1": 250,
+            "x2": 300,
+            "y2": 250,
+            "color": "ink",
+            "w": 2
+          },
+          {
+            "type": "text",
+            "x": 200,
+            "y": 125,
+            "text": "Marketplace",
+            "color": "accent",
+            "size": 24,
+            "bold": true
+          },
+          {
+            "type": "path",
+            "d": "M 50 350 L 70 300 L 250 300 L 230 350 Z",
+            "color": "green",
+            "fill": true
+          },
+          {
+            "type": "circle",
+            "cx": 80,
+            "cy": 360,
+            "r": 15,
+            "color": "ink",
+            "fill": true
+          },
+          {
+            "type": "circle",
+            "cx": 220,
+            "cy": 360,
+            "r": 15,
+            "color": "ink",
+            "fill": true
+          },
+          {
+            "type": "arrow",
+            "x1": 150,
+            "y1": 320,
+            "x2": 180,
+            "y2": 280,
+            "color": "green",
+            "w": 3
+          },
+          {
+            "type": "rect",
+            "x": 300,
+            "y": 300,
+            "w": 60,
+            "h": 40,
+            "color": "orange",
+            "fill": true
+          },
+          {
+            "type": "line",
+            "x1": 300,
+            "y1": 300,
+            "x2": 360,
+            "y2": 340,
+            "color": "red",
+            "w": 4
+          },
+          {
+            "type": "line",
+            "x1": 300,
+            "y1": 340,
+            "x2": 360,
+            "y2": 300,
+            "color": "red",
+            "w": 4
+          }
+        ],
+        "duration": 540,
+        "audioUrl": null,
+        "topic": "V&Co: Estrategias Digitales para Redefinir la Distribución"
+      },
+      {
+        "id": 5,
+        "type": "example",
+        "title": "Opciones 2 y 3: E-Commerce y B2B",
+        "subtitle": "Canales propios con desafíos de canibalización",
+        "narration": "Otra opción es desarrollar un canal propio de E-commerce (DTC), que podría aumentar las ventas en un 5%, pero con alto riesgo de canibalizar a grandes retailers y distribuidores. Una tercera alternativa es una plataforma B2B para la región Norte, reemplazando al distribuidor. Esto proyecta un 20% de crecimiento en la zona, pero podría desviar un 10% del volumen del distribuidor Sur.",
+        "bullets": [
+          "E-commerce (DTC): 5% crecimiento, alto riesgo de canibalización",
+          "Plataforma B2B (Norte): 20% crecimiento en zona",
+          "Riesgo de migración de volumen (Sur)",
+          "Evaluar el impacto en la red y la rentabilidad"
+        ],
+        "quiz": [],
+        "drawing": [
+          {
+            "type": "rect",
+            "x": 50,
+            "y": 80,
+            "w": 3,
+            "h": 100,
+            "color": "ink",
+            "fill": false
+          },
+          {
+            "type": "rect",
+            "x": 30,
+            "y": 180,
+            "w": 190,
+            "h": 20,
+            "color": "ink",
+            "fill": true
+          },
+          {
+            "type": "text",
+            "x": 125,
+            "y": 130,
+            "text": "DTC",
+            "color": "accent",
+            "size": 32,
+            "bold": true
+          },
+          {
+            "type": "path",
+            "d": "M 250 250 A 70 70 0 1 1 350 250 A 70 70 0 1 1 250 250",
+            "color": "ink",
+            "w": 3
+          },
+          {
+            "type": "circle",
+            "cx": 300,
+            "cy": 250,
+            "r": 20,
+            "color": "ink",
+            "fill": true
+          },
+          {
+            "type": "rect",
+            "x": 260,
+            "y": 240,
+            "w": 80,
+            "h": 20,
+            "color": "ink",
+            "fill": true
+          },
+          {
+            "type": "rect",
+            "x": 290,
+            "y": 210,
+            "w": 20,
+            "h": 80,
+            "color": "ink",
+            "fill": true
+          },
+          {
+            "type": "text",
+            "x": 300,
+            "y": 300,
+            "text": "B2B",
+            "color": "purple",
+            "size": 32,
+            "bold": true
+          },
+          {
+            "type": "arrow",
+            "x1": 125,
+            "y1": 220,
+            "x2": 125,
+            "y2": 260,
+            "color": "green",
+            "w": 4
+          },
+          {
+            "type": "arrow",
+            "x1": 300,
+            "y1": 330,
+            "x2": 300,
+            "y2": 370,
+            "color": "green",
+            "w": 4
+          },
+          {
+            "type": "line",
+            "x1": 180,
+            "y1": 280,
+            "x2": 250,
+            "y2": 220,
+            "color": "red",
+            "w": 3
+          },
+          {
+            "type": "line",
+            "x1": 250,
+            "y1": 280,
+            "x2": 180,
+            "y2": 220,
+            "color": "red",
+            "w": 3
+          }
+        ],
+        "duration": 540,
+        "audioUrl": null,
+        "topic": "V&Co: Estrategias Digitales para Redefinir la Distribución"
+      },
+      {
+        "id": 6,
+        "type": "closing",
+        "title": "Claves para la Decisión Estratégica",
+        "subtitle": "Más allá de las ventas: valor, capacidades y rentabilidad",
+        "narration": "Al evaluar estas alternativas digitales, es crucial ir más allá del simple aumento de ventas. Debemos preguntarnos si la propuesta de valor es superior, si la rentabilidad es sostenible a largo plazo, si V&Co tiene las capacidades operativas necesarias y qué otros factores podrían influir en la decisión. La meta es crecer digitalmente, fortaleciendo la marca y la red de distribución.",
+        "bullets": [
+          "Evaluar valor, no solo ventas",
+          "Considerar rentabilidad y capacidades",
+          "Analizar compatibilidad operativa",
+          "Fortalecer marca y red de distribución"
+        ],
+        "quiz": [],
+        "drawing": [
+          {
+            "type": "path",
+            "d": "M 200 100 Q 150 50 100 100 Q 50 150 100 200 Q 150 250 200 200 Q 250 250 300 200 Q 350 150 300 100 Q 250 50 200 100",
+            "color": "ink",
+            "fill": false,
+            "w": 4
+          },
+          {
+            "type": "circle",
+            "cx": 200,
+            "cy": 150,
+            "r": 30,
+            "color": "yellow",
+            "fill": true
+          },
+          {
+            "type": "line",
+            "x1": 200,
+            "y1": 180,
+            "x2": 200,
+            "y2": 210,
+            "color": "yellow",
+            "w": 3
+          },
+          {
+            "type": "line",
+            "x1": 185,
+            "y1": 195,
+            "x2": 170,
+            "y2": 210,
+            "color": "yellow",
+            "w": 3
+          },
+          {
+            "type": "line",
+            "x1": 215,
+            "y1": 195,
+            "x2": 230,
+            "y2": 210,
+            "color": "yellow",
+            "w": 3
+          },
+          {
+            "type": "rect",
+            "x": 230,
+            "y": 250,
+            "w": 3,
+            "h": 100,
+            "color": "ink",
+            "fill": false
+          },
+          {
+            "type": "line",
+            "x1": 240,
+            "y1": 270,
+            "x2": 255,
+            "y2": 285,
+            "color": "green",
+            "w": 3
+          },
+          {
+            "type": "line",
+            "x1": 255,
+            "y1": 285,
+            "x2": 300,
+            "y2": 260,
+            "color": "green",
+            "w": 3
+          },
+          {
+            "type": "text",
+            "x": 250,
+            "y": 270,
+            "text": "Valor",
+            "color": "ink",
+            "size": 18
+          },
+          {
+            "type": "line",
+            "x1": 240,
+            "y1": 300,
+            "x2": 255,
+            "y2": 315,
+            "color": "green",
+            "w": 3
+          },
+          {
+            "type": "line",
+            "x1": 255,
+            "y1": 315,
+            "x2": 300,
+            "y2": 290,
+            "color": "green",
+            "w": 3
+          },
+          {
+            "type": "text",
+            "x": 250,
+            "y": 300,
+            "text": "Rentabilidad",
+            "color": "ink",
+            "size": 18
+          },
+          {
+            "type": "text",
+            "x": 250,
+            "y": 330,
+            "text": "Capacidades",
+            "color": "ink",
+            "size": 18
+          }
+        ],
+        "duration": 540,
+        "audioUrl": null,
+        "topic": "V&Co: Estrategias Digitales para Redefinir la Distribución"
+      }
+    ],
+    "createdAt": "2026-06-30T20:22:05.973Z"
+  },
+  "course_1782850966351_0": {
+    "id": "course_1782850966351_0",
+    "title": "V&Co: Redefiniendo la distribución en el entorno digital",
+    "description": "V&Co: Desafío Digital · El Contexto de V&Co · La Disrupción Digital · Estrategias para el Futuro · Alternativas Digitales · Reflexión y Acción",
+    "status": "content_ready",
+    "source": "file",
+    "boardStyle": "classic",
+    "scorm": true,
+    "scenes": [
+      {
+        "id": 1,
+        "type": "title",
+        "title": "V&Co: Desafío Digital",
+        "subtitle": "Navegando la transformación en un mercado maduro.",
+        "narration": "¡Hola! Hoy vamos a explorar el caso de V&Co, una empresa líder en tecnología residencial de alta gama. V&Co tiene un posicionamiento premium indiscutible, pero se enfrenta a un desafío clave: redefinir su estrategia de distribución en un mercado maduro. Acompáñanos a entender cómo V&Co puede capitalizar las oportunidades digitales.",
+        "bullets": [
+          "V&Co: Tecnología Residencial",
+          "Posicionamiento Premium",
+          "Desafío Digital"
+        ],
+        "quiz": [
+          {
+            "type": "single",
+            "question": "¿Cuál es el principal tipo de producto que comercializa V&Co?",
+            "options": [
+              "Tecnología automotriz",
+              "Tecnología residencial",
+              "Tecnología industrial",
+              "Tecnología de consumo masivo"
+            ],
+            "correctAnswer": 1,
+            "explanation": "V&Co se especializa en tecnología residencial de alta gama."
+          },
+          {
+            "type": "single",
+            "question": "¿Qué caracteriza el posicionamiento de V&Co en el mercado?",
+            "options": [
+              "Precio competitivo",
+              "Bajo costo",
+              "Premium y máxima calidad",
+              "Orientado al volumen"
+            ],
+            "correctAnswer": 2,
+            "explanation": "La compañía ostenta un claro posicionamiento premium, consolidándose como el estándar de máxima calidad del sector."
+          }
+        ],
+        "drawing": [
+          {
+            "type": "text",
+            "x": 170,
+            "y": 150,
+            "text": "V&Co",
+            "color": "accent",
+            "size": 60,
+            "bold": true
+          },
+          {
+            "type": "circle",
+            "cx": 200,
+            "cy": 250,
+            "r": 60,
+            "color": "ink",
+            "fill": false,
+            "w": 4
+          },
+          {
+            "type": "line",
+            "x1": 140,
+            "y1": 250,
+            "x2": 260,
+            "y2": 250,
+            "color": "ink",
+            "w": 3
+          },
+          {
+            "type": "line",
+            "x1": 200,
+            "y1": 190,
+            "x2": 200,
+            "y2": 310,
+            "color": "ink",
+            "w": 3
+          },
+          {
+            "type": "line",
+            "x1": 160,
+            "y1": 210,
+            "x2": 240,
+            "y2": 290,
+            "color": "ink",
+            "w": 3
+          },
+          {
+            "type": "line",
+            "x1": 160,
+            "y1": 290,
+            "x2": 240,
+            "y2": 210,
+            "color": "ink",
+            "w": 3
+          },
+          {
+            "type": "rect",
+            "x": 280,
+            "y": 200,
+            "w": 3,
+            "h": 70,
+            "color": "accent",
+            "fill": false
+          },
+          {
+            "type": "line",
+            "x1": 290,
+            "y1": 210,
+            "x2": 350,
+            "y2": 210,
+            "color": "accent",
+            "w": 2
+          },
+          {
+            "type": "line",
+            "x1": 290,
+            "y1": 225,
+            "x2": 350,
+            "y2": 225,
+            "color": "accent",
+            "w": 2
+          },
+          {
+            "type": "line",
+            "x1": 290,
+            "y1": 240,
+            "x2": 350,
+            "y2": 240,
+            "color": "accent",
+            "w": 2
+          },
+          {
+            "type": "arrow",
+            "x1": 260,
+            "y1": 250,
+            "x2": 280,
+            "y2": 250,
+            "color": "green",
+            "w": 4
+          }
+        ],
+        "duration": 540,
+        "audioUrl": null,
+        "topic": "V&Co: Redefiniendo la distribución en el entorno digital"
+      },
+      {
+        "id": 2,
+        "type": "problem",
+        "title": "El Contexto de V&Co",
+        "subtitle": "Un mercado premium con canales tradicionales.",
+        "narration": "V&Co opera en un mercado maduro que mueve 500.000 unidades anuales, con una sólida cuota del 30%. Su estrategia se basa en tres canales tradicionales: Grandes Retailers, que manejan el 40% del volumen; Grandes Obras, con el 15%; y Distribuidores, que concentran el 45% y abastecen a una extensa red minorista.",
+        "bullets": [
+          "Mercado maduro: 500.000 unidades",
+          "30% cuota de mercado",
+          "3 canales tradicionales: Retailers, Obras, Distribuidores"
+        ],
+        "quiz": [
+          {
+            "type": "single",
+            "question": "¿Cuántas unidades anuales moviliza el mercado de V&Co?",
+            "options": [
+              "30% del total",
+              "50.000 unidades",
+              "500.000 unidades",
+              "15% del total"
+            ],
+            "correctAnswer": 2,
+            "explanation": "El mercado maduro moviliza 500.000 unidades anuales."
+          },
+          {
+            "type": "single",
+            "question": "¿Cuál de los siguientes no es un canal de distribución tradicional de V&Co?",
+            "options": [
+              "Grandes Retailers",
+              "E-commerce propio",
+              "Grandes Obras",
+              "Distribuidores"
+            ],
+            "correctAnswer": 1,
+            "explanation": "E-commerce propio es una estrategia digital a evaluar, no un canal tradicional actual."
+          },
+          {
+            "type": "single",
+            "question": "¿Qué porcentaje del volumen de ventas de V&Co concentran los Distribuidores?",
+            "options": [
+              "40%",
+              "15%",
+              "45%",
+              "30%"
+            ],
+            "correctAnswer": 2,
+            "explanation": "Los distribuidores oficiales concentran el 45% del volumen."
+          }
+        ],
+        "drawing": [
+          {
+            "type": "circle",
+            "cx": 200,
+            "cy": 100,
+            "r": 70,
+            "color": "ink",
+            "fill": false,
+            "w": 3
+          },
+          {
+            "type": "arc",
+            "cx": 200,
+            "cy": 100,
+            "r": 70,
+            "start": 0,
+            "end": 108,
+            "color": "accent",
+            "w": 0,
+            "fill": true
+          },
+          {
+            "type": "text",
+            "x": 200,
+            "y": 100,
+            "text": "30%",
+            "color": "white",
+            "size": 30,
+            "bold": true
+          },
+          {
+            "type": "text",
+            "x": 200,
+            "y": 180,
+            "text": "Cuota de Mercado V&Co",
+            "color": "ink",
+            "size": 20
+          },
+          {
+            "type": "rect",
+            "x": 50,
+            "y": 250,
+            "w": 3,
+            "h": 60,
+            "color": "accent",
+            "fill": false
+          },
+          {
+            "type": "text",
+            "x": 95,
+            "y": 280,
+            "text": "Retailers",
+            "color": "ink",
+            "size": 18
+          },
+          {
+            "type": "rect",
+            "x": 155,
+            "y": 250,
+            "w": 3,
+            "h": 60,
+            "color": "orange",
+            "fill": false
+          },
+          {
+            "type": "text",
+            "x": 200,
+            "y": 280,
+            "text": "Obras",
+            "color": "ink",
+            "size": 18
+          },
+          {
+            "type": "rect",
+            "x": 260,
+            "y": 250,
+            "w": 3,
+            "h": 60,
+            "color": "green",
+            "fill": false
+          },
+          {
+            "type": "text",
+            "x": 305,
+            "y": 280,
+            "text": "Distribuidores",
+            "color": "ink",
+            "size": 18
+          },
+          {
+            "type": "line",
+            "x1": 140,
+            "y1": 280,
+            "x2": 155,
+            "y2": 280,
+            "color": "ink",
+            "w": 2
+          },
+          {
+            "type": "line",
+            "x1": 245,
+            "y1": 280,
+            "x2": 260,
+            "y2": 280,
+            "color": "ink",
+            "w": 2
+          }
+        ],
+        "duration": 540,
+        "audioUrl": null,
+        "topic": "V&Co: Redefiniendo la distribución en el entorno digital"
+      },
+      {
+        "id": 3,
+        "type": "problem",
+        "title": "La Disrupción Digital",
+        "subtitle": "Reclamos, precios y pérdida de posicionamiento.",
+        "narration": "En 2025, surgieron reclamos por publicaciones en un marketplace que vendían productos V&Co por debajo del precio sugerido. Una auditoría reveló que el Distribuidor del Norte operaba bajo seudónimo, diluyendo el posicionamiento premium de la marca. Históricamente, V&Co había evitado lo digital, pero esta situación hizo insostenible ignorar el conflicto.",
+        "bullets": [
+          "Precios perforados en Marketplace",
+          "Distribuidor del Norte (seudónimo)",
+          "Dilución de marca premium",
+          "Conflicto de canal insostenible"
+        ],
+        "quiz": [
+          {
+            "type": "single",
+            "question": "¿Cuál fue la principal causa de los reclamos de los clientes en 2025?",
+            "options": [
+              "Fallas en la calidad del producto.",
+              "Demoras en la entrega de los productos.",
+              "Publicaciones con precios por debajo del sugerido.",
+              "Falta de stock en los retailers."
+            ],
+            "correctAnswer": 2,
+            "explanation": "Los reclamos se debían a ofertas que perforaban el precio de venta sugerido en el marketplace."
+          },
+          {
+            "type": "single",
+            "question": "¿Quién fue identificado como el responsable de las operaciones irregulares en el marketplace?",
+            "options": [
+              "Grandes Retailers",
+              "Grandes Obras",
+              "El Distribuidor del Norte",
+              "El Distribuidor del Sur"
+            ],
+            "correctAnswer": 2,
+            "explanation": "Las operaciones irregulares fueron rastreadas hasta el Distribuidor del Norte."
+          },
+          {
+            "type": "single",
+            "question": "¿Cómo afectó esta situación el posicionamiento de la marca V&Co?",
+            "options": [
+              "Lo fortaleció al aumentar el volumen de ventas.",
+              "Lo diluyó, equiparándola con competidores de menor calidad.",
+              "No tuvo impacto en su posicionamiento.",
+              "Aumentó la percepción de exclusividad."
+            ],
+            "correctAnswer": 1,
+            "explanation": "Diluía el posicionamiento de la marca al equipararla con competidores de menor calidad."
+          }
+        ],
+        "drawing": [
+          {
+            "type": "rect",
+            "x": 100,
+            "y": 100,
+            "w": 3,
+            "h": 150,
+            "color": "ink",
+            "fill": false
+          },
+          {
+            "type": "line",
+            "x1": 110,
+            "y1": 120,
+            "x2": 290,
+            "y2": 120,
+            "color": "ink",
+            "w": 2
+          },
+          {
+            "type": "line",
+            "x1": 110,
+            "y1": 140,
+            "x2": 290,
+            "y2": 140,
+            "color": "ink",
+            "w": 2
+          },
+          {
+            "type": "text",
+            "x": 200,
+            "y": 180,
+            "text": "Marketplace",
+            "color": "ink",
+            "size": 22,
+            "bold": true
+          },
+          {
+            "type": "text",
+            "x": 180,
+            "y": 220,
+            "text": "Oferta V&Co",
+            "color": "accent",
+            "size": 20
+          },
+          {
+            "type": "arrow",
+            "x1": 260,
+            "y1": 230,
+            "x2": 260,
+            "y2": 280,
+            "color": "red",
+            "w": 5
+          },
+          {
+            "type": "line",
+            "x1": 240,
+            "y1": 280,
+            "x2": 280,
+            "y2": 280,
+            "color": "red",
+            "w": 5
+          },
+          {
+            "type": "circle",
+            "cx": 100,
+            "cy": 320,
+            "r": 50,
+            "color": "ink",
+            "fill": false,
+            "w": 3
+          },
+          {
+            "type": "path",
+            "d": "M 100 270 Q 130 290 100 320 Q 70 290 100 270",
+            "color": "accent",
+            "fill": true
+          },
+          {
+            "type": "path",
+            "d": "M 100 320 Q 130 350 100 370 Q 70 350 100 320",
+            "color": "accent",
+            "fill": true
+          },
+          {
+            "type": "line",
+            "x1": 70,
+            "y1": 290,
+            "x2": 130,
+            "y2": 350,
+            "color": "red",
+            "w": 4
+          },
+          {
+            "type": "line",
+            "x1": 70,
+            "y1": 350,
+            "x2": 130,
+            "y2": 290,
+            "color": "red",
+            "w": 4
+          }
+        ],
+        "duration": 540,
+        "audioUrl": null,
+        "topic": "V&Co: Redefiniendo la distribución en el entorno digital"
+      },
+      {
+        "id": 4,
+        "type": "solution",
+        "title": "Estrategias para el Futuro",
+        "subtitle": "Capitalizando el entorno digital con valor estratégico.",
+        "narration": "El desafío ahora es definir una estrategia digital que no solo aproveche las oportunidades del entorno online, sino que también aporte valor estratégico a la red de distribución actual. Necesitamos encontrar el equilibrio para innovar sin generar conflictos, fortaleciendo la marca y expandiendo nuestro alcance de manera inteligente.",
+        "bullets": [
+          "Aprovechar oportunidades digitales",
+          "Aportar valor estratégico",
+          "Fortalecer la red actual",
+          "Evitar conflictos de canal"
+        ],
+        "quiz": [
+          {
+            "type": "single",
+            "question": "¿Cuál es el objetivo principal de una nueva estrategia digital para V&Co?",
+            "options": [
+              "Eliminar todos los canales tradicionales.",
+              "Ignorar el conflicto de canal existente.",
+              "Capitalizar oportunidades digitales aportando valor estratégico a la red actual.",
+              "Reducir los precios de todos los productos."
+            ],
+            "correctAnswer": 2,
+            "explanation": "El objetivo es capitalizar las oportunidades digitales, aportando valor estratégico a la red de distribución actual."
+          },
+          {
+            "type": "single",
+            "question": "¿Qué aspecto es crucial considerar al implementar una estrategia digital en V&Co?",
+            "options": [
+              "Aumentar la pauta publicitaria en medios tradicionales.",
+              "Evitar cualquier tipo de conflicto con los canales existentes.",
+              "Generar valor estratégico y no solo ventas.",
+              "Reducir los descuentos a los distribuidores."
+            ],
+            "correctAnswer": 2,
+            "explanation": "Es fundamental aportar valor estratégico a la red de distribución actual y evitar conflictos de canal."
+          }
+        ],
+        "drawing": [
+          {
+            "type": "rect",
+            "x": 50,
+            "y": 250,
+            "w": 3,
+            "h": 70,
+            "color": "ink",
+            "fill": false
+          },
+          {
+            "type": "text",
+            "x": 100,
+            "y": 285,
+            "text": "Tradicional",
+            "color": "ink",
+            "size": 20
+          },
+          {
+            "type": "rect",
+            "x": 250,
+            "y": 250,
+            "w": 3,
+            "h": 70,
+            "color": "accent",
+            "fill": false
+          },
+          {
+            "type": "text",
+            "x": 300,
+            "y": 285,
+            "text": "Digital",
+            "color": "ink",
+            "size": 20
+          },
+          {
+            "type": "path",
+            "d": "M 150 285 Q 200 200 250 285",
+            "color": "green",
+            "w": 5
+          },
+          {
+            "type": "line",
+            "x1": 160,
+            "y1": 295,
+            "x2": 240,
+            "y2": 295,
+            "color": "green",
+            "w": 5
+          },
+          {
+            "type": "circle",
+            "cx": 200,
+            "cy": 150,
+            "r": 30,
+            "color": "orange",
+            "fill": true,
+            "w": 0
+          },
+          {
+            "type": "text",
+            "x": 200,
+            "y": 155,
+            "text": "$",
+            "color": "white",
+            "size": 30,
+            "bold": true
+          },
+          {
+            "type": "arrow",
+            "x1": 200,
+            "y1": 180,
+            "x2": 200,
+            "y2": 240,
+            "color": "orange",
+            "w": 3
+          }
+        ],
+        "duration": 540,
+        "audioUrl": null,
+        "topic": "V&Co: Redefiniendo la distribución en el entorno digital"
+      },
+      {
+        "id": 5,
+        "type": "solution",
+        "title": "Alternativas Digitales",
+        "subtitle": "Tres caminos para explorar y evaluar.",
+        "narration": "Para abordar este desafío, se proponen tres alternativas. Primero, abrir una tienda oficial en el marketplace líder, buscando un crecimiento del 10%. Segundo, desarrollar un E-commerce propio (DTC) con un crecimiento estimado del 5%, aunque con alto riesgo de canibalización. Finalmente, una plataforma B2B para la región Norte, que proyecta un 20% de incremento.",
+        "bullets": [
+          "Marketplace oficial (+10% volumen)",
+          "E-commerce propio DTC (+5% volumen)",
+          "Plataforma B2B (región Norte, +20% volumen)",
+          "Evaluar riesgos y canibalización"
+        ],
+        "quiz": [
+          {
+            "type": "single",
+            "question": "¿Cuál de las estrategias digitales propuestas busca un crecimiento del 10% en el volumen total de V&Co?",
+            "options": [
+              "E-commerce propio (DTC)",
+              "Plataforma B2B",
+              "Tienda oficial en Marketplace",
+              "Ninguna de las anteriores"
+            ],
+            "correctAnswer": 2,
+            "explanation": "La apertura de una tienda oficial en el principal marketplace del país estima un crecimiento del 10%."
+          },
+          {
+            "type": "single",
+            "question": "¿Qué riesgo principal se asocia con el desarrollo de un canal E-commerce propio (DTC)?",
+            "options": [
+              "Bajo volumen de ventas.",
+              "Alto riesgo de conflicto de canal y canibalización.",
+              "Dificultad para encontrar distribuidores.",
+              "Ausencia de competencia."
+            ],
+            "correctAnswer": 1,
+            "explanation": "Esta iniciativa supone un alto riesgo de conflicto de canal, ya que implicaría competir frontalmente y canibalizar el ecosistema online de los distribuidores minoristas."
+          },
+          {
+            "type": "single",
+            "question": "La plataforma B2B propuesta sustituiría la distribución de qué región:",
+            "options": [
+              "Región Sur",
+              "Región Este",
+              "Región Oeste",
+              "Región Norte"
+            ],
+            "correctAnswer": 3,
+            "explanation": "La plataforma B2B evaluaría la sustitución del distribuidor por una plataforma B2B, sustituyendo la distribución de la región norte."
+          }
+        ],
+        "drawing": [
+          {
+            "type": "rect",
+            "x": 70,
+            "y": 100,
+            "w": 3,
+            "h": 60,
+            "color": "accent",
+            "fill": false
+          },
+          {
+            "type": "text",
+            "x": 110,
+            "y": 130,
+            "text": "Marketplace",
+            "color": "ink",
+            "size": 16
+          },
+          {
+            "type": "rect",
+            "x": 160,
+            "y": 200,
+            "w": 3,
+            "h": 60,
+            "color": "orange",
+            "fill": false
+          },
+          {
+            "type": "text",
+            "x": 200,
+            "y": 230,
+            "text": "E-commerce",
+            "color": "ink",
+            "size": 16
+          },
+          {
+            "type": "rect",
+            "x": 250,
+            "y": 300,
+            "w": 3,
+            "h": 60,
+            "color": "green",
+            "fill": false
+          },
+          {
+            "type": "text",
+            "x": 290,
+            "y": 330,
+            "text": "B2B",
+            "color": "ink",
+            "size": 16
+          },
+          {
+            "type": "arrow",
+            "x1": 110,
+            "y1": 160,
+            "x2": 110,
+            "y2": 210,
+            "color": "ink",
+            "w": 2
+          },
+          {
+            "type": "arrow",
+            "x1": 200,
+            "y1": 260,
+            "x2": 200,
+            "y2": 310,
+            "color": "ink",
+            "w": 2
+          },
+          {
+            "type": "arrow",
+            "x1": 150,
+            "y1": 130,
+            "x2": 160,
+            "y2": 200,
+            "color": "ink",
+            "w": 2
+          },
+          {
+            "type": "arrow",
+            "x1": 240,
+            "y1": 230,
+            "x2": 250,
+            "y2": 300,
+            "color": "ink",
+            "w": 2
+          },
+          {
+            "type": "text",
+            "x": 110,
+            "y": 80,
+            "text": "+10%",
+            "color": "green",
+            "size": 20
+          },
+          {
+            "type": "text",
+            "x": 200,
+            "y": 180,
+            "text": "+5%",
+            "color": "green",
+            "size": 20
+          },
+          {
+            "type": "text",
+            "x": 290,
+            "y": 280,
+            "text": "+20%",
+            "color": "green",
+            "size": 20
+          }
+        ],
+        "duration": 540,
+        "audioUrl": null,
+        "topic": "V&Co: Redefiniendo la distribución en el entorno digital"
+      },
+      {
+        "id": 6,
+        "type": "closing",
+        "title": "Reflexión y Acción",
+        "subtitle": "Más allá de las ventas: capacidad y valor.",
+        "narration": "Al evaluar estas alternativas, recordá que el aumento de ventas no siempre valida una propuesta. Debemos preguntarnos si la rentabilidad es el único factor, si V&Co tiene las capacidades operativas para cada estrategia y qué otros factores podrían influir en la decisión. ¡Es momento de debatir y definir el futuro de V&Co!",
+        "bullets": [
+          "Ventas no equivalen a valor superior",
+          "Rentabilidad no es el único validador",
+          "Evaluar capacidades operativas",
+          "Considerar otros factores"
+        ],
+        "quiz": [
+          {
+            "type": "single",
+            "question": "¿Es suficiente que V&Co aumente sus ventas en unidades luego de implementar una alternativa digital para validar su propuesta de valor?",
+            "options": [
+              "Sí, siempre que las ventas aumenten.",
+              "No, la propuesta de valor es superior solo si la rentabilidad es positiva.",
+              "No, se deben considerar otros factores como el valor estratégico y las capacidades.",
+              "Sí, el volumen de ventas es el único indicador importante."
+            ],
+            "correctAnswer": 2,
+            "explanation": "El aumento de ventas no siempre implica una propuesta de valor superior; se deben considerar otros factores estratégicos y operativos."
+          },
+          {
+            "type": "single",
+            "question": "¿Qué aspectos adicionales a la rentabilidad deberían evaluarse al considerar la implementación de un nuevo canal digital?",
+            "options": [
+              "Solamente el impacto en los descuentos de los distribuidores.",
+              "Las capacidades operativas de V&Co y otros factores estratégicos.",
+              "Únicamente el volumen de unidades vendidas.",
+              "La antigüedad de las relaciones comerciales."
+            ],
+            "correctAnswer": 1,
+            "explanation": "Es crucial evaluar las capacidades que V&Co necesita para operar la estrategia digital y otros factores que pueden cambiar la decisión."
+          }
+        ],
+        "drawing": [
+          {
+            "type": "path",
+            "d": "M 200 80 Q 240 40 240 100 Q 240 140 220 160 L 200 200 L 180 160 Q 160 140 160 100 Q 160 40 200 80 Z",
+            "color": "ink",
+            "fill": false,
+            "w": 4
+          },
+          {
+            "type": "dot",
+            "cx": 200,
+            "cy": 220,
+            "r": 8,
+            "color": "ink"
+          },
+          {
+            "type": "circle",
+            "cx": 100,
+            "cy": 300,
+            "r": 40,
+            "color": "accent",
+            "fill": false,
+            "w": 3
+          },
+          {
+            "type": "line",
+            "x1": 70,
+            "y1": 300,
+            "x2": 130,
+            "y2": 300,
+            "color": "accent",
+            "w": 2
+          },
+          {
+            "type": "line",
+            "x1": 100,
+            "y1": 270,
+            "x2": 100,
+            "y2": 330,
+            "color": "accent",
+            "w": 2
+          },
+          {
+            "type": "circle",
+            "cx": 115,
+            "cy": 285,
+            "r": 5,
+            "color": "accent",
+            "fill": true
+          },
+          {
+            "type": "circle",
+            "cx": 85,
+            "cy": 315,
+            "r": 5,
+            "color": "accent",
+            "fill": true
+          },
+          {
+            "type": "circle",
+            "cx": 300,
+            "cy": 300,
+            "r": 40,
+            "color": "orange",
+            "fill": false,
+            "w": 3
+          },
+          {
+            "type": "line",
+            "x1": 270,
+            "y1": 300,
+            "x2": 330,
+            "y2": 300,
+            "color": "orange",
+            "w": 2
+          },
+          {
+            "type": "line",
+            "x1": 300,
+            "y1": 270,
+            "x2": 300,
+            "y2": 330,
+            "color": "orange",
+            "w": 2
+          },
+          {
+            "type": "circle",
+            "cx": 315,
+            "cy": 285,
+            "r": 5,
+            "color": "orange",
+            "fill": true
+          },
+          {
+            "type": "circle",
+            "cx": 285,
+            "cy": 315,
+            "r": 5,
+            "color": "orange",
+            "fill": true
+          },
+          {
+            "type": "line",
+            "x1": 100,
+            "y1": 260,
+            "x2": 300,
+            "y2": 260,
+            "color": "ink",
+            "w": 3
+          },
+          {
+            "type": "line",
+            "x1": 200,
+            "y1": 260,
+            "x2": 200,
+            "y2": 350,
+            "color": "ink",
+            "w": 3
+          }
+        ],
+        "duration": 540,
+        "audioUrl": null,
+        "topic": "V&Co: Redefiniendo la distribución en el entorno digital"
+      }
+    ],
+    "createdAt": "2026-06-30T20:22:46.351Z"
   }
 }
