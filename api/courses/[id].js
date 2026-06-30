@@ -10,12 +10,10 @@ function loadCourses() {
 }
 
 export default function handler(req, res) {
+  res.setHeader('Access-Control-Allow-Origin', '*');
+  if (req.method === 'OPTIONS') return res.status(200).end();
+
   const { id } = req.query;
-
-  if (req.method !== 'GET') {
-    return res.status(405).json({ error: 'Method not allowed in production.' });
-  }
-
   const all = loadCourses();
   const course = all[id];
 
