@@ -8,6 +8,7 @@ import { fileURLToPath } from 'url';
 
 import { generateScript } from './generate.js';
 import { generateAudio } from './audio.js';
+import { buildScormZip } from './scorm-generator.js';
 
 // Render jobs in memory
 const renderJobs = new Map(); // jobId → { status, progress, error, outputPath }
@@ -39,6 +40,18 @@ function deleteCourse(id) {
   const all = loadCourses();
   delete all[id];
   saveCourses(all);
+}
+
+// ── Smart text truncation ────────────────────────────────────────────────────
+// For large docs: takes 70% from the beginning and 30% from the end.
+// This captures the intro/context and the conclusions.
+function smartTruncate(text, maxChars = 40000) {
+  if (text.length <= maxChars) return text;
+  const front = Math.floor(maxChars * 0.7);
+  const back  = maxChars - front;
+  return text.slice(0, front) +
+    '\n\n[...contenido extenso omitido para mantener el foco...]\n\n' +
+    text.slice(-back);
 }
 
 // ── App setup ────────────────────────────────────────────────────────────────
@@ -109,19 +122,32 @@ app.post('/api/courses', upload.single('file'), async (req, res) => {
       return res.status(400).json({ error: 'Se requiere un archivo o texto' });
     }
 
-    const scenes = await generateScript(rawText);
-    const id = `course_${Date.now()}`;
-    const course = {
-      id,
-      title: scenes[0]?.topic || 'Video explicativo',
-      description: scenes.map(s => s.title).join(' · '),
-      status: 'content_ready',
-      source,
-      scenes,
-      createdAt: new Date().toISOString(),
-    };
-    putCourse(course);
-    res.json(course);
+    const numVideos = Math.min(Math.max(parseInt(req.body.numVideos) || 1, 1), 5);
+    const videoType = req.body.videoType || 'explicativo';
+    const tone = req.body.tone || 'informal';
+    const dialect = req.body.dialect || 'rioplatense';
+    const duration = req.body.duration || 'medio';
+    rawText = smartTruncate(rawText, 40000);
+    const videos = await generateScript(rawText, numVideos, videoType, tone, dialect, duration);
+
+    const courses = videos.map((v, idx) => {
+      const id = `course_${Date.now()}_${idx}`;
+      const course = {
+        id,
+        title: v.topic || `Video ${idx + 1}`,
+        description: v.scenes.map(s => s.title).join(' · '),
+        status: 'content_ready',
+        source,
+        boardStyle: req.body.boardStyle || 'classic',
+        scorm: req.body.scorm === 'true' || req.body.scorm === true,
+        scenes: v.scenes,
+        createdAt: new Date(Date.now() + idx).toISOString(),
+      };
+      putCourse(course);
+      return course;
+    });
+
+    res.json({ courses });
   } catch (err) {
     console.error('[POST /api/courses]', err);
     res.status(500).json({ error: err.message || 'Error al generar el guión' });
@@ -153,6 +179,23 @@ app.post('/api/courses/:id/audio', async (req, res) => {
       renderJobs.set(jobId, { status: 'error', done: 0, total, error: err.message });
     }
   })();
+});
+
+// ── GET /api/courses/:id/scorm ───────────────────────────────────────────────
+// Downloads a SCORM 1.2 ZIP with an HTML quiz player for the course.
+app.get('/api/courses/:id/scorm', async (req, res) => {
+  const course = getCourse(req.params.id);
+  if (!course) return res.status(404).json({ error: 'Curso no encontrado' });
+  try {
+    const zip = await buildScormZip(course);
+    const filename = course.title.replace(/[^a-z0-9áéíóúüñ\s]/gi, '').trim().replace(/\s+/g, '_').slice(0, 60) || course.id;
+    res.setHeader('Content-Type', 'application/zip');
+    res.setHeader('Content-Disposition', `attachment; filename="${filename}_scorm.zip"`);
+    res.send(zip);
+  } catch (err) {
+    console.error('[scorm]', err);
+    res.status(500).json({ error: err.message });
+  }
 });
 
 // ── DELETE /api/courses/:id ──────────────────────────────────────────────────
@@ -220,12 +263,18 @@ app.post('/api/courses/:id/render', async (req, res) => {
       renderJobs.set(jobId, { status: 'rendering', progress: 20, error: null, outputPath: null });
 
       const totalFrames = course.scenes.reduce((a, s) => a + s.duration, 0);
+      // Remotion renders from its own bundled server — audioUrls must be absolute
+      const apiBase = `http://localhost:${PORT}`;
+      const scenesWithAbsoluteAudio = course.scenes.map(s => ({
+        ...s,
+        audioUrl: s.audioUrl?.startsWith('/') ? `${apiBase}${s.audioUrl}` : (s.audioUrl || null),
+      }));
       const inputProps = {
         config: {
           topic: course.title,
-          accentColor: '#1b8e5a',
-          boardStyle: 'classic',
-          scenes: course.scenes,
+          accentColor: '#3851d8',
+          boardStyle: course.boardStyle || 'classic',
+          scenes: scenesWithAbsoluteAudio,
         },
       };
 

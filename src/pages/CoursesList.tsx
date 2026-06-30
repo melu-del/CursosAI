@@ -1,5 +1,8 @@
 import { useEffect, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
+import { Box, Grid, Typography, Chip, IconButton } from '@material-hu/mui';
+import Button from '@material-hu/components/design-system/Buttons/Button';
+import CardContainer from '@material-hu/components/design-system/CardContainer';
 
 interface CourseSummary {
   id: string;
@@ -17,6 +20,13 @@ const STATUS_LABELS: Record<string, string> = {
   content_ready: 'Guión listo',
   ready: 'Con narración',
   error: 'Error',
+};
+
+const STATUS_COLORS: Record<string, 'default' | 'primary' | 'success' | 'error'> = {
+  pending: 'default',
+  content_ready: 'primary',
+  ready: 'success',
+  error: 'error',
 };
 
 export function CoursesList() {
@@ -60,89 +70,115 @@ export function CoursesList() {
 
   if (error) {
     return (
-      <div className="error-box">
-        <div>Algo no funcionó: {error}</div>
-        <button className="btn" style={{ marginTop: 12 }} onClick={load}>Reintentar</button>
-      </div>
+      <Box sx={{ p: 3, bgcolor: 'error.light', borderRadius: 1, color: 'error.dark' }}>
+        <Typography>Algo no funcionó: {error}</Typography>
+        <Button variant="contained" sx={{ mt: 2 }} onClick={load}>Reintentar</Button>
+      </Box>
     );
   }
 
   if (!courses) {
     return (
       <>
-        <div className="page-title-row"><h2>Tus videos</h2></div>
-        <div className="course-grid">
+        <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', mb: 3 }}>
+          <Typography variant="h5" fontWeight={600}>Tus videos</Typography>
+        </Box>
+        <Grid container spacing={2}>
           {[0, 1, 2].map(i => (
-            <div key={i} className="course-card" aria-hidden style={{ pointerEvents: 'none' }}>
-              <div className="skeleton-line skeleton-line--title" />
-              <div className="skeleton-line" />
-              <div className="skeleton-line skeleton-line--short" />
-            </div>
+            <Grid item xs={12} sm={6} md={4} key={i}>
+              <CardContainer sx={{ height: 200 }} />
+            </Grid>
           ))}
-        </div>
+        </Grid>
       </>
     );
   }
 
   if (courses.length === 0) {
     return (
-      <div className="empty-state">
-        <div style={{ fontSize: 64, marginBottom: 16, lineHeight: 1 }}>✏️</div>
-        <h2>Todavía no generaste ningún video</h2>
-        <p style={{ maxWidth: 420, margin: '0 auto 24px' }}>
+      <Box sx={{ textAlign: 'center', py: 8 }}>
+        <Typography sx={{ fontSize: 64, mb: 2, lineHeight: 1 }}>✏️</Typography>
+        <Typography variant="h5" fontWeight={600} gutterBottom>
+          Todavía no generaste ningún video
+        </Typography>
+        <Typography color="text.secondary" sx={{ maxWidth: 420, mx: 'auto', mb: 3 }}>
           Subí un PDF o Word, o describí el tema y la IA arma el video pizarra con animaciones y narración.
-        </p>
-        <Link to="/upload" className="btn">+ Crear mi primer video</Link>
-      </div>
+        </Typography>
+        <Button variant="contained" component={Link} to="/upload">
+          + Crear mi primer video
+        </Button>
+      </Box>
     );
   }
 
   return (
     <>
-      <div className="page-title-row">
-        <div>
-          <h2>Tus videos</h2>
-          <p style={{ margin: '4px 0 0', fontSize: 14, color: 'var(--hu-text-soft)' }}>
-            {courses.length} video{courses.length !== 1 ? 's' : ''} generado{courses.length !== 1 ? 's' : ''}
-          </p>
-        </div>
-        <Link to="/upload" className="btn">+ Crear video</Link>
-      </div>
-      <div className="course-grid">
+      <Box sx={{ mb: 3 }}>
+        <Typography variant="h5" fontWeight={600}>Tus videos</Typography>
+        <Typography variant="body2" color="text.secondary" sx={{ mt: 0.5 }}>
+          {courses.length} video{courses.length !== 1 ? 's' : ''} generado{courses.length !== 1 ? 's' : ''}
+        </Typography>
+      </Box>
+
+      <Grid container spacing={2} alignItems="stretch">
         {courses.map(c => (
-          <div key={c.id} className="course-card" onClick={() => navigate(`/courses/${c.id}`)}>
-            <button
-              className="course-delete-btn"
-              onClick={e => handleDelete(e, c)}
-              disabled={deletingId === c.id}
-              title="Eliminar"
+          <Grid item xs={12} sm={6} md={4} key={c.id}>
+            <CardContainer
+              onClick={() => navigate(`/courses/${c.id}`)}
+              hasShadow
+              fullWidth
+              padding={0}
+              sx={{ position: 'relative', cursor: 'pointer', height: '100%', display: 'flex', flexDirection: 'column' }}
             >
-              {deletingId === c.id ? '…' : '×'}
-            </button>
+              {/* Thumbnail */}
+              <Box sx={{
+                height: 90,
+                background: 'linear-gradient(135deg, #3851d8 0%, #4d6ae0 50%, #2f3fc6 100%)',
+                display: 'flex', alignItems: 'center', justifyContent: 'center',
+                fontSize: 36,
+                borderRadius: '8px 8px 0 0',
+                flexShrink: 0,
+              }}>
+                ✏️
+              </Box>
 
-            {/* Miniatura visual */}
-            <div style={{
-              height: 80, borderRadius: 8, marginBottom: 12,
-              background: 'linear-gradient(135deg, #1b8e5a 0%, #2a9e6a 50%, #156e45 100%)',
-              display: 'flex', alignItems: 'center', justifyContent: 'center',
-              fontSize: 36,
-            }}>
-              ✏️
-            </div>
+              <Box sx={{ p: 2, display: 'flex', flexDirection: 'column', flex: 1 }}>
+                <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', mb: 1 }}>
+                  <Typography fontWeight={600} sx={{ fontSize: 14, flex: 1, mr: 1, lineHeight: 1.4 }}>
+                    {c.title}
+                  </Typography>
+                  <IconButton
+                    size="small"
+                    onClick={e => handleDelete(e, c)}
+                    disabled={deletingId === c.id}
+                    sx={{ color: 'text.disabled', '&:hover': { color: 'error.main' }, mt: -0.5, mr: -0.5, flexShrink: 0 }}
+                  >
+                    {deletingId === c.id ? '…' : '×'}
+                  </IconButton>
+                </Box>
 
-            <h3>{c.title}</h3>
-            <div className="meta" style={{ marginBottom: 4 }}>
-              {c.sceneCount} escenas
-              {c.audioReady && ' · Con narración'}
-              {c.source === 'prompt' && ' · Por tema'}
-            </div>
-            <div className="meta">{formatDate(c.createdAt)}</div>
-            <span className={`status-pill status-${c.status}`}>
-              {STATUS_LABELS[c.status] || c.status}
-            </span>
-          </div>
+                <Typography variant="caption" color="text.secondary" display="block" sx={{ mb: 0.5 }}>
+                  {c.sceneCount} escenas
+                  {c.audioReady && ' · Con narración'}
+                  {c.source === 'prompt' && ' · Por tema'}
+                </Typography>
+                <Typography variant="caption" color="text.disabled" display="block">
+                  {formatDate(c.createdAt)}
+                </Typography>
+
+                <Box sx={{ mt: 'auto', pt: 1.5 }}>
+                  <Chip
+                    label={STATUS_LABELS[c.status] || c.status}
+                    color={STATUS_COLORS[c.status] || 'default'}
+                    size="small"
+                    sx={{ fontSize: 11, height: 20 }}
+                  />
+                </Box>
+              </Box>
+            </CardContainer>
+          </Grid>
         ))}
-      </div>
+      </Grid>
     </>
   );
 }

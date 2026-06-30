@@ -1,35 +1,44 @@
-/* Design tokens — inspirados en osdepym / Humand theme */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;600&display=swap');
+
+/* Design tokens — Humand design system */
 :root {
-  --hu-brand: #1b8e5a;
-  --hu-brand-hover: #156e45;
-  --hu-brand-soft: #e8f4ee;
-  --hu-brand-softer: #f2faf6;
+  /* Brand — Humand blue */
+  --hu-brand: #3851d8;        /* Humand 600 */
+  --hu-brand-hover: #2f3fc6;  /* Humand 700 */
+  --hu-brand-soft: #dee5fb;   /* Humand 100 */
+  --hu-brand-softer: #f1f4fd; /* Humand 50  */
 
-  --hu-bg: #f6f7f9;
+  /* Neutrales — Neutral palette */
+  --hu-bg: #f5f6f8;           /* Neutral 50  */
   --hu-surface: #ffffff;
-  --hu-border: #e4e7eb;
-  --hu-border-strong: #d4d8de;
+  --hu-border: #dfe0e6;       /* Neutral 200 */
+  --hu-border-strong: #cbcdd6;/* Neutral 300 */
 
-  --hu-text: #111827;
-  --hu-text-muted: #4b5563;
-  --hu-text-soft: #6b7280;
-  --hu-text-faint: #9ca3af;
+  /* Texto */
+  --hu-text: #303036;         /* Neutral 950 */
+  --hu-text-muted: #53525d;   /* Neutral 900 */
+  --hu-text-soft: #636271;    /* Neutral 800 */
+  --hu-text-faint: #aaaaba;   /* Neutral 500 */
 
-  --hu-danger: #dc2626;
-  --hu-danger-soft: #fee2e2;
-  --hu-warning: #b45309;
-  --hu-warning-soft: #fef3c7;
-  --hu-info: #1e40af;
-  --hu-info-soft: #dbeafe;
-  --hu-success: #065f46;
-  --hu-success-soft: #d1fae5;
+  /* Estados */
+  --hu-danger: #d42e2e;       /* Red 600     */
+  --hu-danger-soft: #fde3e3;  /* Red 100     */
+  --hu-warning: #b1690e;      /* Yellow 700  */
+  --hu-warning-soft: #fdfaec; /* Yellow 50   */
+  --hu-info: #30a2c7;         /* Sky Blue 700*/
+  --hu-info-soft: #ecfafc;    /* Sky Blue 100*/
+  --hu-success: #227831;      /* Green 800   */
+  --hu-success-soft: #e6fbe9; /* Green 100   */
 
-  --hu-radius-s: 8px;
-  --hu-radius-m: 12px;
-  --hu-radius-l: 16px;
-  --hu-shadow-s: 0 1px 2px rgba(15, 23, 42, 0.05);
-  --hu-shadow-m: 0 2px 8px rgba(15, 23, 42, 0.06);
-  --hu-shadow-l: 0 12px 40px rgba(15, 23, 42, 0.08);
+  /* Border radius — según altura del elemento */
+  --hu-radius-s: 4px;   /* 1–39px   */
+  --hu-radius-m: 8px;   /* 40–71px  */
+  --hu-radius-l: 16px;  /* 72px+    */
+
+  /* Sombras — solo estos 3 tokens */
+  --hu-shadow-s: -1px 4px 8px 0px rgba(233, 233, 244, 1);          /* 4dp  */
+  --hu-shadow-m: -1px 8px 16px 0px rgba(170, 170, 186, 0.45);       /* 8dp  */
+  --hu-shadow-l: 0px -2px 24px 0px rgba(103, 103, 121, 0.50);       /* Inverted */
 }
 
 * { box-sizing: border-box; }
@@ -38,7 +47,11 @@ html, body, #root {
   margin: 0;
   padding: 0;
   min-height: 100%;
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.4;
+  letter-spacing: 0.2px;
   color: var(--hu-text);
   background: var(--hu-bg);
   -webkit-font-smoothing: antialiased;
@@ -64,11 +77,11 @@ a { color: inherit; text-decoration: none; }
 .app-header .brand { display: flex; align-items: center; gap: 12px; cursor: pointer; }
 .app-header .brand-mark {
   width: 34px; height: 34px;
-  border-radius: 10px;
+  border-radius: var(--hu-radius-m);
   background: var(--hu-brand-soft);
   color: var(--hu-brand);
   display: inline-flex; align-items: center; justify-content: center;
-  font-weight: 700; font-size: 18px;
+  font-weight: 600; font-size: 18px;
   box-shadow: var(--hu-shadow-s);
 }
 .app-header h1 { margin: 0; font-size: 15px; font-weight: 600; color: var(--hu-text); }
@@ -188,13 +201,13 @@ a { color: inherit; text-decoration: none; }
   display: flex; justify-content: space-between; align-items: center;
   margin: 6px 0 20px; gap: 16px; flex-wrap: wrap;
 }
-.page-title-row h2 { margin: 0; font-size: 22px; font-weight: 700; letter-spacing: -0.02em; }
+.page-title-row h2 { margin: 0; font-size: 22px; font-weight: 600; letter-spacing: 0.2px; }
 
 .page-header {
   display: flex; justify-content: space-between; align-items: flex-start;
   gap: 16px; margin-top: 10px; flex-wrap: wrap;
 }
-.page-header h2 { margin: 0; font-size: 22px; font-weight: 700; letter-spacing: -0.02em; }
+.page-header h2 { margin: 0; font-size: 22px; font-weight: 600; letter-spacing: 0.2px; }
 .page-header .subtitle { color: var(--hu-text-soft); margin: 6px 0 0; font-size: 14px; line-height: 1.5; }
 
 .back-link {
@@ -207,8 +220,8 @@ a { color: inherit; text-decoration: none; }
 /* ── Upload page ── */
 .upload-shell { max-width: 720px; margin: 0 auto; }
 .upload-hero { text-align: center; margin-bottom: 28px; }
-.upload-hero h1 { font-size: 28px; font-weight: 700; margin: 0 0 8px 0; letter-spacing: -0.02em; }
-.upload-hero p { font-size: 15px; color: var(--hu-text-soft); margin: 0 auto; max-width: 520px; line-height: 1.55; }
+.upload-hero h1 { font-size: 28px; font-weight: 600; margin: 0 0 8px 0; letter-spacing: 0.2px; }
+.upload-hero p { font-size: 15px; color: var(--hu-text-soft); margin: 0 auto; max-width: 520px; line-height: 1.4; }
 
 .dropzone-big {
   display: block; border: 2px dashed var(--hu-border-strong);
@@ -229,12 +242,12 @@ a { color: inherit; text-decoration: none; }
 .mode-tabs {
   display: flex; gap: 4px; margin: 0 auto 16px;
   max-width: 560px; background: var(--hu-bg); padding: 4px;
-  border-radius: 10px; border: 1px solid var(--hu-border);
+  border-radius: var(--hu-radius-m); border: 1px solid var(--hu-border);
 }
 .mode-tab {
   flex: 1; padding: 9px 14px; border: none; background: transparent;
   color: var(--hu-text-muted); font-size: 14px; font-weight: 600;
-  font-family: inherit; border-radius: 7px; cursor: pointer;
+  font-family: inherit; border-radius: var(--hu-radius-s); cursor: pointer;
   transition: background 0.15s, color 0.15s, box-shadow 0.15s;
 }
 .mode-tab:hover { color: var(--hu-text); }
@@ -277,7 +290,7 @@ a { color: inherit; text-decoration: none; }
 }
 .progress-step.active .progress-step-indicator { background: var(--hu-brand-soft); }
 .progress-step.done .progress-step-indicator { background: var(--hu-brand); color: #fff; }
-.progress-step-indicator .check { font-weight: 700; font-size: 16px; }
+.progress-step-indicator .check { font-weight: 600; font-size: 16px; }
 .progress-step-indicator .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--hu-text-faint); }
 .progress-step-indicator .spinner-inner {
   width: 16px; height: 16px;
@@ -300,12 +313,12 @@ a { color: inherit; text-decoration: none; }
 /* ── Module / lesson structure (igual que osdepym) ── */
 .module-block { margin-top: 32px; }
 .module-header { display: flex; align-items: center; gap: 12px; margin-bottom: 12px; flex-wrap: wrap; }
-.module-header h2 { margin: 0; font-size: 18px; font-weight: 600; letter-spacing: -0.01em; }
+.module-header h2 { margin: 0; font-size: 18px; font-weight: 600; letter-spacing: 0.2px; }
 .module-pill {
   display: inline-block; padding: 4px 12px; border-radius: 999px;
   background: var(--hu-brand); color: #fff; font-size: 11px; font-weight: 600; letter-spacing: 0.02em;
 }
-.module-desc { color: var(--hu-text-soft); margin-top: 0; line-height: 1.55; }
+.module-desc { color: var(--hu-text-soft); margin-top: 0; line-height: 1.4; }
 
 .lesson-card {
   background: var(--hu-surface); border: 1px solid var(--hu-border);
@@ -313,7 +326,7 @@ a { color: inherit; text-decoration: none; }
   transition: border-color 0.15s;
 }
 .lesson-card:hover { border-color: var(--hu-border-strong); }
-.lesson-card h3 { margin: 0 0 6px 0; font-size: 15px; font-weight: 600; letter-spacing: -0.01em; }
+.lesson-card h3 { margin: 0 0 6px 0; font-size: 15px; font-weight: 600; letter-spacing: 0.2px; }
 .lesson-desc { color: var(--hu-text-soft); font-size: 13px; margin-bottom: 14px; line-height: 1.5; }
 .lesson-player-wrapper { border-radius: var(--hu-radius-m); overflow: hidden; margin-bottom: 12px; background: #000; }
 .lesson-note { margin-left: 12px; color: var(--hu-text-soft); font-size: 13px; }
@@ -321,7 +334,7 @@ a { color: inherit; text-decoration: none; }
 /* ── Alert & error ── */
 .error-box {
   background: var(--hu-danger-soft); border: 1px solid #fca5a5;
-  color: #991b1b; padding: 14px 18px;
+  color: var(--hu-danger); padding: 14px 18px;
   border-radius: var(--hu-radius-s); margin-top: 16px; font-size: 14px;
 }
 .alert-warning {

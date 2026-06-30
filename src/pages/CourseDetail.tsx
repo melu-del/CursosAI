@@ -1,12 +1,16 @@
 import { useEffect, useRef, useState, useCallback } from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom';
 import { Player } from '@remotion/player';
+import { Box, Typography, Chip, LinearProgress } from '@material-hu/mui';
+import Button from '@material-hu/components/design-system/Buttons/Button';
+import Alert from '@material-hu/components/design-system/Alert';
+import CardContainer from '@material-hu/components/design-system/CardContainer';
 import { WhiteboardComposition } from '../video/WhiteboardComposition';
 import type { WhiteboardScene } from '../video/types';
+import { LessonQuiz } from '../components/LessonQuiz';
 
 const FPS = 30;
-const ACCENT_COLOR = '#1b8e5a';
-const BOARD_STYLE = 'classic' as const;
+const ACCENT_COLOR = '#3851d8';
 
 interface Course {
   id: string;
@@ -14,62 +18,88 @@ interface Course {
   description: string;
   status: string;
   source?: string;
+  boardStyle?: string;
+  scorm?: boolean;
   scenes: WhiteboardScene[];
 }
 
 const SCENE_ICONS: Record<string, string> = {
-  title: '🎯',
-  problem: '🤔',
+  title:    '🎯',
+  problem:  '🤔',
   solution: '✅',
-  example: '💡',
-  closing: '🚀',
-  content: '📋',
+  example:  '💡',
+  closing:  '🚀',
+  content:  '📋',
 };
 
-const SCENE_COLORS: Record<string, { bg: string; fg: string }> = {
-  title:    { bg: '#e8f4ee', fg: '#1b8e5a' },
-  problem:  { bg: '#fee2e2', fg: '#b91c1c' },
-  solution: { bg: '#dcfce7', fg: '#15803d' },
-  example:  { bg: '#dbeafe', fg: '#1d4ed8' },
-  closing:  { bg: '#f3e8ff', fg: '#7e22ce' },
-  content:  { bg: '#f0f9ff', fg: '#0369a1' },
+const SCENE_BG: Record<string, string> = {
+  title:    '#e8f4ee',
+  problem:  '#fee2e2',
+  solution: '#dcfce7',
+  example:  '#dbeafe',
+  closing:  '#f3e8ff',
+  content:  '#f0f9ff',
 };
 
-function ScenePlayer({ scene, courseTitle }: { scene: WhiteboardScene; courseTitle: string }) {
+const SCENE_FG: Record<string, string> = {
+  title:    '#1b8e5a',
+  problem:  '#b91c1c',
+  solution: '#15803d',
+  example:  '#1d4ed8',
+  closing:  '#7e22ce',
+  content:  '#0369a1',
+};
+
+/* ── Full video player ───────────────────────────────────────── */
+type BoardStyle = 'classic' | 'dark' | 'chalk' | 'colorful';
+
+function FullVideoPlayer({ scenes, courseTitle, boardStyle }: { scenes: WhiteboardScene[]; courseTitle: string; boardStyle: string }) {
+  const totalFrames = scenes.reduce((a, s) => a + s.duration, 0);
+  const config = { topic: courseTitle, accentColor: ACCENT_COLOR, boardStyle: boardStyle as BoardStyle, scenes };
+
+  return (
+    <Box sx={{
+      borderRadius: 2, overflow: 'hidden',
+      boxShadow: '0 4px 32px rgba(56,81,216,0.18)',
+      aspectRatio: '16 / 9',
+      bgcolor: '#faf8f5',
+    }}>
+      <Player
+        component={WhiteboardComposition}
+        inputProps={{ config }}
+        durationInFrames={Math.max(totalFrames, 30)}
+        compositionWidth={1280}
+        compositionHeight={720}
+        fps={FPS}
+        style={{ width: '100%', height: '100%' }}
+        controls
+      />
+    </Box>
+  );
+}
+
+/* ── Individual scene preview (collapsed by default) ────────── */
+function ScenePlayer({ scene, courseTitle, boardStyle }: { scene: WhiteboardScene; courseTitle: string; boardStyle: string }) {
   const [open, setOpen] = useState(false);
-  const config = {
-    topic: courseTitle,
-    accentColor: ACCENT_COLOR,
-    boardStyle: BOARD_STYLE,
-    scenes: [scene],
-  };
+  const config = { topic: courseTitle, accentColor: ACCENT_COLOR, boardStyle: boardStyle as BoardStyle, scenes: [scene] };
   const secs = Math.round(scene.duration / FPS);
 
   if (!open) {
     return (
-      <button
+      <Button
+        variant="outlined"
+        fullWidth
         onClick={() => setOpen(true)}
-        style={{
-          width: '100%', padding: '28px 0',
-          background: 'var(--hu-bg)', border: '1px dashed var(--hu-border-strong)',
-          borderRadius: 'var(--hu-radius-m)', cursor: 'pointer',
-          display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 10,
-          color: 'var(--hu-text-soft)', fontSize: 14, fontWeight: 500,
-          fontFamily: 'inherit', marginBottom: 12,
-          transition: 'background 0.15s, border-color 0.15s',
-        }}
-        onMouseOver={e => { (e.currentTarget as HTMLButtonElement).style.borderColor = 'var(--hu-brand)'; (e.currentTarget as HTMLButtonElement).style.color = 'var(--hu-brand)'; }}
-        onMouseOut={e => { (e.currentTarget as HTMLButtonElement).style.borderColor = 'var(--hu-border-strong)'; (e.currentTarget as HTMLButtonElement).style.color = 'var(--hu-text-soft)'; }}
+        sx={{ my: 1, py: 1.5, borderStyle: 'dashed', textTransform: 'none' }}
       >
-        <span style={{ fontSize: 20 }}>▶</span>
-        <span>Previsualizar escena ({secs}s)</span>
-      </button>
+        ▶ Previsualizar escena ({secs}s)
+      </Button>
     );
   }
 
   return (
-    <div style={{ marginBottom: 12 }}>
-      <div className="lesson-player-wrapper" style={{ aspectRatio: '16 / 9' }}>
+    <Box sx={{ my: 1 }}>
+      <Box sx={{ aspectRatio: '16 / 9', borderRadius: 1, overflow: 'hidden' }}>
         <Player
           component={WhiteboardComposition}
           inputProps={{ config }}
@@ -80,32 +110,29 @@ function ScenePlayer({ scene, courseTitle }: { scene: WhiteboardScene; courseTit
           style={{ width: '100%', height: '100%' }}
           controls
         />
-      </div>
-      <button
-        onClick={() => setOpen(false)}
-        style={{
-          background: 'none', border: 'none', color: 'var(--hu-text-faint)',
-          fontSize: 12, cursor: 'pointer', fontFamily: 'inherit', padding: '4px 0',
-        }}
-      >
+      </Box>
+      <Button variant="text" size="small" onClick={() => setOpen(false)} sx={{ textTransform: 'none', mt: 0.5 }}>
         Cerrar preview
-      </button>
-    </div>
+      </Button>
+    </Box>
   );
 }
 
+/* ── Main page ───────────────────────────────────────────────── */
 export function CourseDetail() {
   const { id } = useParams<{ id: string }>();
   const navigate = useNavigate();
 
-  const [course, setCourse] = useState<Course | null>(null);
-  const [error, setError] = useState<string | null>(null);
-  const [deleting, setDeleting] = useState(false);
-  const [generatingAudio, setGeneratingAudio] = useState(false);
-  const [audioMsg, setAudioMsg] = useState<string | null>(null);
-  const [rendering, setRendering] = useState(false);
-  const [renderProgress, setRenderProgress] = useState(0);
-  const [renderError, setRenderError] = useState<string | null>(null);
+  const [course,           setCourse]           = useState<Course | null>(null);
+  const [error,            setError]            = useState<string | null>(null);
+  const [deleting,         setDeleting]         = useState(false);
+  const [generatingAudio,  setGeneratingAudio]  = useState(false);
+  const [audioMsg,         setAudioMsg]         = useState<string | null>(null);
+  const [rendering,        setRendering]        = useState(false);
+  const [renderProgress,   setRenderProgress]   = useState(0);
+  const [renderError,      setRenderError]      = useState<string | null>(null);
+  const [scenesOpen,       setScenesOpen]       = useState(false);
+  const [exportingScorm,   setExportingScorm]   = useState(false);
   const mountedRef = useRef(true);
 
   useEffect(() => {
@@ -126,6 +153,26 @@ export function CourseDetail() {
   }, [id]);
 
   useEffect(() => { load(); }, [load]);
+
+  const handleExportScorm = async () => {
+    if (!course) return;
+    setExportingScorm(true);
+    try {
+      const resp = await fetch(`/api/courses/${course.id}/scorm`);
+      if (!resp.ok) throw new Error('Error al generar SCORM');
+      const blob = await resp.blob();
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = `${course.title.replace(/[^a-z0-9]/gi, '_')}_scorm.zip`;
+      a.click();
+      URL.revokeObjectURL(url);
+    } catch (e: unknown) {
+      alert(e instanceof Error ? e.message : 'Error al exportar SCORM');
+    } finally {
+      setExportingScorm(false);
+    }
+  };
 
   const handleDelete = async () => {
     if (!course) return;
@@ -148,23 +195,18 @@ export function CourseDetail() {
     try {
       const resp = await fetch(`/api/courses/${course.id}/render`, { method: 'POST' });
       const { jobId } = await resp.json();
-
-      // Poll until done
       while (mountedRef.current) {
         await new Promise(r => setTimeout(r, 1500));
         const job = await fetch(`/api/jobs/${jobId}`).then(r => r.json());
         if (mountedRef.current) setRenderProgress(job.progress ?? 0);
         if (job.status === 'done') {
-          // Download
           const a = document.createElement('a');
           a.href = job.outputPath;
           a.download = `${course.title.replace(/[^a-z0-9]/gi, '_')}.mp4`;
           a.click();
           break;
         }
-        if (job.status === 'error') {
-          throw new Error(job.error || 'Error al renderizar');
-        }
+        if (job.status === 'error') throw new Error(job.error || 'Error al renderizar');
       }
     } catch (e: unknown) {
       if (mountedRef.current) setRenderError(e instanceof Error ? e.message : 'Error');
@@ -181,13 +223,10 @@ export function CourseDetail() {
       const resp = await fetch(`/api/courses/${course.id}/audio`, { method: 'POST' });
       const { jobId, error: err } = await resp.json();
       if (!resp.ok) throw new Error(err || 'Error al generar audio');
-
-      // Poll job
       while (mountedRef.current) {
         await new Promise(r => setTimeout(r, 1500));
         const job = await fetch(`/api/jobs/${jobId}`).then(r => r.json());
         if (job.status === 'done') {
-          // Reload course from API
           const updated = await fetch(`/api/courses/${course.id}`).then(r => r.json());
           if (mountedRef.current) {
             setCourse(updated);
@@ -207,210 +246,241 @@ export function CourseDetail() {
 
   if (error) {
     return (
-      <div className="error-box">
-        <div>Algo no funcionó: {error}</div>
-        <div style={{ marginTop: 12, display: 'flex', gap: 8 }}>
-          <button className="btn" onClick={load}>Reintentar</button>
-          <Link to="/" className="btn btn-secondary">Volver</Link>
-        </div>
-      </div>
+      <Box>
+        <Alert severity="error" title="Algo no funcionó" description={error} sx={{ mb: 2 }} />
+        <Box sx={{ display: 'flex', gap: 1 }}>
+          <Button variant="contained" onClick={load}>Reintentar</Button>
+          <Button variant="outlined" component={Link} to="/">Volver</Button>
+        </Box>
+      </Box>
     );
   }
 
   if (!course) {
     return (
-      <>
-        <Link to="/" className="back-link">← Volver</Link>
-        <div style={{ marginTop: 16 }}>
-          <div className="skeleton-line skeleton-line--title" />
-          <div className="skeleton-line" />
-          <div className="skeleton-line skeleton-line--short" />
-        </div>
-      </>
+      <Box>
+        <Button variant="text" component={Link} to="/" sx={{ mb: 2, textTransform: 'none' }}>← Volver</Button>
+        <Box sx={{ display: 'flex', flexDirection: 'column', gap: 1.5 }}>
+          <Box sx={{ aspectRatio: '16/9', bgcolor: 'grey.100', borderRadius: 2 }} />
+          {[1, 0.6].map((w, i) => (
+            <Box key={i} sx={{ height: 16, width: `${w * 60}%`, bgcolor: 'grey.100', borderRadius: 1 }} />
+          ))}
+        </Box>
+      </Box>
     );
   }
 
-  const scenes = course.scenes || [];
-  const missingAudio = scenes.filter(s => !s.audioUrl).length;
-  const totalSecs = Math.round(scenes.reduce((a, s) => a + s.duration, 0) / FPS);
-  const isDemo = course.id === 'course_demo';
+  const scenes           = course.scenes || [];
+  const missingAudio     = scenes.filter(s => !s.audioUrl).length;
+  const totalSecs        = Math.round(scenes.reduce((a, s) => a + s.duration, 0) / FPS);
+  const isDemo           = course.id === 'course_demo';
+  const totalQuizQ       = scenes.reduce((a, s) => a + (s.quiz?.length || 0), 0);
+  const scenesWithQuiz   = scenes.filter(s => s.quiz && s.quiz.length > 0);
 
   return (
     <>
-      <Link to="/" className="back-link">← Volver a mis videos</Link>
+      <Button variant="text" component={Link} to="/" sx={{ mb: 2, textTransform: 'none' }}>
+        ← Volver a mis videos
+      </Button>
 
-      <div className="page-header">
-        <div style={{ flex: 1 }}>
-          <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 4 }}>
-            <h2 style={{ margin: 0 }}>{course.title}</h2>
-            {isDemo && (
-              <span style={{
-                fontSize: 11, fontWeight: 700, letterSpacing: '0.04em',
-                padding: '3px 8px', borderRadius: 999,
-                background: '#fef3c7', color: '#b45309',
-                textTransform: 'uppercase',
-              }}>
-                Demo
-              </span>
+      {/* ── Full video player ── */}
+      <FullVideoPlayer scenes={scenes} courseTitle={course.title} boardStyle={course.boardStyle || 'classic'} />
+
+      {/* ── Video metadata + actions ── */}
+      <Box sx={{ mt: 2.5, mb: 3 }}>
+        <Box sx={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', gap: 2, flexWrap: 'wrap' }}>
+          <Box sx={{ flex: 1, minWidth: 0 }}>
+            <Box sx={{ display: 'flex', alignItems: 'center', gap: 1, mb: 0.5 }}>
+              <Typography variant="h5" fontWeight={600}>{course.title}</Typography>
+              {isDemo && <Chip label="Demo" size="small" color="warning" sx={{ fontSize: 10, height: 18 }} />}
+            </Box>
+            {course.description && (
+              <Typography variant="body2" color="text.secondary" sx={{ mb: 1 }}>
+                {course.description}
+              </Typography>
             )}
-          </div>
-          <p className="subtitle">{course.description}</p>
-          <div style={{ display: 'flex', gap: 16, marginTop: 8, fontSize: 13, color: 'var(--hu-text-soft)' }}>
-            <span>📽 {scenes.length} escenas</span>
-            <span>⏱ {totalSecs}s de video</span>
-            {missingAudio === 0
-              ? <span style={{ color: 'var(--hu-success)' }}>🎙 Con narración</span>
-              : <span>{missingAudio} sin narración</span>
-            }
-          </div>
-        </div>
-        <div style={{ display: 'flex', gap: 8, flexWrap: 'wrap', alignItems: 'flex-start' }}>
-          {missingAudio > 0 && (
-            <button className="btn btn-secondary" onClick={handleGenerateAudio} disabled={generatingAudio}>
-              {generatingAudio ? 'Generando...' : '🎙 Agregar narración'}
-            </button>
-          )}
-          <button
-            className="btn"
-            onClick={handleRender}
-            disabled={rendering || isDemo}
-            title={isDemo ? 'Disponible en cursos reales' : ''}
-          >
-            {rendering
-              ? `⏳ Renderizando ${renderProgress}%`
-              : '⬇️ Descargar MP4'}
-          </button>
-          {!isDemo && (
-            <button className="btn-danger" onClick={handleDelete} disabled={deleting}>
-              {deleting ? 'Eliminando...' : 'Eliminar'}
-            </button>
-          )}
-        </div>
-      </div>
+            <Box sx={{ display: 'flex', gap: 2, flexWrap: 'wrap' }}>
+              <Typography variant="caption" color="text.secondary">📽 {scenes.length} escenas</Typography>
+              <Typography variant="caption" color="text.secondary">⏱ {totalSecs}s</Typography>
+              {missingAudio === 0
+                ? <Typography variant="caption" color="success.main">🎙 Con narración</Typography>
+                : <Typography variant="caption" color="text.disabled">{missingAudio} sin narración</Typography>
+              }
+              {totalQuizQ > 0 && (
+                <Typography variant="caption" color="primary.main">✏️ {totalQuizQ} preguntas</Typography>
+              )}
+            </Box>
+          </Box>
 
-      {/* Demo banner */}
+          <Box sx={{ display: 'flex', gap: 1, flexWrap: 'wrap', flexShrink: 0 }}>
+            {missingAudio > 0 && (
+              <Button variant="outlined" onClick={handleGenerateAudio} loading={generatingAudio} sx={{ textTransform: 'none' }}>
+                🎙 Agregar narración
+              </Button>
+            )}
+            {(course.scorm || (course.scorm == null && totalQuizQ > 0)) && (
+              <Button
+                variant="outlined"
+                onClick={handleExportScorm}
+                loading={exportingScorm}
+                disabled={isDemo}
+                sx={{ textTransform: 'none' }}
+              >
+                📦 Exportar SCORM
+              </Button>
+            )}
+            <Button
+              variant="contained"
+              onClick={handleRender}
+              disabled={rendering || isDemo}
+              loading={rendering}
+              sx={{ textTransform: 'none' }}
+            >
+              {rendering ? `Renderizando ${renderProgress}%` : '⬇️ Descargar MP4'}
+            </Button>
+            {!isDemo && (
+              <Button variant="outlined" color="error" onClick={handleDelete} loading={deleting} sx={{ textTransform: 'none' }}>
+                Eliminar
+              </Button>
+            )}
+          </Box>
+        </Box>
+
+        {rendering && <LinearProgress variant="determinate" value={renderProgress} sx={{ mt: 2, borderRadius: 1 }} />}
+      </Box>
+
+      {/* ── Alerts ── */}
       {isDemo && (
-        <div style={{
-          margin: '16px 0',
-          padding: '14px 18px',
-          background: 'var(--hu-info-soft)',
-          border: '1px solid #bfdbfe',
-          borderRadius: 'var(--hu-radius-s)',
-          fontSize: 14,
-          color: 'var(--hu-info)',
-          display: 'flex',
-          alignItems: 'center',
-          gap: 10,
-        }}>
-          <span style={{ fontSize: 18 }}>ℹ️</span>
-          <span>
-            Este es un <strong>curso de demostración</strong>. Para crear los tuyos, agregá tu{' '}
-            <code style={{ background: '#dbeafe', padding: '1px 5px', borderRadius: 4, fontSize: 12 }}>GEMINI_API_KEY</code>{' '}
-            en el archivo <code style={{ background: '#dbeafe', padding: '1px 5px', borderRadius: 4, fontSize: 12 }}>.env</code>{' '}
-            y hacé clic en <Link to="/upload" style={{ color: 'var(--hu-info)', fontWeight: 600, textDecoration: 'underline' }}>Crear video</Link>.
-          </span>
-        </div>
+        <Alert
+          severity="info"
+          title="Curso de demostración"
+          description={
+            <>
+              Para crear los tuyos, agregá tu <code>GEMINI_API_KEY</code> en el archivo <code>.env</code> y hacé clic en{' '}
+              <Link to="/upload" style={{ color: 'inherit', fontWeight: 600 }}>Crear video</Link>.
+            </>
+          }
+          sx={{ mb: 2 }}
+        />
       )}
-
-      {/* Alert audio faltante */}
       {missingAudio > 0 && !isDemo && (
-        <div className="alert-warning">
-          <div>Hay {missingAudio} escena{missingAudio !== 1 ? 's' : ''} sin narración.</div>
-          <button onClick={handleGenerateAudio} disabled={generatingAudio}>
-            {generatingAudio ? 'Generando narraciones...' : 'Generar narración faltante'}
-          </button>
-          {audioMsg && <div style={{ marginTop: 8, fontSize: 13 }}>{audioMsg}</div>}
-        </div>
+        <Alert
+          severity="warning"
+          title={`${missingAudio} escena${missingAudio !== 1 ? 's' : ''} sin narración`}
+          action={{ text: generatingAudio ? 'Generando...' : 'Generar narración', onClick: handleGenerateAudio }}
+          sx={{ mb: 2 }}
+        />
+      )}
+      {renderError && <Alert severity="error" title="Error al exportar" description={renderError} sx={{ mb: 2 }} />}
+      {audioMsg && missingAudio === 0 && <Alert severity="success" title={audioMsg} sx={{ mb: 2 }} />}
+
+      {/* ── Quiz section ── */}
+      {scenesWithQuiz.length > 0 && (
+        <Box sx={{ mt: 2, mb: 1 }}>
+          <Box sx={{ display: 'flex', alignItems: 'center', gap: 1.5, mb: 2 }}>
+            <Typography variant="h6" fontWeight={600}>✏️ Preguntas del quiz</Typography>
+            <Chip label={`${totalQuizQ} preguntas`} size="small" color="primary" variant="outlined" />
+            {course.scorm && (
+              <Chip label="Incluido en SCORM" size="small" color="warning" variant="outlined" sx={{ fontSize: 10 }} />
+            )}
+          </Box>
+          <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
+            {scenesWithQuiz.map((scene) => (
+              <Box key={scene.id}>
+                <Typography variant="overline" color="text.secondary" fontWeight={600} sx={{ display: 'block', mb: 1 }}>
+                  {SCENE_ICONS[scene.type] || '📋'} {scene.title}
+                </Typography>
+                <LessonQuiz quiz={scene.quiz!} />
+              </Box>
+            ))}
+          </Box>
+        </Box>
       )}
 
-      {renderError && (
-        <div className="error-box" style={{ marginTop: 12 }}>
-          <strong>Error al exportar:</strong> {renderError}
-        </div>
-      )}
+      {/* ── Scenes (collapsible) ── */}
+      <Box sx={{ mt: 1 }}>
+        <Button
+          variant="text"
+          fullWidth
+          onClick={() => setScenesOpen(o => !o)}
+          sx={{
+            textTransform: 'none', justifyContent: 'space-between',
+            py: 1.5, px: 2, borderRadius: 2,
+            bgcolor: scenesOpen ? 'primary.50' : 'grey.50',
+            '&:hover': { bgcolor: 'primary.50' },
+          }}
+        >
+          <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
+            <Typography fontWeight={600}>Escenas del video</Typography>
+            <Chip label={`${scenes.length} escenas`} size="small" color="primary" variant="outlined" />
+          </Box>
+          <Typography color="text.secondary" sx={{ fontSize: 20 }}>
+            {scenesOpen ? '▲' : '▼'}
+          </Typography>
+        </Button>
 
-      {audioMsg && missingAudio === 0 && (
-        <div style={{
-          margin: '12px 0', padding: '10px 14px',
-          background: 'var(--hu-success-soft)', color: 'var(--hu-success)',
-          borderRadius: 'var(--hu-radius-s)', fontSize: 14,
-        }}>
-          ✅ {audioMsg}
-        </div>
-      )}
+        {scenesOpen && (
+          <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2, mt: 2 }}>
+            {scenes.map((scene) => {
+              const bg   = SCENE_BG[scene.type]   || SCENE_BG.content;
+              const fg   = SCENE_FG[scene.type]   || SCENE_FG.content;
+              const icon = SCENE_ICONS[scene.type] || '📋';
+              const secs = Math.round(scene.duration / FPS);
 
-      {/* Module block — igual que osdepym */}
-      <div className="module-block">
-        <div className="module-header">
-          <h2>Escenas del video</h2>
-          <span className="module-pill">{scenes.length} escenas</span>
-        </div>
-        <p className="module-desc">
-          Cada escena es una parte del video pizarra. Hacé clic en ▶ para previsualizarla.
-        </p>
+              return (
+                <CardContainer key={scene.id} hasShadow fullWidth>
+                  <Box sx={{ display: 'flex', alignItems: 'flex-start', gap: 1.5, mb: 1 }}>
+                    <Box sx={{
+                      width: 36, height: 36, borderRadius: 1, flexShrink: 0,
+                      bgcolor: bg, color: fg,
+                      display: 'flex', alignItems: 'center', justifyContent: 'center',
+                      fontSize: 18,
+                    }}>
+                      {icon}
+                    </Box>
+                    <Box sx={{ flex: 1 }}>
+                      <Typography fontWeight={600} sx={{ fontSize: 15 }}>{scene.title}</Typography>
+                      <Box sx={{ display: 'flex', alignItems: 'center', gap: 1, mt: 0.25 }}>
+                        <Typography variant="caption" color="text.disabled">
+                          {scene.type} · {secs}s
+                        </Typography>
+                        {scene.audioUrl && (
+                          <Chip label="🎙 Con narración" size="small" color="success" sx={{ fontSize: 10, height: 18 }} />
+                        )}
+                      </Box>
+                    </Box>
+                  </Box>
 
-        {scenes.map((scene) => {
-          const c = SCENE_COLORS[scene.type] || SCENE_COLORS.content;
-          const icon = SCENE_ICONS[scene.type] || '📋';
-          const secs = Math.round(scene.duration / FPS);
-          return (
-            <div key={scene.id} className="lesson-card">
-              {/* Lesson header */}
-              <div style={{ display: 'flex', alignItems: 'flex-start', gap: 12, marginBottom: 8 }}>
-                <div style={{
-                  width: 36, height: 36, borderRadius: 8, flexShrink: 0,
-                  background: c.bg, color: c.fg,
-                  display: 'flex', alignItems: 'center', justifyContent: 'center',
-                  fontSize: 18,
-                }}>
-                  {icon}
-                </div>
-                <div style={{ flex: 1 }}>
-                  <h3 style={{ margin: 0 }}>{scene.title}</h3>
-                  <div style={{ fontSize: 12, color: 'var(--hu-text-faint)', marginTop: 2 }}>
-                    {scene.type} · {secs}s
-                    {scene.audioUrl && (
-                      <span style={{
-                        marginLeft: 8, fontSize: 11, fontWeight: 600,
-                        color: 'var(--hu-success)', background: 'var(--hu-success-soft)',
-                        padding: '1px 7px', borderRadius: 999,
-                      }}>
-                        🎙 Con narración
-                      </span>
-                    )}
-                  </div>
-                </div>
-              </div>
-
-              {/* Narration text */}
-              {scene.narration && (
-                <div className="lesson-desc">{scene.narration}</div>
-              )}
-
-              {/* Embedded player */}
-              <ScenePlayer scene={scene} courseTitle={course.title} />
-
-              {/* Bullets preview */}
-              {scene.bullets?.length > 0 && (
-                <div style={{
-                  marginTop: 8, padding: '10px 14px',
-                  background: 'var(--hu-bg)', borderRadius: 'var(--hu-radius-s)',
-                  fontSize: 13, color: 'var(--hu-text-muted)',
-                }}>
-                  {scene.bullets.slice(0, 3).map((b, i) => (
-                    <div key={i} style={{ padding: '3px 0' }}>• {b}</div>
-                  ))}
-                  {scene.bullets.length > 3 && (
-                    <div style={{ color: 'var(--hu-text-faint)' }}>
-                      +{scene.bullets.length - 3} más...
-                    </div>
+                  {scene.narration && (
+                    <Typography variant="body2" color="text.secondary" sx={{ mb: 1.5, pl: 0.5 }}>
+                      {scene.narration}
+                    </Typography>
                   )}
-                </div>
-              )}
-            </div>
-          );
-        })}
-      </div>
+
+                  <ScenePlayer scene={scene} courseTitle={course.title} boardStyle={course.boardStyle || 'classic'} />
+
+                  {scene.bullets?.length > 0 && (
+                    <Box sx={{ mt: 1, p: 1.5, bgcolor: 'grey.50', borderRadius: 1 }}>
+                      {scene.bullets.slice(0, 3).map((b, i) => (
+                        <Typography key={i} variant="body2" color="text.secondary" sx={{ py: 0.25 }}>
+                          • {b}
+                        </Typography>
+                      ))}
+                      {scene.bullets.length > 3 && (
+                        <Typography variant="caption" color="text.disabled">
+                          +{scene.bullets.length - 3} más...
+                        </Typography>
+                      )}
+                    </Box>
+                  )}
+
+                  {scene.quiz && scene.quiz.length > 0 && <LessonQuiz quiz={scene.quiz} />}
+                </CardContainer>
+              );
+            })}
+          </Box>
+        )}
+      </Box>
     </>
   );
 }

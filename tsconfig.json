@@ -11,7 +11,27 @@
     "moduleDetection": "force",
     "noEmit": true,
     "jsx": "react-jsx",
-    "strict": true
+    "strict": true,
+    "baseUrl": ".",
+    "paths": {
+      "src/*": ["src/*"],
+      "@material-hu/components/*": ["node_modules/material-hu/lib/components/*"],
+      "@material-hu/mui/x-date-pickers/*": ["node_modules/@mui/x-date-pickers/*"],
+      "@material-hu/mui/x-date-pickers": ["node_modules/@mui/x-date-pickers"],
+      "@material-hu/mui/lab/*": ["node_modules/@mui/lab/*"],
+      "@material-hu/mui/lab": ["node_modules/@mui/lab"],
+      "@material-hu/mui/*": ["node_modules/@mui/material/*"],
+      "@material-hu/mui": ["node_modules/@mui/material"],
+      "@material-hu/icons/material/*": ["node_modules/@mui/icons-material/*"],
+      "@material-hu/icons/material": ["node_modules/@mui/icons-material"],
+      "@material-hu/hooks/*": ["node_modules/material-hu/lib/hooks/*"],
+      "@material-hu/utils/*": ["node_modules/material-hu/lib/utils/*"],
+      "@material-hu/types/*": ["node_modules/material-hu/lib/types/*"],
+      "@material-hu/styles/*": ["node_modules/material-hu/lib/styles/*"],
+      "@material-hu/theme/*": ["node_modules/material-hu/lib/theme/*"],
+      "@material-hu/icons/tabler": ["node_modules/@tabler/icons-react/dist/tabler-icons-react.d.ts"],
+      "material-hu/lib/*": ["node_modules/material-hu/lib/*"]
+    }
   },
   "include": ["src"]
 }
