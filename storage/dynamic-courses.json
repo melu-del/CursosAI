@@ -774,7 +774,7 @@
     "id": "course_1782941568339_0",
     "title": "Dominando la Sincronización de Audio Web",
     "description": "Dominando `waitUntilAudio` · El Desafío del Audio Asíncrono · `waitUntilAudio`: La Solución · Aplicando `waitUntilAudio` · Ventajas de Implementar `waitUntilAudio` · Próximos Pasos y Recapitulación",
-    "status": "content_ready",
+    "status": "ready",
     "source": "prompt",
     "boardStyle": "classic",
     "scorm": false,
@@ -826,8 +826,8 @@
             "w": 5
           }
         ],
-        "duration": 540,
-        "audioUrl": null,
+        "duration": 816,
+        "audioUrl": "/api/storage/course_1782941568339_0/audio/scene_1.wav",
         "topic": "Dominando la Sincronización de Audio Web"
       },
       {
@@ -935,8 +935,8 @@
             "color": "red"
           }
         ],
-        "duration": 540,
-        "audioUrl": null,
+        "duration": 787,
+        "audioUrl": "/api/storage/course_1782941568339_0/audio/scene_2.wav",
         "topic": "Dominando la Sincronización de Audio Web"
       },
       {
@@ -1040,8 +1040,8 @@
             "w": 2
           }
         ],
-        "duration": 540,
-        "audioUrl": null,
+        "duration": 757,
+        "audioUrl": "/api/storage/course_1782941568339_0/audio/scene_3.wav",
         "topic": "Dominando la Sincronización de Audio Web"
       },
       {
@@ -1155,8 +1155,8 @@
             "size": 18
           }
         ],
-        "duration": 540,
-        "audioUrl": null,
+        "duration": 828,
+        "audioUrl": "/api/storage/course_1782941568339_0/audio/scene_4.wav",
         "topic": "Dominando la Sincronización de Audio Web"
       },
       {
@@ -1279,8 +1279,8 @@
             "w": 2
           }
         ],
-        "duration": 540,
-        "audioUrl": null,
+        "duration": 764,
+        "audioUrl": "/api/storage/course_1782941568339_0/audio/scene_5.wav",
         "topic": "Dominando la Sincronización de Audio Web"
       },
       {
@@ -1408,8 +1408,8 @@
             "w": 3
           }
         ],
-        "duration": 540,
-        "audioUrl": null,
+        "duration": 753,
+        "audioUrl": "/api/storage/course_1782941568339_0/audio/scene_6.wav",
         "topic": "Dominando la Sincronización de Audio Web"
       }
     ],
