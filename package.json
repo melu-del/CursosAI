@@ -26,6 +26,7 @@
     "cors": "^2.8.5",
     "dotenv": "^16.4.5",
     "express": "^4.19.2",
+    "formidable": "^3.5.4",
     "hu-translations": "npm:@humanddev/hu-translations@^4.2.6",
     "humand-biome-config": "npm:@humanddev/humand-biome-config@^0.1.0",
     "i18next": "^26.3.3",
