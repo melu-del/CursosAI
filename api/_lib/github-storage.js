@@ -4,7 +4,7 @@ const API_URL = `https://api.github.com/repos/${REPO}/contents/${PATH}`;
 
 function authHeaders() {
   return {
-    Authorization: `token ${process.env.GITHUB_TOKEN}`,
+    Authorization: `token ${process.env.GITHUB_STORAGE_TOKEN}`,
     Accept: 'application/vnd.github+json',
     'User-Agent': 'whiteboard-ai',
   };
