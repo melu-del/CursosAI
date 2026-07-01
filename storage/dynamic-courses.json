@@ -1,0 +1,773 @@
+{
+  "course_1782933452514_0": {
+    "id": "course_1782933452514_0",
+    "title": "Persistencia en GitHub v2",
+    "description": "Persistencia en GitHub v2 · Desafíos de la Persistencia · La Solución: GitHub Persistencia v2 · Un Caso Práctico · Beneficios Clave · Conclusiones y Próximos Pasos",
+    "status": "content_ready",
+    "source": "prompt",
+    "boardStyle": "classic",
+    "scorm": false,
+    "scenes": [
+      {
+        "id": 1,
+        "type": "title",
+        "title": "Persistencia en GitHub v2",
+        "subtitle": "Asegurando la Trazabilidad y Durabilidad de tus Proyectos",
+        "narration": "¡Hola! Hoy vamos a explorar la \"Persistencia en GitHub v2\". ¿Sabés lo crucial que es mantener un registro fiable de cada cambio en tus proyectos? Con esta versión mejorada, buscamos precisamente eso: garantizar que tu trabajo esté siempre seguro, accesible y completamente trazable. Preparate para descubrir cómo optimizar la gestión de tus versiones.",
+        "bullets": [
+          "Registro fiable de cambios",
+          "Trabajo seguro y accesible",
+          "Trazabilidad completa"
+        ],
+        "quiz": [],
+        "drawing": [
+          {
+            "type": "circle",
+            "cx": 200,
+            "cy": 170,
+            "r": 80,
+            "color": "ink",
+            "fill": false,
+            "w": 4
+          },
+          {
+            "type": "poly",
+            "points": [
+              [
+                130,
+                100
+              ],
+              [
+                150,
+                50
+              ],
+              [
+                170,
+                100
+              ]
+            ],
+            "color": "ink",
+            "fill": false,
+            "w": 4
+          },
+          {
+            "type": "poly",
+            "points": [
+              [
+                230,
+                100
+              ],
+              [
+                250,
+                50
+              ],
+              [
+                270,
+                100
+              ]
+            ],
+            "color": "ink",
+            "fill": false,
+            "w": 4
+          },
+          {
+            "type": "text",
+            "x": 200,
+            "y": 170,
+            "text": "GH",
+            "color": "accent",
+            "size": 40,
+            "bold": true
+          },
+          {
+            "type": "text",
+            "x": 200,
+            "y": 250,
+            "text": "v2",
+            "color": "green",
+            "size": 30,
+            "bold": true
+          },
+          {
+            "type": "rect",
+            "x": 140,
+            "y": 300,
+            "w": 3,
+            "h": 30,
+            "color": "ink",
+            "fill": false
+          },
+          {
+            "type": "rect",
+            "x": 140,
+            "y": 320,
+            "w": 3,
+            "h": 30,
+            "color": "ink",
+            "fill": false
+          },
+          {
+            "type": "arc",
+            "cx": 200,
+            "cy": 300,
+            "r": 60,
+            "start": 0,
+            "end": 180,
+            "color": "ink",
+            "w": 3
+          }
+        ],
+        "duration": 540,
+        "audioUrl": null,
+        "topic": "Persistencia en GitHub v2"
+      },
+      {
+        "id": 2,
+        "type": "problem",
+        "title": "Desafíos de la Persistencia",
+        "subtitle": "¿Qué problemas enfrentamos sin una buena gestión de versiones?",
+        "narration": "Antes de \"v2\", ¿alguna vez te encontraste con la pérdida de archivos importantes, o con dificultades para saber quién hizo qué cambio y cuándo? La falta de una persistencia robusta puede generar inconsistencias, errores difíciles de rastrear y una gran frustración en los equipos. Esos problemas impactan directamente la eficiencia y la calidad de nuestros proyectos.",
+        "bullets": [
+          "Pérdida de archivos",
+          "Inconsistencia de versiones",
+          "Dificultad para rastrear cambios"
+        ],
+        "quiz": [],
+        "drawing": [
+          {
+            "type": "circle",
+            "cx": 100,
+            "cy": 100,
+            "r": 50,
+            "color": "ink",
+            "fill": false,
+            "w": 4
+          },
+          {
+            "type": "rect",
+            "x": 90,
+            "y": 40,
+            "w": 2,
+            "h": 20,
+            "color": "ink",
+            "fill": false
+          },
+          {
+            "type": "rect",
+            "x": 125,
+            "y": 80,
+            "w": 2,
+            "h": 20,
+            "color": "ink",
+            "fill": false
+          },
+          {
+            "type": "rect",
+            "x": 90,
+            "y": 140,
+            "w": 2,
+            "h": 20,
+            "color": "ink",
+            "fill": false
+          },
+          {
+            "type": "line",
+            "x1": 150,
+            "y1": 100,
+            "x2": 170,
+            "y2": 100,
+            "color": "red",
+            "w": 4
+          },
+          {
+            "type": "rect",
+            "x": 250,
+            "y": 200,
+            "w": 2,
+            "h": 60,
+            "color": "ink",
+            "fill": false
+          },
+          {
+            "type": "rect",
+            "x": 280,
+            "y": 170,
+            "w": 2,
+            "h": 60,
+            "color": "ink",
+            "fill": false
+          },
+          {
+            "type": "path",
+            "d": "M 200 300 Q 220 280 200 260 Q 180 240 200 240 L 200 220",
+            "color": "ink",
+            "w": 4
+          },
+          {
+            "type": "dot",
+            "cx": 200,
+            "cy": 210,
+            "r": 8,
+            "color": "ink"
+          },
+          {
+            "type": "circle",
+            "cx": 100,
+            "cy": 300,
+            "r": 40,
+            "color": "ink",
+            "fill": false,
+            "w": 3
+          },
+          {
+            "type": "dot",
+            "cx": 85,
+            "cy": 290,
+            "r": 4,
+            "color": "ink"
+          },
+          {
+            "type": "dot",
+            "cx": 115,
+            "cy": 290,
+            "r": 4,
+            "color": "ink"
+          },
+          {
+            "type": "arc",
+            "cx": 100,
+            "cy": 310,
+            "r": 15,
+            "start": 0,
+            "end": 180,
+            "color": "ink",
+            "w": 3
+          }
+        ],
+        "duration": 540,
+        "audioUrl": null,
+        "topic": "Persistencia en GitHub v2"
+      },
+      {
+        "id": 3,
+        "type": "solution",
+        "title": "La Solución: GitHub Persistencia v2",
+        "subtitle": "Cómo GitHub v2 resuelve los problemas de gestión de versiones",
+        "narration": "\"Persistencia en GitHub v2\" capitaliza las fortalezas de GitHub para ofrecerte un sistema robusto. Utiliza ramas, commits y solicitudes de extracción para asegurar que cada modificación quede registrada. Esto te permite volver a cualquier punto en la historia de tu proyecto, colaborar de forma eficiente y mantener la integridad de tu código en todo momento.",
+        "bullets": [
+          "Control de versiones avanzado",
+          "Colaboración eficiente",
+          "Integridad del código"
+        ],
+        "quiz": [],
+        "drawing": [
+          {
+            "type": "line",
+            "x1": 50,
+            "y1": 200,
+            "x2": 350,
+            "y2": 200,
+            "color": "ink",
+            "w": 4
+          },
+          {
+            "type": "dot",
+            "cx": 80,
+            "cy": 200,
+            "r": 8,
+            "color": "accent"
+          },
+          {
+            "type": "dot",
+            "cx": 140,
+            "cy": 200,
+            "r": 8,
+            "color": "accent"
+          },
+          {
+            "type": "dot",
+            "cx": 200,
+            "cy": 200,
+            "r": 8,
+            "color": "accent"
+          },
+          {
+            "type": "line",
+            "x1": 140,
+            "y1": 200,
+            "x2": 140,
+            "y2": 100,
+            "color": "green",
+            "w": 3
+          },
+          {
+            "type": "line",
+            "x1": 140,
+            "y1": 100,
+            "x2": 280,
+            "y2": 100,
+            "color": "green",
+            "w": 3
+          },
+          {
+            "type": "dot",
+            "cx": 180,
+            "cy": 100,
+            "r": 8,
+            "color": "orange"
+          },
+          {
+            "type": "dot",
+            "cx": 240,
+            "cy": 100,
+            "r": 8,
+            "color": "orange"
+          },
+          {
+            "type": "arrow",
+            "x1": 280,
+            "y1": 100,
+            "x2": 280,
+            "y2": 200,
+            "color": "green",
+            "w": 3
+          },
+          {
+            "type": "dot",
+            "cx": 320,
+            "cy": 200,
+            "r": 8,
+            "color": "accent"
+          },
+          {
+            "type": "text",
+            "x": 200,
+            "y": 250,
+            "text": "Historial de Cambios",
+            "color": "ink",
+            "size": 24
+          }
+        ],
+        "duration": 540,
+        "audioUrl": null,
+        "topic": "Persistencia en GitHub v2"
+      },
+      {
+        "id": 4,
+        "type": "example",
+        "title": "Un Caso Práctico",
+        "subtitle": "Flujo de trabajo con Persistencia en GitHub v2",
+        "narration": "Imaginá que estás desarrollando una nueva característica. Creás una rama específica, hacés tus cambios y los confirmás. Luego, enviás una solicitud de extracción para que tu equipo revise el código. Una vez aprobado, se fusiona con la rama principal. Todo este proceso queda registrado y persistente, asegurando que cada paso sea transparente y recuperable.",
+        "bullets": [
+          "Crear una rama",
+          "Realizar cambios y commits",
+          "Solicitud de extracción y revisión",
+          "Fusión a la rama principal"
+        ],
+        "quiz": [],
+        "drawing": [
+          {
+            "type": "line",
+            "x1": 50,
+            "y1": 300,
+            "x2": 350,
+            "y2": 300,
+            "color": "ink",
+            "w": 4
+          },
+          {
+            "type": "text",
+            "x": 200,
+            "y": 325,
+            "text": "main",
+            "color": "ink",
+            "size": 20
+          },
+          {
+            "type": "dot",
+            "cx": 80,
+            "cy": 300,
+            "r": 6,
+            "color": "accent"
+          },
+          {
+            "type": "line",
+            "x1": 120,
+            "y1": 300,
+            "x2": 120,
+            "y2": 150,
+            "color": "green",
+            "w": 3
+          },
+          {
+            "type": "line",
+            "x1": 120,
+            "y1": 150,
+            "x2": 280,
+            "y2": 150,
+            "color": "green",
+            "w": 3
+          },
+          {
+            "type": "text",
+            "x": 200,
+            "y": 125,
+            "text": "feature",
+            "color": "green",
+            "size": 20
+          },
+          {
+            "type": "dot",
+            "cx": 170,
+            "cy": 150,
+            "r": 6,
+            "color": "orange"
+          },
+          {
+            "type": "dot",
+            "cx": 230,
+            "cy": 150,
+            "r": 6,
+            "color": "orange"
+          },
+          {
+            "type": "arrow",
+            "x1": 280,
+            "y1": 150,
+            "x2": 280,
+            "y2": 280,
+            "color": "purple",
+            "w": 3
+          },
+          {
+            "type": "text",
+            "x": 300,
+            "y": 215,
+            "text": "PR",
+            "color": "purple",
+            "size": 22,
+            "bold": true
+          },
+          {
+            "type": "arrow",
+            "x1": 300,
+            "y1": 300,
+            "x2": 330,
+            "y2": 300,
+            "color": "ink",
+            "w": 4
+          },
+          {
+            "type": "dot",
+            "cx": 330,
+            "cy": 300,
+            "r": 6,
+            "color": "accent"
+          }
+        ],
+        "duration": 540,
+        "audioUrl": null,
+        "topic": "Persistencia en GitHub v2"
+      },
+      {
+        "id": 5,
+        "type": "solution",
+        "title": "Beneficios Clave",
+        "subtitle": "¿Qué ganás al usar Persistencia en GitHub v2?",
+        "narration": "Los beneficios son claros: mayor seguridad para tu código, una colaboración más fluida y una trazabilidad impecable. Reducís los riesgos de errores y acelerás el desarrollo, porque sabés que podés confiar en el historial de tu proyecto. En definitiva, \"Persistencia en GitHub v2\" te brinda tranquilidad y eficiencia en tu trabajo diario.",
+        "bullets": [
+          "Mayor seguridad del código",
+          "Colaboración fluida",
+          "Trazabilidad impecable",
+          "Reducción de riesgos"
+        ],
+        "quiz": [],
+        "drawing": [
+          {
+            "type": "poly",
+            "points": [
+              [
+                100,
+                100
+              ],
+              [
+                150,
+                50
+              ],
+              [
+                200,
+                100
+              ],
+              [
+                200,
+                150
+              ],
+              [
+                150,
+                200
+              ],
+              [
+                100,
+                150
+              ]
+            ],
+            "color": "accent",
+            "fill": false,
+            "w": 4
+          },
+          {
+            "type": "line",
+            "x1": 150,
+            "y1": 110,
+            "x2": 150,
+            "y2": 160,
+            "color": "accent",
+            "w": 3
+          },
+          {
+            "type": "circle",
+            "cx": 280,
+            "cy": 100,
+            "r": 20,
+            "color": "ink",
+            "fill": false,
+            "w": 3
+          },
+          {
+            "type": "line",
+            "x1": 280,
+            "y1": 120,
+            "x2": 280,
+            "y2": 160,
+            "color": "ink",
+            "w": 3
+          },
+          {
+            "type": "line",
+            "x1": 260,
+            "y1": 130,
+            "x2": 300,
+            "y2": 130,
+            "color": "ink",
+            "w": 3
+          },
+          {
+            "type": "circle",
+            "cx": 340,
+            "cy": 100,
+            "r": 20,
+            "color": "ink",
+            "fill": false,
+            "w": 3
+          },
+          {
+            "type": "line",
+            "x1": 340,
+            "y1": 120,
+            "x2": 340,
+            "y2": 160,
+            "color": "ink",
+            "w": 3
+          },
+          {
+            "type": "line",
+            "x1": 320,
+            "y1": 130,
+            "x2": 360,
+            "y2": 130,
+            "color": "ink",
+            "w": 3
+          },
+          {
+            "type": "line",
+            "x1": 300,
+            "y1": 130,
+            "x2": 320,
+            "y2": 130,
+            "color": "green",
+            "w": 4
+          },
+          {
+            "type": "circle",
+            "cx": 100,
+            "cy": 300,
+            "r": 40,
+            "color": "ink",
+            "fill": false,
+            "w": 4
+          },
+          {
+            "type": "line",
+            "x1": 130,
+            "y1": 330,
+            "x2": 170,
+            "y2": 370,
+            "color": "ink",
+            "w": 4
+          },
+          {
+            "type": "circle",
+            "cx": 280,
+            "cy": 300,
+            "r": 40,
+            "color": "ink",
+            "fill": false,
+            "w": 4
+          },
+          {
+            "type": "line",
+            "x1": 310,
+            "y1": 330,
+            "x2": 350,
+            "y2": 370,
+            "color": "ink",
+            "w": 4
+          }
+        ],
+        "duration": 540,
+        "audioUrl": null,
+        "topic": "Persistencia en GitHub v2"
+      },
+      {
+        "id": 6,
+        "type": "closing",
+        "title": "Conclusiones y Próximos Pasos",
+        "subtitle": "Resumen de los puntos clave y cómo empezar",
+        "narration": "Hemos visto cómo \"Persistencia en GitHub v2\" es una herramienta fundamental para la gestión de proyectos. Te invitamos a aplicar estos principios en tu día a día: usá las ramas correctamente, hacé commits significativos y aprovechá las solicitudes de extracción. ¡Empezá hoy mismo a construir un historial de proyecto más robusto y confiable!",
+        "bullets": [
+          "Herramienta fundamental",
+          "Usar ramas y commits",
+          "Aprovechar PRs",
+          "Historial robusto y confiable"
+        ],
+        "quiz": [],
+        "drawing": [
+          {
+            "type": "poly",
+            "points": [
+              [
+                80,
+                200
+              ],
+              [
+                120,
+                250
+              ],
+              [
+                200,
+                100
+              ],
+              [
+                190,
+                90
+              ],
+              [
+                110,
+                240
+              ],
+              [
+                90,
+                200
+              ]
+            ],
+            "color": "green",
+            "fill": true
+          },
+          {
+            "type": "path",
+            "d": "M 280 150 Q 260 100 280 50 Q 300 100 280 150",
+            "color": "yellow",
+            "fill": true,
+            "w": 4
+          },
+          {
+            "type": "rect",
+            "x": 270,
+            "y": 150,
+            "w": 20,
+            "h": 20,
+            "color": "yellow",
+            "fill": true
+          },
+          {
+            "type": "line",
+            "x1": 275,
+            "y1": 170,
+            "x2": 285,
+            "y2": 170,
+            "color": "ink",
+            "w": 2
+          },
+          {
+            "type": "line",
+            "x1": 275,
+            "y1": 175,
+            "x2": 285,
+            "y2": 175,
+            "color": "ink",
+            "w": 2
+          },
+          {
+            "type": "line",
+            "x1": 275,
+            "y1": 180,
+            "x2": 285,
+            "y2": 180,
+            "color": "ink",
+            "w": 2
+          },
+          {
+            "type": "line",
+            "x1": 100,
+            "y1": 300,
+            "x2": 150,
+            "y2": 250,
+            "color": "ink",
+            "w": 3
+          },
+          {
+            "type": "line",
+            "x1": 150,
+            "y1": 250,
+            "x2": 200,
+            "y2": 300,
+            "color": "ink",
+            "w": 3
+          },
+          {
+            "type": "arrow",
+            "x1": 250,
+            "y1": 350,
+            "x2": 350,
+            "y2": 250,
+            "color": "accent",
+            "w": 4
+          },
+          {
+            "type": "poly",
+            "points": [
+              [
+                330,
+                250
+              ],
+              [
+                350,
+                220
+              ],
+              [
+                370,
+                250
+              ]
+            ],
+            "color": "accent",
+            "fill": true
+          }
+        ],
+        "duration": 540,
+        "audioUrl": null,
+        "topic": "Persistencia en GitHub v2"
+      }
+    ],
+    "createdAt": "2026-07-01T19:17:32.514Z"
+  }
+}
