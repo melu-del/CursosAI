@@ -1,16 +1,13 @@
-import { readFileSync, writeFileSync } from 'fs';
+import { readFileSync } from 'fs';
 import { join } from 'path';
+import { loadDynamicCourses, saveCourse } from '../../_lib/github-storage.js';
 
 const BUNDLED_FILE = join(process.cwd(), 'storage', 'courses.json');
-const TMP_FILE = '/tmp/courses.json';
 
-function loadCourses() {
+async function loadCourses() {
   let courses = {};
   try { courses = JSON.parse(readFileSync(BUNDLED_FILE, 'utf-8')); } catch {}
-  try {
-    const tmp = JSON.parse(readFileSync(TMP_FILE, 'utf-8'));
-    Object.assign(courses, tmp);
-  } catch {}
+  Object.assign(courses, await loadDynamicCourses());
   return courses;
 }
 
@@ -24,7 +21,7 @@ export default async function handler(req, res) {
   }
 
   const { id } = req.query;
-  const all = loadCourses();
+  const all = await loadCourses();
   const course = all[id];
   if (!course) return res.status(404).json({ error: 'Curso no encontrado' });
 
@@ -47,9 +44,5 @@ async function generateAudioAsync(course) {
   course.scenes = enriched;
   course.status = 'ready';
 
-  // Save back to /tmp
-  let tmp = {};
-  try { tmp = JSON.parse(readFileSync('/tmp/courses.json', 'utf-8')); } catch {}
-  tmp[course.id] = course;
-  writeFileSync('/tmp/courses.json', JSON.stringify(tmp, null, 2));
+  await saveCourse(course);
 }

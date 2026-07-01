@@ -2,9 +2,11 @@ import { GoogleGenAI } from '@google/genai';
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
+import { saveAudioFile } from './_lib/github-storage.js';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(__dirname, '..');
+const ON_VERCEL = !!process.env.VERCEL;
 
 const VOICE = 'Puck';
 const MODEL = 'gemini-2.5-flash-preview-tts';
@@ -36,16 +38,15 @@ function pcmToWav(pcmBase64) {
   return Buffer.concat([header, pcm]);
 }
 
-function wavDurationS(filePath) {
+function wavDurationS(buf) {
   try {
-    const buf = fs.readFileSync(filePath);
     const byteRate = buf.readUInt32LE(28);
     const dataSize = buf.readUInt32LE(40);
     return byteRate > 0 ? dataSize / byteRate : 8;
   } catch { return 8; }
 }
 
-async function synthesize(ai, text, outputPath) {
+async function synthesize(ai, text) {
   const response = await ai.models.generateContent({
     model: MODEL,
     contents: [{ parts: [{ text }] }],
@@ -59,9 +60,7 @@ async function synthesize(ai, text, outputPath) {
   const audioPart = parts.find(p => p.inlineData?.mimeType?.startsWith('audio/'));
   if (!audioPart) throw new Error('Gemini TTS no devolvió audio para: ' + text.slice(0, 60));
 
-  const wav = pcmToWav(audioPart.inlineData.data);
-  fs.mkdirSync(path.dirname(outputPath), { recursive: true });
-  fs.writeFileSync(outputPath, wav);
+  return pcmToWav(audioPart.inlineData.data);
 }
 
 export async function generateAudio(scenes, courseId, onProgress = () => {}) {
@@ -70,7 +69,7 @@ export async function generateAudio(scenes, courseId, onProgress = () => {}) {
 
   const ai = new GoogleGenAI({ apiKey });
   const audioDir = path.join(ROOT, 'storage', courseId, 'audio');
-  fs.mkdirSync(audioDir, { recursive: true });
+  if (!ON_VERCEL) fs.mkdirSync(audioDir, { recursive: true });
 
   const enriched = [];
 
@@ -82,13 +81,19 @@ export async function generateAudio(scenes, courseId, onProgress = () => {}) {
     }
 
     const filename = `scene_${i + 1}.wav`;
-    const filePath = path.join(audioDir, filename);
-    const audioUrl = `/storage/${courseId}/audio/${filename}`;
+    const audioUrl = ON_VERCEL
+      ? `/api/storage/${courseId}/audio/${filename}`
+      : `/storage/${courseId}/audio/${filename}`;
 
     console.log(`[audio] Generando escena ${i + 1}/${scenes.length}...`);
     try {
-      await synthesize(ai, scene.narration, filePath);
-      const durationS = wavDurationS(filePath);
+      const wav = await synthesize(ai, scene.narration);
+      if (ON_VERCEL) {
+        await saveAudioFile(courseId, filename, wav);
+      } else {
+        fs.writeFileSync(path.join(audioDir, filename), wav);
+      }
+      const durationS = wavDurationS(wav);
       const durationFrames = Math.ceil((durationS + PADDING_S) * FPS);
       enriched.push({ ...scene, audioUrl, duration: durationFrames });
     } catch (err) {

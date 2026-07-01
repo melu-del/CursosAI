@@ -1,28 +1,17 @@
-import { readFileSync, writeFileSync, mkdirSync } from 'fs';
+import { readFileSync } from 'fs';
 import { join } from 'path';
 import { generateScript } from './generate.js';
+import { loadDynamicCourses, saveCourse } from './_lib/github-storage.js';
 
 export const config = { api: { bodyParser: false } };
 
 const BUNDLED_FILE = join(process.cwd(), 'storage', 'courses.json');
-const TMP_FILE = '/tmp/courses.json';
 
-function loadCourses() {
+async function loadCourses() {
   let courses = {};
   try { courses = JSON.parse(readFileSync(BUNDLED_FILE, 'utf-8')); } catch {}
-  try {
-    const tmp = JSON.parse(readFileSync(TMP_FILE, 'utf-8'));
-    Object.assign(courses, tmp);
-  } catch {}
+  Object.assign(courses, await loadDynamicCourses());
   return courses;
-}
-
-function saveTmpCourse(course) {
-  let tmp = {};
-  try { tmp = JSON.parse(readFileSync(TMP_FILE, 'utf-8')); } catch {}
-  tmp[course.id] = course;
-  mkdirSync('/tmp', { recursive: true });
-  writeFileSync(TMP_FILE, JSON.stringify(tmp, null, 2));
 }
 
 function smartTruncate(text, max = 40000) {
@@ -95,7 +84,7 @@ export default async function handler(req, res) {
   if (req.method === 'OPTIONS') return res.status(200).end();
 
   if (req.method === 'GET') {
-    const all = loadCourses();
+    const all = await loadCourses();
     const list = Object.values(all)
       .sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt))
       .map(c => ({
@@ -123,7 +112,9 @@ export default async function handler(req, res) {
       const count = Math.min(Math.max(numVideos, 1), 5);
       const videos = await generateScript(text, count, videoType, tone, dialect, duration);
 
-      const courses = videos.map((v, idx) => {
+      const courses = [];
+      for (let idx = 0; idx < videos.length; idx++) {
+        const v = videos[idx];
         const id = `course_${Date.now()}_${idx}`;
         const course = {
           id, title: v.topic || `Video ${idx + 1}`,
@@ -132,9 +123,9 @@ export default async function handler(req, res) {
           scorm: false, scenes: v.scenes,
           createdAt: new Date(Date.now() + idx).toISOString(),
         };
-        saveTmpCourse(course);
-        return course;
-      });
+        await saveCourse(course);
+        courses.push(course);
+      }
 
       return res.json({ courses });
     } catch (err) {

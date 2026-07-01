@@ -1,28 +1,17 @@
-import { readFileSync, writeFileSync, mkdirSync } from 'fs';
+import { readFileSync } from 'fs';
 import { join } from 'path';
+import { loadDynamicCourses, deleteCourse } from '../_lib/github-storage.js';
 
 const BUNDLED_FILE = join(process.cwd(), 'storage', 'courses.json');
-const TMP_FILE = '/tmp/courses.json';
 
-function loadCourses() {
+async function loadCourses() {
   let courses = {};
   try { courses = JSON.parse(readFileSync(BUNDLED_FILE, 'utf-8')); } catch {}
-  try {
-    const tmp = JSON.parse(readFileSync(TMP_FILE, 'utf-8'));
-    Object.assign(courses, tmp);
-  } catch {}
+  Object.assign(courses, await loadDynamicCourses());
   return courses;
 }
 
-function deleteTmpCourse(id) {
-  try {
-    const tmp = JSON.parse(readFileSync(TMP_FILE, 'utf-8'));
-    delete tmp[id];
-    writeFileSync(TMP_FILE, JSON.stringify(tmp, null, 2));
-  } catch {}
-}
-
-export default function handler(req, res) {
+export default async function handler(req, res) {
   res.setHeader('Access-Control-Allow-Origin', '*');
   res.setHeader('Cache-Control', 'no-store');
   if (req.method === 'OPTIONS') return res.status(200).end();
@@ -30,11 +19,11 @@ export default function handler(req, res) {
   const { id } = req.query;
 
   if (req.method === 'DELETE') {
-    deleteTmpCourse(id);
+    await deleteCourse(id);
     return res.json({ ok: true });
   }
 
-  const all = loadCourses();
+  const all = await loadCourses();
   const course = all[id];
   if (!course) return res.status(404).json({ error: 'Curso no encontrado' });
 
