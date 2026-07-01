@@ -1,5 +1,6 @@
 import { readFileSync } from 'fs';
 import { join } from 'path';
+import { waitUntil } from '@vercel/functions';
 import { loadDynamicCourses, saveCourse } from '../../_lib/github-storage.js';
 
 const BUNDLED_FILE = join(process.cwd(), 'storage', 'courses.json');
@@ -27,8 +28,8 @@ export default async function handler(req, res) {
 
   const jobId = `audio_${id}`;
 
-  // Trigger async audio generation (best-effort — Vercel may timeout for long courses)
-  generateAudioAsync(course).catch(err => console.error('[audio async]', err));
+  // Extend execution past the response so Vercel doesn't kill the function early.
+  waitUntil(generateAudioAsync(course).catch(err => console.error('[audio async]', err)));
 
   res.json({ jobId });
 }
