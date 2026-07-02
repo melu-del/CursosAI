@@ -14,5 +14,6 @@ export default async function handler(req, res) {
   if (!buffer) return res.status(404).json({ error: 'Audio no encontrado' });
 
   res.setHeader('Content-Type', 'audio/wav');
-  res.send(buffer);
+  res.setHeader('Content-Length', buffer.length);
+  res.end(buffer);
 }
