@@ -1414,5 +1414,595 @@
       }
     ],
     "createdAt": "2026-07-01T21:32:48.339Z"
+  },
+  "course_1782953886874_0": {
+    "id": "course_1782953886874_0",
+    "title": "Impulsando el Crecimiento: El Poder del Feedback Constructivo",
+    "description": "¿Qué es el Feedback Constructivo? · El Problema de la Falta de Feedback · Claves del Feedback Constructivo · Método SBI: Situación, Comportamiento, Impacto · Construyendo una Cultura de Crecimiento",
+    "status": "content_ready",
+    "source": "prompt",
+    "boardStyle": "classic",
+    "scorm": false,
+    "scenes": [
+      {
+        "id": 1,
+        "type": "title",
+        "title": "¿Qué es el Feedback Constructivo?",
+        "subtitle": "Descubrí cómo potenciar el desarrollo personal y del equipo.",
+        "narration": "¡Hola! En este video, vamos a explorar la importancia del feedback constructivo. ¿Alguna vez te preguntaste cómo podés mejorar continuamente y ayudar a otros a crecer? El feedback es una herramienta clave para lograrlo. No se trata de criticar, sino de ofrecer una perspectiva valiosa para el aprendizaje y el desarrollo. Preparate para transformar tu manera de comunicarte y colaborar.",
+        "bullets": [
+          "Mejora continua y desarrollo",
+          "Herramienta para el crecimiento personal",
+          "Fomenta la colaboración efectiva"
+        ],
+        "quiz": [],
+        "drawing": [
+          {
+            "type": "circle",
+            "cx": 200,
+            "cy": 200,
+            "r": 120,
+            "color": "accent",
+            "fill": false,
+            "w": 5
+          },
+          {
+            "type": "path",
+            "d": "M 140 160 Q 160 130 200 130 Q 240 130 260 160",
+            "color": "ink",
+            "w": 3
+          },
+          {
+            "type": "path",
+            "d": "M 140 240 Q 160 270 200 270 Q 240 270 260 240",
+            "color": "ink",
+            "w": 3
+          },
+          {
+            "type": "arrow",
+            "x1": 110,
+            "y1": 200,
+            "x2": 70,
+            "y2": 200,
+            "color": "green",
+            "w": 4
+          },
+          {
+            "type": "arrow",
+            "x1": 290,
+            "y1": 200,
+            "x2": 330,
+            "y2": 200,
+            "color": "green",
+            "w": 4
+          },
+          {
+            "type": "text",
+            "x": 200,
+            "y": 190,
+            "text": "FEEDBACK",
+            "color": "accent",
+            "size": 28,
+            "bold": true
+          },
+          {
+            "type": "arrow",
+            "x1": 200,
+            "y1": 100,
+            "x2": 200,
+            "y2": 60,
+            "color": "green",
+            "w": 4
+          },
+          {
+            "type": "arrow",
+            "x1": 200,
+            "y1": 300,
+            "x2": 200,
+            "y2": 340,
+            "color": "green",
+            "w": 4
+          },
+          {
+            "type": "text",
+            "x": 200,
+            "y": 230,
+            "text": "CONSTRUCTIVO",
+            "color": "ink",
+            "size": 18,
+            "bold": false
+          }
+        ],
+        "duration": 540,
+        "audioUrl": null,
+        "topic": "Impulsando el Crecimiento: El Poder del Feedback Constructivo"
+      },
+      {
+        "id": 2,
+        "type": "problem",
+        "title": "El Problema de la Falta de Feedback",
+        "subtitle": "Descubrí los desafíos de no ofrecer o recibir retroalimentación efectiva.",
+        "narration": "Sin un feedback adecuado, surgen varios problemas. Las personas pueden no ser conscientes de áreas donde necesitan mejorar, lo que lleva a la repetición de errores y al estancamiento. La falta de comunicación clara genera malentendidos y frustración, afectando la motivación y el rendimiento del equipo. Un ambiente sin feedback constructivo limita el desarrollo individual y colectivo.",
+        "bullets": [
+          "Repetición de errores",
+          "Falta de claridad y comprensión",
+          "Estancamiento y desmotivación"
+        ],
+        "quiz": [],
+        "drawing": [
+          {
+            "type": "rect",
+            "x": 160,
+            "y": 100,
+            "w": 3,
+            "h": 100,
+            "color": "ink",
+            "fill": false
+          },
+          {
+            "type": "line",
+            "x1": 160,
+            "y1": 100,
+            "x2": 240,
+            "y2": 200,
+            "color": "ink",
+            "w": 3
+          },
+          {
+            "type": "line",
+            "x1": 240,
+            "y1": 100,
+            "x2": 160,
+            "y2": 200,
+            "color": "ink",
+            "w": 3
+          },
+          {
+            "type": "path",
+            "d": "M 180 230 Q 200 210 220 230",
+            "color": "red",
+            "w": 4
+          },
+          {
+            "type": "circle",
+            "cx": 185,
+            "cy": 250,
+            "r": 5,
+            "color": "ink",
+            "fill": true
+          },
+          {
+            "type": "circle",
+            "cx": 215,
+            "cy": 250,
+            "r": 5,
+            "color": "ink",
+            "fill": true
+          },
+          {
+            "type": "line",
+            "x1": 200,
+            "y1": 270,
+            "x2": 200,
+            "y2": 330,
+            "color": "ink",
+            "w": 3
+          },
+          {
+            "type": "line",
+            "x1": 170,
+            "y1": 300,
+            "x2": 230,
+            "y2": 300,
+            "color": "ink",
+            "w": 3
+          },
+          {
+            "type": "path",
+            "d": "M 300 80 Q 340 100 300 120",
+            "color": "ink",
+            "w": 3
+          },
+          {
+            "type": "path",
+            "d": "M 300 120 Q 260 100 300 80",
+            "color": "ink",
+            "w": 3
+          },
+          {
+            "type": "line",
+            "x1": 280,
+            "y1": 90,
+            "x2": 320,
+            "y2": 110,
+            "color": "red",
+            "w": 5
+          },
+          {
+            "type": "line",
+            "x1": 280,
+            "y1": 110,
+            "x2": 320,
+            "y2": 90,
+            "color": "red",
+            "w": 5
+          }
+        ],
+        "duration": 540,
+        "audioUrl": null,
+        "topic": "Impulsando el Crecimiento: El Poder del Feedback Constructivo"
+      },
+      {
+        "id": 3,
+        "type": "solution",
+        "title": "Claves del Feedback Constructivo",
+        "subtitle": "Aprendé a dar feedback de manera efectiva y orientada al crecimiento.",
+        "narration": "El feedback constructivo es específico, objetivo y se centra en el comportamiento, no en la persona. Se da en el momento adecuado y de forma privada, buscando siempre generar una conversación que impulse la mejora. Su objetivo es que la persona comprenda qué hizo bien y qué puede ajustar para un mejor desempeño, siempre con una actitud de apoyo.",
+        "bullets": [
+          "Específico y objetivo",
+          "Enfocado en el comportamiento",
+          "Oportuno y con intención de ayuda",
+          "Orientado a la acción y mejora"
+        ],
+        "quiz": [],
+        "drawing": [
+          {
+            "type": "rect",
+            "x": 100,
+            "y": 80,
+            "w": 3,
+            "h": 250,
+            "color": "ink",
+            "fill": false
+          },
+          {
+            "type": "line",
+            "x1": 110,
+            "y1": 120,
+            "x2": 290,
+            "y2": 120,
+            "color": "ink",
+            "w": 2
+          },
+          {
+            "type": "line",
+            "x1": 110,
+            "y1": 160,
+            "x2": 290,
+            "y2": 160,
+            "color": "ink",
+            "w": 2
+          },
+          {
+            "type": "line",
+            "x1": 110,
+            "y1": 200,
+            "x2": 290,
+            "y2": 200,
+            "color": "ink",
+            "w": 2
+          },
+          {
+            "type": "line",
+            "x1": 110,
+            "y1": 240,
+            "x2": 290,
+            "y2": 240,
+            "color": "ink",
+            "w": 2
+          },
+          {
+            "type": "line",
+            "x1": 110,
+            "y1": 280,
+            "x2": 290,
+            "y2": 280,
+            "color": "ink",
+            "w": 2
+          },
+          {
+            "type": "circle",
+            "cx": 105,
+            "cy": 120,
+            "r": 5,
+            "color": "accent",
+            "fill": true
+          },
+          {
+            "type": "circle",
+            "cx": 105,
+            "cy": 160,
+            "r": 5,
+            "color": "accent",
+            "fill": true
+          },
+          {
+            "type": "circle",
+            "cx": 105,
+            "cy": 200,
+            "r": 5,
+            "color": "accent",
+            "fill": true
+          },
+          {
+            "type": "circle",
+            "cx": 105,
+            "cy": 240,
+            "r": 5,
+            "color": "accent",
+            "fill": true
+          },
+          {
+            "type": "circle",
+            "cx": 105,
+            "cy": 280,
+            "r": 5,
+            "color": "accent",
+            "fill": true
+          },
+          {
+            "type": "arrow",
+            "x1": 200,
+            "y1": 340,
+            "x2": 200,
+            "y2": 370,
+            "color": "green",
+            "w": 5
+          },
+          {
+            "type": "text",
+            "x": 200,
+            "y": 355,
+            "text": "¡MEJORA!",
+            "color": "green",
+            "size": 24,
+            "bold": true
+          }
+        ],
+        "duration": 540,
+        "audioUrl": null,
+        "topic": "Impulsando el Crecimiento: El Poder del Feedback Constructivo"
+      },
+      {
+        "id": 4,
+        "type": "example",
+        "title": "Método SBI: Situación, Comportamiento, Impacto",
+        "subtitle": "Un marco práctico para dar feedback claro y efectivo.",
+        "narration": "Una forma eficaz de estructurar el feedback es el método SBI: Situación, Comportamiento, Impacto. Primero, describí la Situación específica donde ocurrió. Luego, detallá el Comportamiento observable, sin juicios. Finalmente, explicá el Impacto que ese comportamiento tuvo en vos, en el equipo o en los resultados. Esto ayuda a la persona a entender claramente y a reflexionar sobre su acción.",
+        "bullets": [
+          "Situación: ¿Cuándo y dónde?",
+          "Comportamiento: ¿Qué hizo?",
+          "Impacto: ¿Qué consecuencias tuvo?"
+        ],
+        "quiz": [],
+        "drawing": [
+          {
+            "type": "rect",
+            "x": 60,
+            "y": 100,
+            "w": 3,
+            "h": 70,
+            "color": "accent",
+            "fill": false
+          },
+          {
+            "type": "text",
+            "x": 110,
+            "y": 135,
+            "text": "SITUACIÓN",
+            "color": "ink",
+            "size": 18,
+            "bold": true
+          },
+          {
+            "type": "arrow",
+            "x1": 165,
+            "y1": 135,
+            "x2": 200,
+            "y2": 135,
+            "color": "ink",
+            "w": 3
+          },
+          {
+            "type": "rect",
+            "x": 210,
+            "y": 100,
+            "w": 3,
+            "h": 70,
+            "color": "accent",
+            "fill": false
+          },
+          {
+            "type": "text",
+            "x": 260,
+            "y": 135,
+            "text": "COMPORTAMIENTO",
+            "color": "ink",
+            "size": 14,
+            "bold": true
+          },
+          {
+            "type": "arrow",
+            "x1": 165,
+            "y1": 265,
+            "x2": 200,
+            "y2": 265,
+            "color": "ink",
+            "w": 3
+          },
+          {
+            "type": "rect",
+            "x": 60,
+            "y": 230,
+            "w": 3,
+            "h": 70,
+            "color": "accent",
+            "fill": false
+          },
+          {
+            "type": "text",
+            "x": 110,
+            "y": 265,
+            "text": "IMPACTO",
+            "color": "ink",
+            "size": 18,
+            "bold": true
+          },
+          {
+            "type": "arrow",
+            "x1": 260,
+            "y1": 175,
+            "x2": 260,
+            "y2": 220,
+            "color": "ink",
+            "w": 3
+          },
+          {
+            "type": "arrow",
+            "x1": 210,
+            "y1": 265,
+            "x2": 245,
+            "y2": 265,
+            "color": "ink",
+            "w": 3
+          },
+          {
+            "type": "rect",
+            "x": 210,
+            "y": 230,
+            "w": 3,
+            "h": 70,
+            "color": "green",
+            "fill": false
+          },
+          {
+            "type": "text",
+            "x": 260,
+            "y": 265,
+            "text": "CONVERSACIÓN",
+            "color": "ink",
+            "size": 14,
+            "bold": true
+          }
+        ],
+        "duration": 540,
+        "audioUrl": null,
+        "topic": "Impulsando el Crecimiento: El Poder del Feedback Constructivo"
+      },
+      {
+        "id": 5,
+        "type": "closing",
+        "title": "Construyendo una Cultura de Crecimiento",
+        "subtitle": "Integrá el feedback constructivo para un equipo más fuerte y productivo.",
+        "narration": "El feedback constructivo es una habilidad que se desarrolla con la práctica. Al integrarlo en nuestro día a día, creamos un ambiente de confianza y aprendizaje continuo. Fomentar esta cultura nos permite identificar áreas de mejora, celebrar éxitos y construir relaciones laborales más sólidas. Empezá hoy mismo a dar y pedir feedback de manera constructiva para un crecimiento sostenible.",
+        "bullets": [
+          "Fomenta la confianza y el aprendizaje",
+          "Mejora la comunicación del equipo",
+          "Impulsa el desarrollo profesional continuo",
+          "Crea un ambiente de apoyo mutuo"
+        ],
+        "quiz": [],
+        "drawing": [
+          {
+            "type": "circle",
+            "cx": 200,
+            "cy": 200,
+            "r": 150,
+            "color": "green",
+            "fill": false,
+            "w": 4
+          },
+          {
+            "type": "dot",
+            "cx": 120,
+            "cy": 180,
+            "r": 10,
+            "color": "ink"
+          },
+          {
+            "type": "dot",
+            "cx": 280,
+            "cy": 180,
+            "r": 10,
+            "color": "ink"
+          },
+          {
+            "type": "dot",
+            "cx": 200,
+            "cy": 100,
+            "r": 10,
+            "color": "ink"
+          },
+          {
+            "type": "dot",
+            "cx": 200,
+            "cy": 300,
+            "r": 10,
+            "color": "ink"
+          },
+          {
+            "type": "arrow",
+            "x1": 120,
+            "y1": 180,
+            "x2": 190,
+            "y2": 110,
+            "color": "accent",
+            "w": 3
+          },
+          {
+            "type": "arrow",
+            "x1": 210,
+            "y1": 110,
+            "x2": 280,
+            "y2": 180,
+            "color": "accent",
+            "w": 3
+          },
+          {
+            "type": "arrow",
+            "x1": 280,
+            "y1": 180,
+            "x2": 210,
+            "y2": 290,
+            "color": "accent",
+            "w": 3
+          },
+          {
+            "type": "arrow",
+            "x1": 190,
+            "y1": 290,
+            "x2": 120,
+            "y2": 180,
+            "color": "accent",
+            "w": 3
+          },
+          {
+            "type": "text",
+            "x": 200,
+            "y": 200,
+            "text": "CRECIMIENTO",
+            "color": "green",
+            "size": 22,
+            "bold": true
+          },
+          {
+            "type": "path",
+            "d": "M 100 350 L 100 300 Q 150 250 200 300 L 200 350",
+            "color": "ink",
+            "w": 3
+          },
+          {
+            "type": "path",
+            "d": "M 200 350 L 200 300 Q 250 250 300 300 L 300 350",
+            "color": "ink",
+            "w": 3
+          }
+        ],
+        "duration": 540,
+        "audioUrl": null,
+        "topic": "Impulsando el Crecimiento: El Poder del Feedback Constructivo"
+      }
+    ],
+    "createdAt": "2026-07-02T00:58:06.874Z"
   }
 }
