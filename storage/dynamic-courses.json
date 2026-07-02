@@ -1419,7 +1419,7 @@
     "id": "course_1782953886874_0",
     "title": "Impulsando el Crecimiento: El Poder del Feedback Constructivo",
     "description": "¿Qué es el Feedback Constructivo? · El Problema de la Falta de Feedback · Claves del Feedback Constructivo · Método SBI: Situación, Comportamiento, Impacto · Construyendo una Cultura de Crecimiento",
-    "status": "content_ready",
+    "status": "ready",
     "source": "prompt",
     "boardStyle": "classic",
     "scorm": false,
@@ -1513,8 +1513,8 @@
             "bold": false
           }
         ],
-        "duration": 540,
-        "audioUrl": null,
+        "duration": 812,
+        "audioUrl": "/api/storage?course=course_1782953886874_0&file=scene_1.wav",
         "topic": "Impulsando el Crecimiento: El Poder del Feedback Constructivo"
       },
       {
@@ -1628,8 +1628,8 @@
             "w": 5
           }
         ],
-        "duration": 540,
-        "audioUrl": null,
+        "duration": 811,
+        "audioUrl": "/api/storage?course=course_1782953886874_0&file=scene_2.wav",
         "topic": "Impulsando el Crecimiento: El Poder del Feedback Constructivo"
       },
       {
@@ -1759,8 +1759,8 @@
             "bold": true
           }
         ],
-        "duration": 540,
-        "audioUrl": null,
+        "duration": 747,
+        "audioUrl": "/api/storage?course=course_1782953886874_0&file=scene_3.wav",
         "topic": "Impulsando el Crecimiento: El Poder del Feedback Constructivo"
       },
       {
@@ -1885,8 +1885,8 @@
             "bold": true
           }
         ],
-        "duration": 540,
-        "audioUrl": null,
+        "duration": 856,
+        "audioUrl": "/api/storage?course=course_1782953886874_0&file=scene_4.wav",
         "topic": "Impulsando el Crecimiento: El Poder del Feedback Constructivo"
       },
       {
@@ -1998,8 +1998,8 @@
             "w": 3
           }
         ],
-        "duration": 540,
-        "audioUrl": null,
+        "duration": 780,
+        "audioUrl": "/api/storage?course=course_1782953886874_0&file=scene_5.wav",
         "topic": "Impulsando el Crecimiento: El Poder del Feedback Constructivo"
       }
     ],
