@@ -2,7 +2,7 @@ import { loadAudioFile } from './_lib/github-storage.js';
 
 export default async function handler(req, res) {
   res.setHeader('Access-Control-Allow-Origin', '*');
-  res.setHeader('Cache-Control', 'public, max-age=31536000, immutable');
+  res.setHeader('Cache-Control', 'public, max-age=3600');
   if (req.method === 'OPTIONS') return res.status(200).end();
 
   const { course, file } = req.query;
