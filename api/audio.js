@@ -82,7 +82,7 @@ export async function generateAudio(scenes, courseId, onProgress = () => {}) {
 
     const filename = `scene_${i + 1}.wav`;
     const audioUrl = ON_VERCEL
-      ? `/api/storage/${courseId}/audio/${filename}`
+      ? `/api/storage?course=${courseId}&file=${filename}`
       : `/storage/${courseId}/audio/${filename}`;
 
     console.log(`[audio] Generando escena ${i + 1}/${scenes.length}...`);
