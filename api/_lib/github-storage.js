@@ -77,8 +77,16 @@ export async function saveAudioFile(courseId, filename, buffer) {
 
 export async function loadAudioFile(courseId, filename) {
   const repoPath = `storage/audio/${courseId}/${filename}`;
-  const res = await fetch(fileApiUrl(repoPath), { headers: authHeaders() });
-  if (!res.ok) return null;
-  const data = await res.json();
-  return Buffer.from(data.content, 'base64');
+  const metaRes = await fetch(fileApiUrl(repoPath), { headers: authHeaders() });
+  if (!metaRes.ok) return null;
+  const meta = await metaRes.json();
+
+  // Contents API omits `content` for files over 1MB; fetch the blob directly instead.
+  const blobRes = await fetch(
+    `https://api.github.com/repos/${REPO}/git/blobs/${meta.sha}`,
+    { headers: authHeaders() }
+  );
+  if (!blobRes.ok) return null;
+  const blob = await blobRes.json();
+  return Buffer.from(blob.content, 'base64');
 }
